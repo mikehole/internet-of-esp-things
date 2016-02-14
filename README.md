@@ -10,7 +10,7 @@ https://en.wikipedia.org/wiki/ESP8266
 
 ###Slave
 
-###Ma
+###Stand Alone
 
 ##MCU Master Libraries
 
