@@ -1,1 +1,3 @@
-# internet-of-esp-things
+# Internet of ESP Things
+
+Just setting up details here soon. 
