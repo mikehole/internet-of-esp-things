@@ -6,3 +6,15 @@ This is to be achieved by taking advantage of a set of the best ideas and implem
 
 https://en.wikipedia.org/wiki/ESP8266
 
+##Firmware
+
+###Slave
+
+###Ma
+
+##MCU Master Libraries
+
+###Python
+
+###C#
+
