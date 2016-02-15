@@ -2,19 +2,48 @@
 
 The main aim of this repository is to simplify the process of connecting Espressif ESP chips/modules to the main cloud based IoT infrastructures. 
 
-This is to be achieved by taking advantage of a set of the best ideas and implementations available for the Espressif ESP modules. Currently the only publicallly abailable chip is the ESP8266. More information can be found here:  
+This will be achieved by taking advantage of a set of the best ideas and implementations available for the Espressif ESP modules. Currently the only publicly available chip is the ESP8266. More information found here:  
 
 https://en.wikipedia.org/wiki/ESP8266
 
-##Firmware
+This project will take advantage of the community base Arduino development environment support that is available for the ESP8266:
 
-###Slave
+https://github.com/esp8266/Arduino
 
-###Stand Alone
+##Firmware Packages##
+The firmware will be delivered as two main packages that can fulfil   
 
-##MCU Master Libraries
+###Slave###
+The slave firmware is for when the module is used by a connected MCU that communicates via the serial port to the chip. The idea behind this package is that the pre compiled binary can be flashed to the chip without any compilation or configuration changes.     
 
-###Python
+###Stand Alone###
+This package is to allow developers to extend the core functionality to include any custom functionality that falls outside of the given libraries. This could include the interfacing with sensors that are connected to the modules GPIO. 
 
-###C#
+##Libraries##
+This solution will rely on a core set of libraries that will provide the following functionality:  
+
+####Set-up and Provisioning:####
+Normally one of the first things you need to do with an ESP based device is connect to a WiFi network this can be achieved by hard coding the access point into the binary that is uploaded to the chip. There are however much neater solutions that allow the module to provide an out of the box method of connection.
+
+These solutions check for given access point setting held on the device persistent storage and if none are found then it offers up a temporary access point so that the user can connect and provide the desired access point settings. A good example of this can be found here: https://github.com/tzapu/WiFiManager 
+
+####Azure:#### 
+A library allowing the publishing of data to the Azure IoT hub. This will be based around work that has been carried out by Dave Glover that can be found here: https://github.com/gloveboxes/Arduino-ESP8266-Secure-Azure-IoT-Hub-Client
+
+
+####MQTT:#####
+To allow event publishing and device control via the MQTT machine to machine device protocol. There are a few libraries available on git hub. Once a suitable candidate is found full details will be provided.
+
+####Others:#####
+Any other cloud based provider yet to be identified as a worthwhile addition.
+
+##MCU Master Libraries##
+
+###Python###
+
+###C# ###
+
+##Applications##
+
+
 
