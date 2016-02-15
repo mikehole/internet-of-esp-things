@@ -11,7 +11,7 @@ This project will take advantage of the community base Arduino development envir
 https://github.com/esp8266/Arduino
 
 ##Firmware Packages##
-The firmware will be delivered as two main packages that can fulfil   
+The firmware will be delivered as two main packages that can fulfil the requirements of the beginner or expert user.  
 
 ###Slave###
 The slave firmware is for when the module is used by a connected MCU that communicates via the serial port to the chip. The idea behind this package is that the pre compiled binary can be flashed to the chip without any compilation or configuration changes.     
