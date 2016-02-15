@@ -27,14 +27,14 @@ Normally one of the first things you need to do with an ESP based device is conn
 
 These solutions check for given access point setting held on the device persistent storage and if none are found then it offers up a temporary access point so that the user can connect and provide the desired access point settings. A good example of this can be found here: https://github.com/tzapu/WiFiManager 
 
-####Azure:#### 
+####Azure: 
 A library allowing the publishing of data to the Azure IoT hub. This will be based around work that has been carried out by Dave Glover that can be found here: https://github.com/gloveboxes/Arduino-ESP8266-Secure-Azure-IoT-Hub-Client
 
 
-####MQTT:#####
+####MQTT:
 To allow event publishing and device control via the MQTT machine to machine device protocol. There are a few libraries available on git hub. Once a suitable candidate is found full details will be provided.
 
-####Others:#####
+####Others:
 Any other cloud based provider yet to be identified as a worthwhile addition.
 
 ##MCU Master Libraries##
