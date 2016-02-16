@@ -1,3 +1,5 @@
+Please Note None of this code is ready for use. 
+
 # Internet of ESP Things
 
 The main aim of this repository is to simplify the process of connecting Espressif ESP chips/modules to the main cloud based IoT infrastructures. 
