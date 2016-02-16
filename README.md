@@ -1,4 +1,4 @@
-Please Note None of this code is ready for use. 
+Please note this code is not ready for use. 
 
 # Internet of ESP Things
 
