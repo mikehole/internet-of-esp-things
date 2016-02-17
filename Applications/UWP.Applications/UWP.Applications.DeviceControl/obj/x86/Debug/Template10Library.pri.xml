@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PriInfo>
+	<ResourceMap name="Template10Library" version="1.0" primary="true">
+		<Qualifiers/>
+		<ResourceMapSubtree name="Files">
+			<ResourceMapSubtree name="Template10Library">
+				<NamedResource name="Template10Library.xr.xml" uri="ms-resource://Template10Library/Files/Template10Library/Template10Library.xr.xml">
+					<Candidate type="Path">
+						<Value>Template10Library\Template10Library.xr.xml</Value>
+					</Candidate>
+				</NamedResource>
+				<ResourceMapSubtree name="Controls">
+					<NamedResource name="HamburgerMenu.xaml" uri="ms-resource://Template10Library/Files/Template10Library/Controls/HamburgerMenu.xaml">
+						<Candidate type="Path">
+							<Value>Template10Library\Controls\HamburgerMenu.xaml</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="HamburgerMenu.xbf" uri="ms-resource://Template10Library/Files/Template10Library/Controls/HamburgerMenu.xbf">
+						<Candidate type="EmbeddedData">
+							<Base64Value>[Embedded Binary Data]</Base64Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+				<ResourceMapSubtree name="Converters">
+					<ResourceMapSubtree name="Themes">
+						<NamedResource name="Generic.xaml" uri="ms-resource://Template10Library/Files/Template10Library/Converters/Themes/Generic.xaml">
+							<Candidate type="Path">
+								<Value>Template10Library\Converters\Themes\Generic.xaml</Value>
+							</Candidate>
+						</NamedResource>
+						<NamedResource name="Generic.xbf" uri="ms-resource://Template10Library/Files/Template10Library/Converters/Themes/Generic.xbf">
+							<Candidate type="EmbeddedData">
+								<Base64Value>[Embedded Binary Data]</Base64Value>
+							</Candidate>
+						</NamedResource>
+					</ResourceMapSubtree>
+				</ResourceMapSubtree>
+				<ResourceMapSubtree name="Properties">
+					<NamedResource name="Template10Library.rd.xml" uri="ms-resource://Template10Library/Files/Template10Library/Properties/Template10Library.rd.xml">
+						<Candidate type="Path">
+							<Value>Template10Library\Properties\Template10Library.rd.xml</Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+				<ResourceMapSubtree name="Themes">
+					<NamedResource name="Generic.xaml" uri="ms-resource://Template10Library/Files/Template10Library/Themes/Generic.xaml">
+						<Candidate type="Path">
+							<Value>Template10Library\Themes\Generic.xaml</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="Generic.xbf" uri="ms-resource://Template10Library/Files/Template10Library/Themes/Generic.xbf">
+						<Candidate type="EmbeddedData">
+							<Base64Value>[Embedded Binary Data]</Base64Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+			</ResourceMapSubtree>
+		</ResourceMapSubtree>
+	</ResourceMap>
+</PriInfo>
