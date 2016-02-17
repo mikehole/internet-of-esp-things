@@ -19,8 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{3D8C14B0-20A5-4FCD-992B-68CEE50AC613}</ProjectGuid>
-    <RootNamespace>IoesptSlaveFirmware</RootNamespace>
+    <ProjectGuid>{5321F251-5CD7-44A8-8FB0-63C696E76AF6}</ProjectGuid>
+    <RootNamespace>IoesptMasterFirmware</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -74,8 +74,8 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>C:\Users\MikeHole\AppData\Roaming\arduino15\packages\esp8266\hardware\esp8266\2.0.0\cores\esp8266;C:\Users\MikeHole\AppData\Roaming\arduino15\packages\esp8266\hardware\esp8266\2.0.0\variants\nodemcu;D:\Source\github.com\internet-of-esp-things\ArduinoProjects\IoesptSlaveFirmware;D:\Users\MikeHole\Documents\Arduino\libraries\ArduinoJson\src;D:\Users\MikeHole\Documents\Arduino\libraries\ArduinoJson\src\utility;C:\Users\MikeHole\AppData\Roaming\arduino15\packages\esp8266\hardware\esp8266\2.0.0\libraries\ESP8266mDNS;C:\Users\MikeHole\AppData\Roaming\arduino15\packages\esp8266\hardware\esp8266\2.0.0\libraries\ESP8266mDNS\utility;C:\Users\MikeHole\AppData\Roaming\arduino15\packages\esp8266\hardware\esp8266\2.0.0\libraries\ESP8266WebServer\src;C:\Users\MikeHole\AppData\Roaming\arduino15\packages\esp8266\hardware\esp8266\2.0.0\libraries\ESP8266WebServer\src\utility;C:\Users\MikeHole\AppData\Roaming\arduino15\packages\esp8266\hardware\esp8266\2.0.0\libraries\ESP8266WiFi\src;C:\Users\MikeHole\AppData\Roaming\arduino15\packages\esp8266\hardware\esp8266\2.0.0\libraries\ESP8266WiFi\src\utility;C:\Program Files (x86)\Arduino\libraries;C:\Users\MikeHole\AppData\Roaming\arduino15\packages\esp8266\hardware\esp8266\2.0.0\libraries;C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\3pb03i5n.uak\Micro Platforms\default\debuggers;D:\Users\MikeHole\Documents\Arduino\libraries;C:\Users\MikeHole\AppData\Roaming\arduino15\packages\esp8266\hardware\esp8266\2.0.0/tools/sdk/include;C:\Users\MikeHole\AppData\Roaming\arduino15\packages\esp8266\hardware\esp8266\2.0.0\cores\esp8266;C:\Users\MikeHole\AppData\Roaming\arduino15\packages\esp8266\hardware\esp8266\2.0.0\variants\nodemcu;D:\Users\MikeHole\Documents\Arduino\libraries\ArduinoJson\src;C:\Users\MikeHole\AppData\Roaming\arduino15\packages\esp8266\hardware\esp8266\2.0.0\libraries\ESP8266WebServer\src;C:\Users\MikeHole\AppData\Roaming\arduino15\packages\esp8266\hardware\esp8266\2.0.0\libraries\ESP8266WiFi\src;D:\Source\github.com\internet-of-esp-things\ArduinoProjects\Azure\src\_micro-api\libraries\IoespAzure\src;C:\Program Files (x86)\Arduino\libraries;C:\Users\MikeHole\AppData\Roaming\arduino15\packages\esp8266\hardware\esp8266\2.0.0\libraries;C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\3pb03i5n.uak\Micro Platforms\default\debuggers;D:\Users\MikeHole\Documents\Arduino\libraries;C:\Users\MikeHole\AppData\Roaming\arduino15\packages\esp8266\tools\xtensa-lx106-elf-gcc\1.20.0-26-gb404fb9-2\xtensa-lx106-elf\include\c++\4.8.2;C:\Users\MikeHole\AppData\Roaming\arduino15\packages\esp8266\tools\xtensa-lx106-elf-gcc\1.20.0-26-gb404fb9-2\xtensa-lx106-elf\include\c++\4.8.2\xtensa-lx106-elf;C:\Users\MikeHole\AppData\Roaming\arduino15\packages\esp8266\tools\xtensa-lx106-elf-gcc\1.20.0-26-gb404fb9-2\xtensa-lx106-elf\include;C:\Users\MikeHole\AppData\Roaming\arduino15\packages\esp8266\tools\xtensa-lx106-elf-gcc\1.20.0-26-gb404fb9-2\lib\gcc\xtensa-lx106-elf\4.8.2\include;C:\Users\MikeHole\AppData\Roaming\arduino15\packages\esp8266\hardware\esp8266\2.0.0\tools\sdk\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <ForcedIncludeFiles>D:\Source\github.com\internet-of-esp-things\ArduinoProjects\IoesptSlaveFirmware\__vm\.IoesptSlaveFirmware.vsarduino.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <AdditionalIncludeDirectories>C:\Users\MikeHole\AppData\Roaming\arduino15\packages\esp8266\hardware\esp8266\2.0.0\cores\esp8266;C:\Users\MikeHole\AppData\Roaming\arduino15\packages\esp8266\hardware\esp8266\2.0.0\variants\nodemcu;D:\Source\github.com\internet-of-esp-things\ArduinoProjects\IoesptMasterFirmware;C:\Program Files (x86)\Arduino\libraries;C:\Users\MikeHole\AppData\Roaming\arduino15\packages\esp8266\hardware\esp8266\2.0.0\libraries;C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\3pb03i5n.uak\Micro Platforms\default\debuggers;D:\Users\MikeHole\Documents\Arduino\libraries;C:\Users\MikeHole\AppData\Roaming\arduino15\packages\esp8266\hardware\esp8266\2.0.0/tools/sdk/include;C:\Users\MikeHole\AppData\Roaming\arduino15\packages\esp8266\hardware\esp8266\2.0.0\cores\esp8266;C:\Users\MikeHole\AppData\Roaming\arduino15\packages\esp8266\hardware\esp8266\2.0.0\variants\nodemcu;D:\Users\MikeHole\Documents\Arduino\libraries\ArduinoJson\src;C:\Users\MikeHole\AppData\Roaming\arduino15\packages\esp8266\hardware\esp8266\2.0.0\libraries\ESP8266WebServer\src;C:\Users\MikeHole\AppData\Roaming\arduino15\packages\esp8266\hardware\esp8266\2.0.0\libraries\ESP8266WiFi\src;D:\Source\github.com\internet-of-esp-things\ArduinoProjects\Azure\src\_micro-api\libraries\IoespAzure\src;C:\Program Files (x86)\Arduino\libraries;C:\Users\MikeHole\AppData\Roaming\arduino15\packages\esp8266\hardware\esp8266\2.0.0\libraries;C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\3pb03i5n.uak\Micro Platforms\default\debuggers;D:\Users\MikeHole\Documents\Arduino\libraries;C:\Users\MikeHole\AppData\Roaming\arduino15\packages\esp8266\tools\xtensa-lx106-elf-gcc\1.20.0-26-gb404fb9-2\xtensa-lx106-elf\include\c++\4.8.2;C:\Users\MikeHole\AppData\Roaming\arduino15\packages\esp8266\tools\xtensa-lx106-elf-gcc\1.20.0-26-gb404fb9-2\xtensa-lx106-elf\include\c++\4.8.2\xtensa-lx106-elf;C:\Users\MikeHole\AppData\Roaming\arduino15\packages\esp8266\tools\xtensa-lx106-elf-gcc\1.20.0-26-gb404fb9-2\xtensa-lx106-elf\include;C:\Users\MikeHole\AppData\Roaming\arduino15\packages\esp8266\tools\xtensa-lx106-elf-gcc\1.20.0-26-gb404fb9-2\lib\gcc\xtensa-lx106-elf\4.8.2\include;C:\Users\MikeHole\AppData\Roaming\arduino15\packages\esp8266\hardware\esp8266\2.0.0\tools\sdk\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>D:\Users\MikeHole\Documents\Arduino\IoesptMasterFirmware\__vm\.IoesptMasterFirmware.vsarduino.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <PreprocessorDefinitions>__ESP8266_ESp8266__;__ESP8266_ESP8266__;__ets__;ICACHE_FLASH;F_CPU=80000000L;ARDUINO=10605;ARDUINO_ESP8266_ESP12;ARDUINO_ARCH_ESP8266;ESP8266;__cplusplus=201103L;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
   </ItemDefinitionGroup>
@@ -113,19 +113,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <None Include="IoesptSlaveFirmware.ino">
+    <None Include="IoesptMasterFirmware.ino">
       <FileType>CppCode</FileType>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="__vm\.IoesptSlaveFirmware.vsarduino.h" />
+    <ClInclude Include="__vm\.IoesptMasterFirmware.vsarduino.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Azure\Azure.vcxproj">
       <Project>{826a405d-8a58-4d34-a48c-973d36dca86b}</Project>
     </ProjectReference>
     <ProjectReference Include="..\Provisioning\Provisioning.vcxproj">
-      <Project>{02b749cd-6876-46dd-869e-855cce9dfa86}</Project>
+      <Project>{05ea6169-a86d-49a3-8a26-0cffedfa5bb8}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
