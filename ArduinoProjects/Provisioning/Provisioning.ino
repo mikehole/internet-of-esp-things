@@ -6,12 +6,14 @@
 
 #include "IoesptProvisioning.h"
 
+IoesptProvisioning prov;
+
 void setup()
 {
-	Serial.begin(115200);
-	Serial.println("*IOESP-Code Start - Hello world.");
-	
+	Serial.println("");
+	Serial.println("*IOESP-Provisioning - Hello world.");
 
+	prov.setupConfigPortal();
 }
 
 void loop()

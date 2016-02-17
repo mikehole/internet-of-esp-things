@@ -21,5 +21,13 @@
     <ClInclude Include="__vm\.Azure.vsarduino.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\_micro-api\libraries\IoespAzure\src\IoespAzure.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\_micro-api\libraries\IoespAzure\src\IoespAzure.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

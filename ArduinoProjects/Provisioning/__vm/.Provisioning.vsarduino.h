@@ -18,7 +18,9 @@
 #define ARDUINO 10605
 #define ARDUINO_ESP8266_ESP12
 #define ARDUINO_ARCH_ESP8266
-#define __cplusplus
+#define ESP8266
+#define __cplusplus 201103L
+#define __STDC__
 #define __ARM__
 #define __inline__
 #define __asm__(x)
