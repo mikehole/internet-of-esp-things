@@ -24,9 +24,21 @@
     <ClInclude Include="src\_micro-api\libraries\IoespAzure\src\IoespAzure.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\_micro-api\libraries\Base64\src\Base64.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\_micro-api\libraries\sha256\src\sha256.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\_micro-api\libraries\IoespAzure\src\IoespAzure.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\_micro-api\libraries\Base64\src\Base64.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\_micro-api\libraries\sha256\src\sha256.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

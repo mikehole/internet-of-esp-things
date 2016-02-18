@@ -1,3 +1,5 @@
+#include "sha256.h"
+#include "Base64.h"
 #include <ArduinoJson.h>
 #include <ESP8266WiFi.h>
 #include <ESP8266WiFiMulti.h>
@@ -9,6 +11,9 @@
 
 #include "IoespAzure.h"
 
+const char *ssid = "virginmedia5388578";
+const char *password = "wtjjldlr"; 
+
 IoesptAzure azure;
 
 void setup() {
@@ -16,9 +21,14 @@ void setup() {
 	Serial.println("");
 	Serial.println("*IOESP-Azure - Hello world.");
 
-	WiFi.begin("edge", "P3n4rth#");
+	WiFi.begin(ssid, password);
 
 	Serial.println("");
+
+	//ID=TestDevice
+	//PrimaryKey = ExnLPZH9oJAhW2BQf3IMgmJaYuMjep0t52Cfs7 + m1rs =
+	//SecondaryKey = 6BZ2wpbJkzUq6ZIiPM1tbdh7UvGrFiA8xuw / okd9nWc =
+	//HostName=MikeHoleHome.azure-devices.net;DeviceId=TestDevice;SharedAccessKey=ExnLPZH9oJAhW2BQf3IMgmJaYuMjep0t52Cfs7+m1rs=
 
 	// Wait for connection
 	while (WiFi.status() != WL_CONNECTED) {
@@ -28,7 +38,7 @@ void setup() {
 
 	Serial.println("");
 	Serial.print("Connected to ");
-	Serial.println("edge");
+	Serial.println(ssid);
 	Serial.print("IP address: ");
 	Serial.println(WiFi.localIP());
 
