@@ -33,9 +33,6 @@ private:
 
 	std::unique_ptr<ESP8266WebServer> server;
 
-	template <typename Generic>
-	void          DEBUG_WM(Generic text);
-
 	unsigned long timeout = 0;
 	unsigned long start = 0;
 
@@ -50,6 +47,19 @@ private:
 	IPAddress     _sta_static_sn;
 
 	static char result[1000];
+
+	//Diagnostics
+	template <typename Generic>
+	void DEBUG_WMSL(Generic text);
+
+	template <typename Generic>
+	void DEBUG_WMS(Generic text);
+
+	template <typename Generic>
+	void DEBUG_WMC(Generic text);
+
+	template <typename Generic>
+	void DEBUG_WMF(Generic text);
 
 };
 

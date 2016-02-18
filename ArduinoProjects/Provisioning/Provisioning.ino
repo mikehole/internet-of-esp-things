@@ -10,8 +10,9 @@ IoesptProvisioning prov;
 
 void setup()
 {
+	Serial.begin(115200);
 	Serial.println("");
-	Serial.println("*IOESP-Provisioning - Hello world.");
+	Serial.println("*IOESPT-Provisioning - Hello world.");
 
 	prov.setupConfigPortal();
 }

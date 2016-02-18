@@ -12,11 +12,10 @@
 #define _VSARDUINO_H_
 #define __ESP8266_ESp8266__
 #define __ESP8266_ESP8266__
-#define _VMDEBUG 1
 #define __ets__
 #define ICACHE_FLASH
 #define F_CPU 80000000L
-#define ARDUINO 10607
+#define ARDUINO 10605
 #define ARDUINO_ESP8266_ESP12
 #define ARDUINO_ARCH_ESP8266
 #define ESP8266
