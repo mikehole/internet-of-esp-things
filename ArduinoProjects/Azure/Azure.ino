@@ -11,15 +11,17 @@
 
 #include "IoespAzure.h"
 
-const char *ssid = "virginmedia5388578";
-const char *password = "wtjjldlr"; 
+const char *ssid = "edge";
+const char *password = "P3n4rth#"; 
+//const char *ssid = "virginmedia5388578";
+//const char *password = "wtjjldlr";
 
 IoesptAzure azure;
 
 void setup() {
 	Serial.begin(115200);
 	Serial.println("");
-	Serial.println("*IOESP-Azure - Hello world.");
+	Serial.println("*IOESPT-Azure - Hello world.");
 
 	WiFi.begin(ssid, password);
 
@@ -43,6 +45,9 @@ void setup() {
 	Serial.println(WiFi.localIP());
 
 	azure.start();
+
+	azure.publishToAzure("{'message':'Hello World'}");
+
 }
 
 void loop() {

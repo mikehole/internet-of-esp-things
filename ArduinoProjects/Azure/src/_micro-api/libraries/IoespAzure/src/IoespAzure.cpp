@@ -28,6 +28,16 @@ String IoesptAzure::urlEncode(const char* msg)
 IoesptAzure::IoesptAzure()
 {
 
+	device.boardType = Other;            // BoardType enumeration: NodeMCU, WeMos, SparkfunThing, Other (defaults to Other). This determines pin number of the onboard LED for wifi and publish status. Other means no LED status  
+	device.deepSleepSeconds = 0;         // if greater than zero with call ESP8266 deep sleep (default is 0 disabled). GPIO16 needs to be tied to RST to wake from deepSleep. Causes a reset, execution restarts from beginning of sketch 
+	
+	cloud.cloudMode = IoTHub;            // CloudMode enumeration: IoTHub and EventHub (default is IoTHub) 
+	cloud.publishRateInSeconds = 90;     // limits publishing rate to specified seconds (default is 90 seconds).  Connectivity problems may result if number too small eg 2 
+	cloud.sasExpiryDate = 1737504000;    // Expires Wed, 22 Jan 2025 00:00:00 GMT (defaults to Expires Wed, 22 Jan 2025 00:00:00 GMT) 
+
+	cloud.host = "MikeHoleHome.azure-devices.net";
+	cloud.key = "ExnLPZH9oJAhW2BQf3IMgmJaYuMjep0t52Cfs7+m1rs=";
+	cloud.id = "TestDevice";
 }
 
 void IoesptAzure::start()
@@ -37,7 +47,7 @@ void IoesptAzure::start()
 	server->on("/", std::bind(&IoesptAzure::handleRoot, this));
 
 	server->begin();
-	DEBUG_WM("HTTP server started");
+	DEBUG_WMSL("HTTP server started");
 }
 
 void IoesptAzure::processRequests()
@@ -51,7 +61,7 @@ void IoesptAzure::processRequests()
 
 void IoesptAzure::handleRoot() {
 
-	DEBUG_WM(F("Handle root"));
+	DEBUG_WMSL(F("Handle root"));
 
 	server->send(200, "text/plain", "hello from esp8266!");
 }
@@ -88,18 +98,18 @@ void IoesptAzure::initialiseEventHub() {
 
 void IoesptAzure::connectToAzure() {
 	delay(500); // give network connection a moment to settle
-	DEBUG_WM(cloud.id);
-	DEBUG_WM(" connecting to ");
-	DEBUG_WM(cloud.host);
+	DEBUG_WMS(cloud.id);
+	DEBUG_WMC(" connecting to ");
+	DEBUG_WMF(cloud.host);
 	if (WiFi.status() != WL_CONNECTED) { return; }
 	if (!tlsClient.connect(cloud.host, 443)) {      // Use WiFiClientSecure class to create TLS connection
-		DEBUG_WM("Host connection failed.  WiFi IP Address: ");
-		DEBUG_WM(WiFi.localIP());
+		DEBUG_WMS("Host connection failed.  WiFi IP Address: ");
+		DEBUG_WMF(WiFi.localIP());
 
 		delay(2000);
 	}
 	else {
-		DEBUG_WM("Host connected");
+		DEBUG_WMSL("Host connected");
 		yield(); // give firmware some time 
 				 //    delay(250); // give network connection a moment to settle
 	}
@@ -193,25 +203,41 @@ void IoesptAzure::publishToAzure(String data) {
 		}
 	} while (chunk.length() > 0 && ++limit < 100);
 
-	DEBUG_WM("Bytes sent ");
-	DEBUG_WM(bytesWritten);
-	DEBUG_WM(", Memory ");
-	DEBUG_WM(ESP.getFreeHeap());
-	DEBUG_WM(" Message ");
-	DEBUG_WM(sendCount);
-	DEBUG_WM(", Response chunks ");
-	DEBUG_WM(limit);
-	DEBUG_WM(", Response code: ");
+	DEBUG_WMS("Bytes sent ");
+	DEBUG_WMC(bytesWritten);
+	DEBUG_WMC(", Memory ");
+	DEBUG_WMC(ESP.getFreeHeap());
+	DEBUG_WMC(" Message ");
+	DEBUG_WMC(sendCount);
+	DEBUG_WMC(", Response chunks ");
+	DEBUG_WMC(limit);
+	DEBUG_WMC(", Response code: ");
 
-	if (response.length() > 12) { DEBUG_WM(response.substring(9, 12)); }
-	else { DEBUG_WM("unknown"); }
+	if (response.length() > 12) { DEBUG_WMF(response.substring(9, 12)); }
+	else { DEBUG_WMF("unknown"); }
 }
 
 ///////////////////////////
 // Diagnostics
 
 template <typename Generic>
-void IoesptAzure::DEBUG_WM(Generic text) {
-	Serial.print("*IOESP-Azure: ");
+void IoesptAzure::DEBUG_WMSL(Generic text) {
+	Serial.print("*IOESPT-Azure: ");
+	Serial.println(text);
+}
+
+template <typename Generic>
+void IoesptAzure::DEBUG_WMS(Generic text) {
+	Serial.print("*IOESPT-Azure: ");
+	Serial.print(text);
+}
+
+template <typename Generic>
+void IoesptAzure::DEBUG_WMC(Generic text) {
+	Serial.print(text);
+}
+
+template <typename Generic>
+void IoesptAzure::DEBUG_WMF(Generic text) {
 	Serial.println(text);
 }

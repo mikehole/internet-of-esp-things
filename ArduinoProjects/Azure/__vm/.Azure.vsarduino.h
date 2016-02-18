@@ -15,7 +15,7 @@
 #define __ets__
 #define ICACHE_FLASH
 #define F_CPU 80000000L
-#define ARDUINO 10607
+#define ARDUINO 10605
 #define ARDUINO_ESP8266_ESP12
 #define ARDUINO_ARCH_ESP8266
 #define ESP8266
@@ -101,6 +101,10 @@ extern "C" void __cxa_pure_virtual() {;}
 #define portInputRegister(P)
 #define portModeRegister(P)
 #include <..\Azure\Azure.ino>
+#include <src\_micro-api\libraries\Base64\src\Base64.cpp>
+#include <src\_micro-api\libraries\Base64\src\Base64.h>
 #include <src\_micro-api\libraries\IoespAzure\src\IoespAzure.cpp>
 #include <src\_micro-api\libraries\IoespAzure\src\IoespAzure.h>
+#include <src\_micro-api\libraries\sha256\src\sha256.cpp>
+#include <src\_micro-api\libraries\sha256\src\sha256.h>
 #endif

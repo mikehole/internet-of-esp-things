@@ -105,7 +105,16 @@ private:
 
 	//Diagnostics
 	template <typename Generic>
-	void          DEBUG_WM(Generic text);
+	void DEBUG_WMSL(Generic text);
+
+	template <typename Generic>
+	void DEBUG_WMS(Generic text);
+
+	template <typename Generic>
+	void DEBUG_WMC(Generic text);
+
+	template <typename Generic>
+	void DEBUG_WMF(Generic text);
 
 };
 

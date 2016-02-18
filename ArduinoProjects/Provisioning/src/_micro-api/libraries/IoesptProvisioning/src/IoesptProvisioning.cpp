@@ -13,25 +13,25 @@ void IoesptProvisioning::setupConfigPortal() {
 
 	server.reset(new ESP8266WebServer(80));
 
-	DEBUG_WM(F(""));
+	DEBUG_WMSL(F(""));
 
 	start = millis();
 
-	DEBUG_WM(F("Configuring access point... "));
-	DEBUG_WM(_apName);
+	DEBUG_WMSL(F("Configuring access point... "));
+	DEBUG_WMSL(_apName);
 
 	if (_apPassword != NULL) {
 		if (strlen(_apPassword) < 8 || strlen(_apPassword) > 63) {
 			// fail passphrase to short or long!
-			DEBUG_WM(F("Invalid AccessPoint password. Ignoring"));
+			DEBUG_WMSL(F("Invalid AccessPoint password. Ignoring"));
 			_apPassword = NULL;
 		}
-		DEBUG_WM(_apPassword);
+		DEBUG_WMSL(_apPassword);
 	}
 
 	//optional soft ip config
 	if (_ap_static_ip) {
-		DEBUG_WM(F("Custom AP IP/GW/Subnet"));
+		DEBUG_WMSL(F("Custom AP IP/GW/Subnet"));
 		WiFi.softAPConfig(_ap_static_ip, _ap_static_gw, _ap_static_sn);
 	}
 
@@ -44,8 +44,8 @@ void IoesptProvisioning::setupConfigPortal() {
 
 	delay(500); // Without delay I've seen the IP address blank
 
-	DEBUG_WM(F("AP IP address: "));
-	DEBUG_WM(WiFi.softAPIP());
+	DEBUG_WMSL(F("AP IP address: "));
+	DEBUG_WMSL(WiFi.softAPIP());
 
 	/* Setup web pages: root, wifi config pages, SO captive portal detectors and not found. */
 
@@ -55,7 +55,7 @@ void IoesptProvisioning::setupConfigPortal() {
 
 	server->begin(); // Web server start
 
-	DEBUG_WM(F("HTTP server started"));
+	DEBUG_WMSL(F("HTTP server started"));
 
 	while (true) {
 		//HTTP
@@ -65,7 +65,7 @@ void IoesptProvisioning::setupConfigPortal() {
 
 void IoesptProvisioning::handleRoot() {
 
-	DEBUG_WM(F("Handle root"));
+	DEBUG_WMSL(F("Handle root"));
 
 	server->send(200, "text/plain", "hello from esp8266!");
 }
@@ -78,14 +78,14 @@ void IoesptProvisioning::listAccessPoints() {
 
 	JsonArray& data = root.createNestedArray("WiFi");
 
-	DEBUG_WM(F("List access points"));
+	DEBUG_WMSL(F("List access points"));
 
 	int n = WiFi.scanNetworks();
-	DEBUG_WM(F("Scan done"));
+	DEBUG_WMSL(F("Scan done"));
 
 	if (n == 0)
 	{
-		DEBUG_WM(F("No networks found"));
+		DEBUG_WMSL(F("No networks found"));
 	}
 	else
 	{
@@ -93,10 +93,11 @@ void IoesptProvisioning::listAccessPoints() {
 		{
 			JsonObject& wifi = jsonBuffer.createObject();
 
-			DEBUG_WM(WiFi.SSID(i));
+			DEBUG_WMS(WiFi.SSID(i));
 			wifi["ssid"] = WiFi.SSID(i);
 
-			DEBUG_WM(WiFi.RSSI(i));
+			DEBUG_WMC(" Power: ");
+			DEBUG_WMF(WiFi.RSSI(i));
 
 			int quality = getRSSIasQuality(WiFi.RSSI(i));
 
@@ -129,9 +130,27 @@ int IoesptProvisioning::getRSSIasQuality(int RSSI) {
 }
 
 
+///////////////////////////
+// Diagnostics
+
 template <typename Generic>
-void IoesptProvisioning::DEBUG_WM(Generic text) {
-	Serial.print("*IOESP-Provisioning: ");
+void IoesptProvisioning::DEBUG_WMSL(Generic text) {
+	Serial.print("*IOESPT-Provisioning: ");
 	Serial.println(text);
 }
 
+template <typename Generic>
+void IoesptProvisioning::DEBUG_WMS(Generic text) {
+	Serial.print("*IOESPT-Provisioning: ");
+	Serial.print(text);
+}
+
+template <typename Generic>
+void IoesptProvisioning::DEBUG_WMC(Generic text) {
+	Serial.print(text);
+}
+
+template <typename Generic>
+void IoesptProvisioning::DEBUG_WMF(Generic text) {
+	Serial.println(text);
+}
