@@ -46,8 +46,6 @@ private:
 	IPAddress     _sta_static_gw;
 	IPAddress     _sta_static_sn;
 
-	static char result[1000];
-
 	//Diagnostics
 	template <typename Generic>
 	void DEBUG_WMSL(Generic text);

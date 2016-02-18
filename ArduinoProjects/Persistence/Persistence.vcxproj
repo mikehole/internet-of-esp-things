@@ -19,8 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{05EA6169-A86D-49A3-8A26-0CFFEDFA5BB8}</ProjectGuid>
-    <RootNamespace>Provisioning</RootNamespace>
+    <ProjectGuid>{B701754A-A1E4-43D7-9D17-8E1F627B25ED}</ProjectGuid>
+    <RootNamespace>Persistence</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -74,8 +74,8 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>C:\Users\mike\AppData\Local\arduino15\packages\esp8266\hardware\esp8266\2.0.0\cores\esp8266;C:\Users\mike\AppData\Local\arduino15\packages\esp8266\hardware\esp8266\2.0.0\variants\nodemcu;C:\Source\github\internet-of-esp-things\ArduinoProjects\Provisioning;C:\Users\mike\Documents\Arduino\libraries\ArduinoJson\src;C:\Users\mike\Documents\Arduino\libraries\ArduinoJson\src\utility;C:\Users\mike\AppData\Local\arduino15\packages\esp8266\hardware\esp8266\2.0.0\libraries\ESP8266mDNS;C:\Users\mike\AppData\Local\arduino15\packages\esp8266\hardware\esp8266\2.0.0\libraries\ESP8266mDNS\utility;C:\Users\mike\AppData\Local\arduino15\packages\esp8266\hardware\esp8266\2.0.0\libraries\ESP8266WebServer\src;C:\Users\mike\AppData\Local\arduino15\packages\esp8266\hardware\esp8266\2.0.0\libraries\ESP8266WebServer\src\utility;C:\Users\mike\AppData\Local\arduino15\packages\esp8266\hardware\esp8266\2.0.0\libraries\ESP8266WiFi\src;C:\Users\mike\AppData\Local\arduino15\packages\esp8266\hardware\esp8266\2.0.0\libraries\ESP8266WiFi\src\utility;C:\Source\github\internet-of-esp-things\ArduinoProjects\Provisioning\src\_micro-api\libraries\IoesptProvisioning\src;C:\Source\github\internet-of-esp-things\ArduinoProjects\Provisioning\src\_micro-api\libraries\IoesptProvisioning\src\utility;C:\Program Files (x86)\Arduino\libraries;C:\Users\mike\AppData\Local\arduino15\packages\esp8266\hardware\esp8266\2.0.0\libraries;C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\k1je5jgk.mxi\Micro Platforms\default\debuggers;C:\Users\mike\Documents\Arduino\libraries;C:\Users\mike\AppData\Local\arduino15\packages\esp8266\hardware\esp8266\2.0.0/tools/sdk/include;C:\Users\mike\AppData\Local\arduino15\packages\esp8266\tools\xtensa-lx106-elf-gcc\1.20.0-26-gb404fb9-2\xtensa-lx106-elf\include\c++\4.8.2;C:\Users\mike\AppData\Local\arduino15\packages\esp8266\tools\xtensa-lx106-elf-gcc\1.20.0-26-gb404fb9-2\xtensa-lx106-elf\include\c++\4.8.2\xtensa-lx106-elf;C:\Users\mike\AppData\Local\arduino15\packages\esp8266\tools\xtensa-lx106-elf-gcc\1.20.0-26-gb404fb9-2\xtensa-lx106-elf\include;C:\Users\mike\AppData\Local\arduino15\packages\esp8266\tools\xtensa-lx106-elf-gcc\1.20.0-26-gb404fb9-2\lib\gcc\xtensa-lx106-elf\4.8.2\include;C:\Users\mike\AppData\Local\arduino15\packages\esp8266\hardware\esp8266\2.0.0\tools\sdk\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <ForcedIncludeFiles>C:\Source\github\internet-of-esp-things\ArduinoProjects\Provisioning\__vm\.Provisioning.vsarduino.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <AdditionalIncludeDirectories>C:\Users\mike\AppData\Local\arduino15\packages\esp8266\hardware\esp8266\2.0.0\cores\esp8266;C:\Users\mike\AppData\Local\arduino15\packages\esp8266\hardware\esp8266\2.0.0\variants\nodemcu;C:\Users\mike\Documents\Arduino\Persistence;C:\Program Files (x86)\Arduino\libraries;C:\Users\mike\AppData\Local\arduino15\packages\esp8266\hardware\esp8266\2.0.0\libraries;C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\k1je5jgk.mxi\Micro Platforms\default\debuggers;C:\Users\mike\Documents\Arduino\libraries;C:\Users\mike\AppData\Local\arduino15\packages\esp8266\hardware\esp8266\2.0.0/tools/sdk/include;C:\Users\mike\AppData\Local\arduino15\packages\esp8266\tools\xtensa-lx106-elf-gcc\1.20.0-26-gb404fb9-2\xtensa-lx106-elf\include\c++\4.8.2;C:\Users\mike\AppData\Local\arduino15\packages\esp8266\tools\xtensa-lx106-elf-gcc\1.20.0-26-gb404fb9-2\xtensa-lx106-elf\include\c++\4.8.2\xtensa-lx106-elf;C:\Users\mike\AppData\Local\arduino15\packages\esp8266\tools\xtensa-lx106-elf-gcc\1.20.0-26-gb404fb9-2\xtensa-lx106-elf\include;C:\Users\mike\AppData\Local\arduino15\packages\esp8266\tools\xtensa-lx106-elf-gcc\1.20.0-26-gb404fb9-2\lib\gcc\xtensa-lx106-elf\4.8.2\include;C:\Users\mike\AppData\Local\arduino15\packages\esp8266\hardware\esp8266\2.0.0\tools\sdk\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>C:\Users\mike\Documents\Arduino\Persistence\__vm\.Persistence.vsarduino.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <PreprocessorDefinitions>__ESP8266_ESp8266__;__ESP8266_ESP8266__;__ets__;ICACHE_FLASH;F_CPU=80000000L;ARDUINO=10607;ARDUINO_ESP8266_ESP12;ARDUINO_ARCH_ESP8266;ESP8266;__cplusplus=201103L;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
   </ItemDefinitionGroup>
@@ -113,23 +113,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <None Include="Provisioning.ino">
+    <None Include="Persistence.ino">
       <FileType>CppCode</FileType>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\_micro-api\libraries\IoesptProvisioning\src\IoesptProvisioning.h" />
-    <ClInclude Include="__vm\.Provisioning.vsarduino.h" />
+    <ClInclude Include="src\_micro-api\libraries\IoesptPersistence\src\IoesptPersistence.h" />
+    <ClInclude Include="__vm\.Persistence.vsarduino.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\_micro-api\libraries\IoesptProvisioning\src\IoesptProvisioning.cpp" />
+    <ClCompile Include="src\_micro-api\libraries\IoesptPersistence\src\IoesptPersistence.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties arduino.upload.port="COM17" />
+      <UserProperties arduino.upload.port="COM6" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>
