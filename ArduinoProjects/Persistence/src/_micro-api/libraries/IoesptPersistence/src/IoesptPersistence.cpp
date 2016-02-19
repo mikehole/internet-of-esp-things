@@ -10,9 +10,15 @@ IoesptPersistance::IoesptPersistance()
 
 void IoesptPersistance::loadSettings(LoadCallbackType callback)
 {
+	EEPROM.begin(BufferLen + 2);
+
 	StaticJsonBuffer<1000> jsonBuffer;
 
 	length = word(EEPROM.read(0), EEPROM.read(1));
+
+	DEBUG_WMS("Eprom contents length:");
+	DEBUG_WMF(length);
+
 
 	int address = 2;
 
@@ -22,7 +28,8 @@ void IoesptPersistance::loadSettings(LoadCallbackType callback)
 
 	buffer[address - 2] = '\0';
 	
-	Serial.println(buffer);
+	DEBUG_WMS("Buffer Contents:");
+	DEBUG_WMF(buffer);
 
 	JsonObject& root = jsonBuffer.parseObject(buffer);
 
@@ -31,6 +38,8 @@ void IoesptPersistance::loadSettings(LoadCallbackType callback)
 
 void IoesptPersistance::saveSettings(SaveCallbackType callback)
 {
+	EEPROM.begin(BufferLen + 2);
+	
 	StaticJsonBuffer<1000> jsonBuffer;
 
 	JsonObject& root = jsonBuffer.createObject();
@@ -38,10 +47,12 @@ void IoesptPersistance::saveSettings(SaveCallbackType callback)
 	callback(root);
 
 	root.prettyPrintTo(Serial);
-	
-	EEPROM.begin(BufferLen+2);
 
-	length = root.printTo(buffer, BufferLen);
+	length = root.printTo(buffer, length);
+
+	DEBUG_WMS("Saving Eprom contents length:");
+	DEBUG_WMF(length);
+
 	
 	root.prettyPrintTo(Serial);
 
