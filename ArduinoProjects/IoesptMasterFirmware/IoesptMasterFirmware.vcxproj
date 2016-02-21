@@ -120,14 +120,6 @@
   <ItemGroup>
     <ClInclude Include="__vm\.IoesptMasterFirmware.vsarduino.h" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Azure\Azure.vcxproj">
-      <Project>{826a405d-8a58-4d34-a48c-973d36dca86b}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\Provisioning\Provisioning.vcxproj">
-      <Project>{05ea6169-a86d-49a3-8a26-0cffedfa5bb8}</Project>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
