@@ -4,9 +4,13 @@
 #include <ESP8266mDNS.h>
 #include <ArduinoJson.h>
 
+#include "IoesptPersistence.h"
 #include "IoesptProvisioning.h"
+#include "IoesptAzure.h"
 
-IoesptProvisioning prov; 
+IoespPersistance persistance;
+IoesptProvisioning provisioning;
+IoesptAzure azure;
 
 void setup()
 {
@@ -14,7 +18,7 @@ void setup()
 	Serial.println(""); //Lets move away from the ugly stuff that gets sent on boot
 	Serial.println("*IOESP-Firmware Start - Hello world.");
 
-	prov.setupConfigPortal();
+	provisioning.setupConfigPortal();
 }
 
 void loop()
