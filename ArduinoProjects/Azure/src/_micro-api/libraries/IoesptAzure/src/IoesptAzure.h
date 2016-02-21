@@ -72,6 +72,10 @@ public:
 
 	void publishToAzure(String data);
 
+	void loadSettings(JsonObject& root);
+
+	void saveSettings(JsonObject& root);
+
 private:
 
 	void initialiseAzure();

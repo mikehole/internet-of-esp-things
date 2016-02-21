@@ -35,10 +35,42 @@ IoesptAzure::IoesptAzure()
 	cloud.publishRateInSeconds = 90;     // limits publishing rate to specified seconds (default is 90 seconds).  Connectivity problems may result if number too small eg 2 
 	cloud.sasExpiryDate = 1737504000;    // Expires Wed, 22 Jan 2025 00:00:00 GMT (defaults to Expires Wed, 22 Jan 2025 00:00:00 GMT) 
 
-	cloud.host = "MikeHoleHome.azure-devices.net";
-	cloud.key = "ExnLPZH9oJAhW2BQf3IMgmJaYuMjep0t52Cfs7+m1rs=";
-	cloud.id = "TestDevice";
+	//cloud.host = "MikeHoleHome.azure-devices.net";
+	//cloud.key = "ExnLPZH9oJAhW2BQf3IMgmJaYuMjep0t52Cfs7+m1rs=";
+	//cloud.id = "TestDevice";
 }
+
+///////////////////////////
+// Settings Handlers
+
+
+void IoesptAzure::loadSettings(JsonObject& root)
+{
+	JsonObject azureSettings = root["azureSettings"];
+
+
+
+	//cloud.host = "MikeHoleHome.azure-devices.net";
+	//cloud.key = "ExnLPZH9oJAhW2BQf3IMgmJaYuMjep0t52Cfs7+m1rs=";
+	//cloud.id = "TestDevice";
+}
+
+void IoesptAzure::saveSettings(JsonObject& root)
+{
+	JsonObject& azureSettings;
+
+	if (root.containsKey("azureSettings"))
+		azureSettings = root.createNestedObject("azureSettings");
+	else
+		azureSettings = root["azureSettings"];
+
+	azureSettings["host"] = cloud.host;
+	
+	azureSettings["key"] = cloud.key;
+	
+	azureSettings["id"] = cloud.id;
+}
+
 
 void IoesptAzure::start()
 {
