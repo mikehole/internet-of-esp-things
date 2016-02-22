@@ -1,3 +1,4 @@
+#include <EEPROM.h>
 #include <ESP8266WiFi.h>
 #include <WiFiClient.h>
 #include <ESP8266WebServer.h>
@@ -24,7 +25,9 @@ void setup()
 	Serial.println(""); //Lets move away from the ugly stuff that gets sent on boot
 	Serial.println("*IOESP-Slave Firmware Start - Hello world.");
 
-	//provisioning.setupConfigPortal();
+	persistence.saveSettings(&GiveSettings);
+	persistence.loadSettings(&GetSettings);
+
 }
 
 void loop()
@@ -32,4 +35,14 @@ void loop()
 
   /* add main program code here */
 
+}
+
+void GiveSettings(JsonObject& root)
+{
+	azure.saveSettings(root);
+}
+
+void GetSettings(JsonObject& root)
+{
+	azure.loadSettings(root);
 }
