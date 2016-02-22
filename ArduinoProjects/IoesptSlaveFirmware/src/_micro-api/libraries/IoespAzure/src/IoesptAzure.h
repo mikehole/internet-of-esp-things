@@ -1,4 +1,4 @@
-// IoespAzure.h
+// IoesptAzure.h
 
 #ifndef _IOESPAZURE_h
 #define _IOESPAZURE_h
@@ -71,10 +71,6 @@ public:
 	void start();
 
 	void publishToAzure(String data);
-
-	void loadSettings(JsonObject& root);
-
-	void saveSettings(JsonObject& root);
 
 private:
 
