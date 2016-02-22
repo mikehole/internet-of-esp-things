@@ -9,7 +9,7 @@
 #include <WiFiUdp.h>
 #include <ESP8266WebServer.h>
 
-#include "IoespAzure.h"
+#include "IoesptAzure.h"
 
 const char *ssid = "edge";
 const char *password = "P3n4rth#"; 

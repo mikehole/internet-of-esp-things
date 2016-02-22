@@ -9,6 +9,17 @@ IoesptProvisioning::IoesptProvisioning()
 
 }
 
+void IoesptProvisioning::loadSettings(JsonObject& root)
+{
+
+}
+
+void IoesptProvisioning::saveSettings(JsonObject& root)
+{
+
+}
+
+
 void IoesptProvisioning::setupConfigPortal() {
 
 	server.reset(new ESP8266WebServer(80));

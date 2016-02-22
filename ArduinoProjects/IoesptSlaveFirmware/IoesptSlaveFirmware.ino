@@ -4,21 +4,27 @@
 #include <ESP8266mDNS.h>
 #include <ArduinoJson.h>
 
-#include "IoesptPersistence.h"
-#include "IoesptProvisioning.h"
-#include "IoesptAzure.h"
 
-IoespPersistance persistance;
+#include <sha256.h>
+#include <Base64.h>
+#include <IoesptAzure.h>
+#include <IoesptPersistence.h>
+#include <IoesptProvisioning.h>
+
+IoesptPersistance persistence;
+
 IoesptProvisioning provisioning;
+
 IoesptAzure azure;
+
 
 void setup()
 {
 	Serial.begin(115200);
 	Serial.println(""); //Lets move away from the ugly stuff that gets sent on boot
-	Serial.println("*IOESP-Firmware Start - Hello world.");
+	Serial.println("*IOESP-Slave Firmware Start - Hello world.");
 
-	provisioning.setupConfigPortal();
+	//provisioning.setupConfigPortal();
 }
 
 void loop()

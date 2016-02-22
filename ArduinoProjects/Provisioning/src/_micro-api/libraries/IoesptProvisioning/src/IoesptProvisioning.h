@@ -22,6 +22,10 @@ public:
 
 	void setupConfigPortal();
 
+	void loadSettings(JsonObject& root);
+
+	void saveSettings(JsonObject& root);
+
 private:
 
 	//Web server handlers
