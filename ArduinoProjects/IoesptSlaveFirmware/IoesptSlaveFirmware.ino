@@ -27,7 +27,7 @@ void setup()
 
 	provisioning.settingsChanged = &settingsChanged;
 
-	persistence.loadSettings(&GetSettings);
+	//persistence.loadSettings(&GetSettings);
 	
 	//If we don't have a SSID saved then we need to start
 	//the provisioning access point 
