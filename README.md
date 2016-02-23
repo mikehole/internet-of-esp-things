@@ -22,6 +22,11 @@ The slave firmware is for when the module is used by a connected MCU that commun
 This package is to allow developers to extend the core functionality to include any custom functionality that falls outside of the given libraries. This could include the interfacing with sensors that are connected to the modules GPIO. 
 
 ##Libraries##
+
+Due to Arduino project structures the libraries have to be placed within their own repository that can be found here:
+
+[https://github.com/mikehole/ioespt-libraries](https://github.com/mikehole/ioespt-libraries "ioespt-libraries")
+
 This solution will rely on a core set of libraries that will provide the following functionality:  
 
 ####Set-up and Provisioning:####
@@ -31,6 +36,9 @@ These solutions check for given access point setting held on the device persiste
 
 ####Azure: 
 A library allowing the publishing of data to the Azure IoT hub. This will be based around work that has been carried out by Dave Glover that can be found here: https://github.com/gloveboxes/Arduino-ESP8266-Secure-Azure-IoT-Hub-Client
+
+####Persistence: 
+Used to save configuration data to the devices EPROM.
 
 
 ####MQTT:
