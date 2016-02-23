@@ -18,7 +18,6 @@ IoesptProvisioning provisioning;
 
 IoesptAzure azure;
 
-
 void setup()
 {
 	Serial.begin(115200);
@@ -27,32 +26,23 @@ void setup()
 
 	provisioning.settingsChanged = &settingsChanged;
 
-	//persistence.loadSettings(&GetSettings);
+	persistence.loadSettings(&GetSettings);
 	
 	//If we don't have a SSID saved then we need to start
 	//the provisioning access point 
-	if (provisioning.wifi.ssid == "")
+	if (provisioning.getConnected())
 	{
-		provisioning.setupConfigPortal();
+		//Connected lets get stuff ready then
+
+		Serial.println("");
+		Serial.print("Connected to ");
+		Serial.println(provisioning.wifi.ssid);
+		Serial.print("IP address: ");
+		Serial.println(WiFi.localIP());
+
+		azure.start();
 	}
 	
-	WiFi.begin(&provisioning.wifi.ssid[0u], &provisioning.wifi.password[0u]);
-	Serial.println("");
-
-	// Wait for connection
-	while (WiFi.status() != WL_CONNECTED) {
-		delay(500);
-		Serial.print(".");
-	}
-
-	Serial.println("");
-	Serial.print("Connected to ");
-	Serial.println(provisioning.wifi.ssid);
-	Serial.print("IP address: ");
-	Serial.println(WiFi.localIP());
-
-	azure.start();
-
 	//azure.publishToAzure("{'value':'Hello Mike'}");
 
 }
@@ -80,3 +70,5 @@ void settingsChanged()
 {
 	persistence.saveSettings(&GiveSettings);
 }
+
+
