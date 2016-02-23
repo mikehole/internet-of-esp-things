@@ -25,12 +25,18 @@ void setup()
 	Serial.println(""); //Lets move away from the ugly stuff that gets sent on boot
 	Serial.println("*IOESP-Slave Firmware Start - Hello world.");
 
-	//persistence.saveSettings(&GiveSettings);
-	
-	
+	provisioning.settingsChanged = &settingsChanged;
+
 	persistence.loadSettings(&GetSettings);
 	
-	WiFi.begin(provisioning.wifi.ssid, provisioning.wifi.password);
+	//If we don't have a SSID saved then we need to start
+	//the provisioning access point 
+	if (provisioning.wifi.ssid == "")
+	{
+		provisioning.setupConfigPortal();
+	}
+	
+	WiFi.begin(&provisioning.wifi.ssid[0u], &provisioning.wifi.password[0u]);
 	Serial.println("");
 
 	// Wait for connection
@@ -44,7 +50,6 @@ void setup()
 	Serial.println(provisioning.wifi.ssid);
 	Serial.print("IP address: ");
 	Serial.println(WiFi.localIP());
-
 
 	azure.start();
 
@@ -69,4 +74,9 @@ void GetSettings(JsonObject& root)
 {
 	azure.loadSettings(root);
 	provisioning.loadSettings(root);
+}
+
+void settingsChanged()
+{
+	persistence.saveSettings(&GiveSettings);
 }
