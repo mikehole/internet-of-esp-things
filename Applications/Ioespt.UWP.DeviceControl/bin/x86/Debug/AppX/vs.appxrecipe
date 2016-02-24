@@ -22,13 +22,13 @@
     <AppXManifest Include="D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.DeviceControl\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-02-24T15:21:07.054</Modified>
+      <Modified>2016-02-24T17:09:13.042</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.DeviceControl\bin\x86\Debug\Ioespt.UWP.DeviceControl.exe">
       <PackagePath>entrypoint\Ioespt.UWP.DeviceControl.exe</PackagePath>
-      <Modified>2016-02-24T15:21:05.936</Modified>
+      <Modified>2016-02-24T16:56:25.765</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\MikeHole\.nuget\packages\Microsoft.CSharp\4.0.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -510,7 +510,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.DeviceControl\bin\x86\Debug\Ioespt.UWP.DeviceControl.xr.xml">
       <PackagePath>Ioespt.UWP.DeviceControl.xr.xml</PackagePath>
-      <Modified>2016-02-24T13:46:46.345</Modified>
+      <Modified>2016-02-24T16:56:24.721</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -554,11 +554,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.DeviceControl\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2016-02-24T15:21:06.681</Modified>
+      <Modified>2016-02-24T17:09:12.656</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.DeviceControl\bin\x86\Debug\Core\Ioespt.UWP.DeviceControl.exe">
       <PackagePath>Ioespt.UWP.DeviceControl.exe</PackagePath>
-      <Modified>2016-02-24T15:21:07.052</Modified>
+      <Modified>2016-02-24T17:09:13.040</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

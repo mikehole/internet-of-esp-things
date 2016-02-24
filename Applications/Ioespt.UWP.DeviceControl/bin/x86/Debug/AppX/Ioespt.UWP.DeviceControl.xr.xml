@@ -2,6 +2,11 @@
 <Roots >
   <Roots.PropertyPathNames>
     <RootPropertyPathName Name="detailsPanelVisible" />
+    <RootPropertyPathName Name="device" />
+    <RootPropertyPathName Name="ModuleType" />
+    <RootPropertyPathName Name="FirmwareVersion" />
+    <RootPropertyPathName Name="FirmwareName" />
+    <RootPropertyPathName Name="ChipId" />
     <RootPropertyPathName Name="startPanelVisible" />
     <RootPropertyPathName Name="Value" />
     <RootPropertyPathName Name="AboutPartViewModel" />
@@ -129,12 +134,12 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
       <RootProperty Name="Text" />
+      <RootProperty Name="Style" />
+      <RootProperty Name="Margin" />
       <RootProperty Name="TextWrapping" />
       <RootProperty Name="TextAlignment" />
-      <RootProperty Name="Margin" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Foreground" />
-      <RootProperty Name="Style" />
       <RootProperty Name="FontSize" />
       <RootProperty Name="Inlines" />
       <RootProperty Name="LineHeight" />

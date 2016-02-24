@@ -87,7 +87,15 @@
             <RelativePanel.AlignLeftWithPanel>True</RelativePanel.AlignLeftWithPanel>
 
             <StackPanel Grid.Row="1">
-                <TextBlock Text="Device Details" />
+                <TextBlock Text="Device Details" Style="{ThemeResource SubheaderTextBlockStyle}" />
+                <TextBlock Text="Chip Id" Margin="0,15,0,0" />
+                <TextBlock Text="{Binding device.ChipId}"  Style="{ThemeResource TitleTextBlockStyle}" />
+                <TextBlock Text="Firmware"  />
+                <TextBlock Text="{Binding device.FirmwareName}" Style="{ThemeResource TitleTextBlockStyle}" />
+                <TextBlock Text="Firmware Version"  />
+                <TextBlock Text="{Binding device.FirmwareVersion}" Style="{ThemeResource TitleTextBlockStyle}" />
+                <TextBlock Text="Module Type"  />
+                <TextBlock Text="{Binding device.ModuleType}" Style="{ThemeResource TitleTextBlockStyle}" />
             </StackPanel>
 
         </Grid>
