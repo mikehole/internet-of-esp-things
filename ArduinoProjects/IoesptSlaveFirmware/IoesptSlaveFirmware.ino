@@ -24,9 +24,15 @@ void setup()
 	Serial.println(""); //Lets move away from the ugly stuff that gets sent on boot
 	Serial.println("*IOESP-Slave Firmware Start - Hello world.");
 
+	//Set the device details here:
+	provisioning.device.ChipId = String(ESP.getChipId());
+	provisioning.device.FirmwareName = "IOESP-Slave";
+	provisioning.device.FirmwareVersion = "0.1.0";
+	provisioning.device.ModuleType = "ESP8266-Generic";
+
 	provisioning.settingsChanged = &settingsChanged;
 
-	persistence.loadSettings(&GetSettings);
+	//persistence.loadSettings(&GetSettings);
 	
 	//If we don't have a SSID saved then we need to start
 	//the provisioning access point 

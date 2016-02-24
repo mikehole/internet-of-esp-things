@@ -1,1 +1,88 @@
-﻿
+﻿  Debug.cpp
+c1xx : warning C4117: macro name '__cplusplus' is reserved, '#define' ignored
+d:\source\github.com\internet-of-esp-things\arduinoprojects\ioesptslavefirmware\__vm\.ioesptslavefirmware.vsarduino.h(13): warning C4005: '__ESP8266_ESp8266__': macro redefinition
+  d:\source\github.com\internet-of-esp-things\arduinoprojects\ioesptslavefirmware\__vm\.ioesptslavefirmware.vsarduino.h(13): note: command-line arguments:  see previous definition of '__ESP8266_ESp8266__'
+d:\source\github.com\internet-of-esp-things\arduinoprojects\ioesptslavefirmware\__vm\.ioesptslavefirmware.vsarduino.h(14): warning C4005: '__ESP8266_ESP8266__': macro redefinition
+  d:\source\github.com\internet-of-esp-things\arduinoprojects\ioesptslavefirmware\__vm\.ioesptslavefirmware.vsarduino.h(14): note: command-line arguments:  see previous definition of '__ESP8266_ESP8266__'
+d:\source\github.com\internet-of-esp-things\arduinoprojects\ioesptslavefirmware\__vm\.ioesptslavefirmware.vsarduino.h(15): warning C4005: '__ets__': macro redefinition
+  d:\source\github.com\internet-of-esp-things\arduinoprojects\ioesptslavefirmware\__vm\.ioesptslavefirmware.vsarduino.h(15): note: command-line arguments:  see previous definition of '__ets__'
+d:\source\github.com\internet-of-esp-things\arduinoprojects\ioesptslavefirmware\__vm\.ioesptslavefirmware.vsarduino.h(16): warning C4005: 'ICACHE_FLASH': macro redefinition
+  d:\source\github.com\internet-of-esp-things\arduinoprojects\ioesptslavefirmware\__vm\.ioesptslavefirmware.vsarduino.h(16): note: command-line arguments:  see previous definition of 'ICACHE_FLASH'
+d:\source\github.com\internet-of-esp-things\arduinoprojects\ioesptslavefirmware\__vm\.ioesptslavefirmware.vsarduino.h(19): warning C4005: 'ARDUINO_ESP8266_ESP12': macro redefinition
+  d:\source\github.com\internet-of-esp-things\arduinoprojects\ioesptslavefirmware\__vm\.ioesptslavefirmware.vsarduino.h(19): note: command-line arguments:  see previous definition of 'ARDUINO_ESP8266_ESP12'
+d:\source\github.com\internet-of-esp-things\arduinoprojects\ioesptslavefirmware\__vm\.ioesptslavefirmware.vsarduino.h(20): warning C4005: 'ARDUINO_ARCH_ESP8266': macro redefinition
+  d:\source\github.com\internet-of-esp-things\arduinoprojects\ioesptslavefirmware\__vm\.ioesptslavefirmware.vsarduino.h(20): note: command-line arguments:  see previous definition of 'ARDUINO_ARCH_ESP8266'
+d:\source\github.com\internet-of-esp-things\arduinoprojects\ioesptslavefirmware\__vm\.ioesptslavefirmware.vsarduino.h(21): warning C4005: 'ESP8266': macro redefinition
+  d:\source\github.com\internet-of-esp-things\arduinoprojects\ioesptslavefirmware\__vm\.ioesptslavefirmware.vsarduino.h(21): note: command-line arguments:  see previous definition of 'ESP8266'
+d:\source\github.com\internet-of-esp-things\arduinoprojects\ioesptslavefirmware\__vm\.ioesptslavefirmware.vsarduino.h(22): warning C4117: macro name '__cplusplus' is reserved, '#define' ignored
+d:\source\github.com\internet-of-esp-things\arduinoprojects\ioesptslavefirmware\__vm\.ioesptslavefirmware.vsarduino.h(31): warning C4005: '__asm__': macro redefinition
+  d:\source\github.com\internet-of-esp-things\arduinoprojects\ioesptslavefirmware\__vm\.ioesptslavefirmware.vsarduino.h(26): note: see previous definition of '__asm__'
+c:\users\mikehole\appdata\roaming\arduino15\packages\esp8266\tools\xtensa-lx106-elf-gcc\1.20.0-26-gb404fb9-2\xtensa-lx106-elf\include\_ansi.h(65): warning C4005: '_EXFUN': macro redefinition
+  d:\source\github.com\internet-of-esp-things\arduinoprojects\ioesptslavefirmware\__vm\.ioesptslavefirmware.vsarduino.h(69): note: see previous definition of '_EXFUN'
+c:\users\mikehole\appdata\roaming\arduino15\packages\esp8266\tools\xtensa-lx106-elf-gcc\1.20.0-26-gb404fb9-2\lib\gcc\xtensa-lx106-elf\4.8.2\include\stddef.h(212): error C2371: 'size_t': redefinition; different basic types
+  d:\source\github.com\internet-of-esp-things\arduinoprojects\ioesptslavefirmware\predefined c++ types (compiler internal)(16): note: see declaration of 'size_t'
+c:\users\mikehole\appdata\roaming\arduino15\packages\esp8266\tools\xtensa-lx106-elf-gcc\1.20.0-26-gb404fb9-2\xtensa-lx106-elf\include\stdint.h(42): error C2371: 'uint8_t': redefinition; different basic types
+  d:\source\github.com\internet-of-esp-things\arduinoprojects\ioesptslavefirmware\__vm\.ioesptslavefirmware.vsarduino.h(49): note: see declaration of 'uint8_t'
+c:\users\mikehole\appdata\roaming\arduino15\packages\esp8266\tools\xtensa-lx106-elf-gcc\1.20.0-26-gb404fb9-2\lib\gcc\xtensa-lx106-elf\4.8.2\include\stdarg.h(40): warning C4091: 'typedef ': ignored on left of 'int' when no variable is declared
+c:\users\mikehole\appdata\roaming\arduino15\packages\esp8266\hardware\esp8266\2.0.0\cores\esp8266\arduino.h(187): error C2371: 'byte': redefinition; different basic types
+  d:\source\github.com\internet-of-esp-things\arduinoprojects\ioesptslavefirmware\__vm\.ioesptslavefirmware.vsarduino.h(80): note: see declaration of 'byte'
+c:\users\mikehole\appdata\roaming\arduino15\packages\esp8266\hardware\esp8266\2.0.0\tools\sdk\include\ets_sys.h(67): error C2059: syntax error: ':'
+c:\users\mikehole\appdata\roaming\arduino15\packages\esp8266\hardware\esp8266\2.0.0\tools\sdk\include\ets_sys.h(75): error C2059: syntax error: ':'
+c:\users\mikehole\appdata\roaming\arduino15\packages\esp8266\hardware\esp8266\2.0.0\tools\sdk\include\ets_sys.h(82): error C2059: syntax error: ':'
+c:\users\mikehole\appdata\roaming\arduino15\packages\esp8266\hardware\esp8266\2.0.0\cores\esp8266\pgmspace.h(15): warning C4005: 'PROGMEM': macro redefinition
+  d:\source\github.com\internet-of-esp-things\arduinoprojects\ioesptslavefirmware\__vm\.ioesptslavefirmware.vsarduino.h(51): note: see previous definition of 'PROGMEM'
+c:\users\mikehole\appdata\roaming\arduino15\packages\esp8266\hardware\esp8266\2.0.0\cores\esp8266\pgmspace.h(17): warning C4005: 'PGM_VOID_P': macro redefinition
+  d:\source\github.com\internet-of-esp-things\arduinoprojects\ioesptslavefirmware\__vm\.ioesptslavefirmware.vsarduino.h(55): note: see previous definition of 'PGM_VOID_P'
+c:\users\mikehole\appdata\roaming\arduino15\packages\esp8266\hardware\esp8266\2.0.0\cores\esp8266\pgmspace.h(23): warning C4091: 'typedef ': ignored on left of 'void' when no variable is declared
+c:\users\mikehole\appdata\roaming\arduino15\packages\esp8266\hardware\esp8266\2.0.0\cores\esp8266\hardwareserial.h(100): error C2535: 'size_t HardwareSerial::write(uint8_t)': member function already defined or declared
+  c:\users\mikehole\appdata\roaming\arduino15\packages\esp8266\hardware\esp8266\2.0.0\cores\esp8266\hardwareserial.h(90): note: see declaration of 'HardwareSerial::write'
+c:\users\mikehole\appdata\roaming\arduino15\packages\esp8266\hardware\esp8266\2.0.0\cores\esp8266\esp.h(139): error C2059: syntax error: ':'
+c:\users\mikehole\appdata\roaming\arduino15\packages\esp8266\hardware\esp8266\2.0.0\cores\esp8266\md5builder.h(34): warning C4267: 'argument': conversion from 'size_t' to 'uint16_t', possible loss of data
+d:\source\github.com\internet-of-esp-things\arduinoprojects\ioesptslavefirmware\__vm\.ioesptslavefirmware.vsarduino.h(93): warning C4005: 'pgm_read_byte': macro redefinition
+  c:\users\mikehole\appdata\roaming\arduino15\packages\esp8266\hardware\esp8266\2.0.0\cores\esp8266\pgmspace.h(84): note: see previous definition of 'pgm_read_byte'
+d:\source\github.com\internet-of-esp-things\arduinoprojects\ioesptslavefirmware\__vm\.ioesptslavefirmware.vsarduino.h(94): warning C4005: 'pgm_read_word': macro redefinition
+  c:\users\mikehole\appdata\roaming\arduino15\packages\esp8266\hardware\esp8266\2.0.0\cores\esp8266\pgmspace.h(93): note: see previous definition of 'pgm_read_word'
+d:\source\github.com\internet-of-esp-things\arduinoprojects\ioesptslavefirmware\__vm\.ioesptslavefirmware.vsarduino.h(96): warning C4005: 'digitalPinToPort': macro redefinition
+  c:\users\mikehole\appdata\roaming\arduino15\packages\esp8266\hardware\esp8266\2.0.0\cores\esp8266\arduino.h(224): note: see previous definition of 'digitalPinToPort'
+d:\source\github.com\internet-of-esp-things\arduinoprojects\ioesptslavefirmware\__vm\.ioesptslavefirmware.vsarduino.h(97): warning C4005: 'digitalPinToBitMask': macro redefinition
+  c:\users\mikehole\appdata\roaming\arduino15\packages\esp8266\hardware\esp8266\2.0.0\cores\esp8266\arduino.h(225): note: see previous definition of 'digitalPinToBitMask'
+d:\source\github.com\internet-of-esp-things\arduinoprojects\ioesptslavefirmware\__vm\.ioesptslavefirmware.vsarduino.h(98): warning C4005: 'digitalPinToTimer': macro redefinition
+  c:\users\mikehole\appdata\roaming\arduino15\packages\esp8266\hardware\esp8266\2.0.0\cores\esp8266\arduino.h(226): note: see previous definition of 'digitalPinToTimer'
+d:\source\github.com\internet-of-esp-things\arduinoprojects\ioesptslavefirmware\__vm\.ioesptslavefirmware.vsarduino.h(100): warning C4005: 'portOutputRegister': macro redefinition
+  c:\users\mikehole\appdata\roaming\arduino15\packages\esp8266\hardware\esp8266\2.0.0\cores\esp8266\arduino.h(227): note: see previous definition of 'portOutputRegister'
+d:\source\github.com\internet-of-esp-things\arduinoprojects\ioesptslavefirmware\__vm\.ioesptslavefirmware.vsarduino.h(101): warning C4005: 'portInputRegister': macro redefinition
+  c:\users\mikehole\appdata\roaming\arduino15\packages\esp8266\hardware\esp8266\2.0.0\cores\esp8266\arduino.h(228): note: see previous definition of 'portInputRegister'
+d:\source\github.com\internet-of-esp-things\arduinoprojects\ioesptslavefirmware\__vm\.ioesptslavefirmware.vsarduino.h(102): warning C4005: 'portModeRegister': macro redefinition
+  c:\users\mikehole\appdata\roaming\arduino15\packages\esp8266\hardware\esp8266\2.0.0\cores\esp8266\arduino.h(229): note: see previous definition of 'portModeRegister'
+c:\users\mikehole\appdata\roaming\arduino15\packages\esp8266\tools\xtensa-lx106-elf-gcc\1.20.0-26-gb404fb9-2\xtensa-lx106-elf\include\c++\4.8.2\memory(46): warning C4068: unknown pragma
+c:\users\mikehole\appdata\roaming\arduino15\packages\esp8266\tools\xtensa-lx106-elf-gcc\1.20.0-26-gb404fb9-2\xtensa-lx106-elf\include\c++\4.8.2\bits\cpp_type_traits.h(35): warning C4068: unknown pragma
+c:\users\mikehole\appdata\roaming\arduino15\packages\esp8266\tools\xtensa-lx106-elf-gcc\1.20.0-26-gb404fb9-2\xtensa-lx106-elf\include\c++\4.8.2\ext\type_traits.h(32): warning C4068: unknown pragma
+c:\users\mikehole\appdata\roaming\arduino15\packages\esp8266\tools\xtensa-lx106-elf-gcc\1.20.0-26-gb404fb9-2\xtensa-lx106-elf\include\c++\4.8.2\ext\type_traits.h(188): error C2143: syntax error: missing ')' before '+'
+  c:\users\mikehole\appdata\roaming\arduino15\packages\esp8266\tools\xtensa-lx106-elf-gcc\1.20.0-26-gb404fb9-2\xtensa-lx106-elf\include\c++\4.8.2\ext\type_traits.h(189): note: see reference to class template instantiation '__gnu_cxx::__promote_2<_Tp,_Up,_Tp2,_Up2>' being compiled
+c:\users\mikehole\appdata\roaming\arduino15\packages\esp8266\tools\xtensa-lx106-elf-gcc\1.20.0-26-gb404fb9-2\xtensa-lx106-elf\include\c++\4.8.2\ext\type_traits.h(188): error C2143: syntax error: missing ';' before '+'
+c:\users\mikehole\appdata\roaming\arduino15\packages\esp8266\tools\xtensa-lx106-elf-gcc\1.20.0-26-gb404fb9-2\xtensa-lx106-elf\include\c++\4.8.2\ext\type_traits.h(188): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\mikehole\appdata\roaming\arduino15\packages\esp8266\tools\xtensa-lx106-elf-gcc\1.20.0-26-gb404fb9-2\xtensa-lx106-elf\include\c++\4.8.2\ext\type_traits.h(188): error C2059: syntax error: '+'
+c:\users\mikehole\appdata\roaming\arduino15\packages\esp8266\tools\xtensa-lx106-elf-gcc\1.20.0-26-gb404fb9-2\xtensa-lx106-elf\include\c++\4.8.2\ext\type_traits.h(188): error C2059: syntax error: ')'
+c:\users\mikehole\appdata\roaming\arduino15\packages\esp8266\tools\xtensa-lx106-elf-gcc\1.20.0-26-gb404fb9-2\xtensa-lx106-elf\include\c++\4.8.2\ext\type_traits.h(188): error C2238: unexpected token(s) preceding ';'
+c:\users\mikehole\appdata\roaming\arduino15\packages\esp8266\tools\xtensa-lx106-elf-gcc\1.20.0-26-gb404fb9-2\xtensa-lx106-elf\include\c++\4.8.2\ext\type_traits.h(197): error C2143: syntax error: missing ')' before '+'
+  c:\users\mikehole\appdata\roaming\arduino15\packages\esp8266\tools\xtensa-lx106-elf-gcc\1.20.0-26-gb404fb9-2\xtensa-lx106-elf\include\c++\4.8.2\ext\type_traits.h(198): note: see reference to class template instantiation '__gnu_cxx::__promote_3<_Tp,_Up,_Vp,_Tp2,_Up2,_Vp2>' being compiled
+c:\users\mikehole\appdata\roaming\arduino15\packages\esp8266\tools\xtensa-lx106-elf-gcc\1.20.0-26-gb404fb9-2\xtensa-lx106-elf\include\c++\4.8.2\ext\type_traits.h(197): error C2143: syntax error: missing ';' before '+'
+c:\users\mikehole\appdata\roaming\arduino15\packages\esp8266\tools\xtensa-lx106-elf-gcc\1.20.0-26-gb404fb9-2\xtensa-lx106-elf\include\c++\4.8.2\ext\type_traits.h(197): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\mikehole\appdata\roaming\arduino15\packages\esp8266\tools\xtensa-lx106-elf-gcc\1.20.0-26-gb404fb9-2\xtensa-lx106-elf\include\c++\4.8.2\ext\type_traits.h(197): error C2059: syntax error: '+'
+c:\users\mikehole\appdata\roaming\arduino15\packages\esp8266\tools\xtensa-lx106-elf-gcc\1.20.0-26-gb404fb9-2\xtensa-lx106-elf\include\c++\4.8.2\ext\type_traits.h(197): error C2059: syntax error: ')'
+c:\users\mikehole\appdata\roaming\arduino15\packages\esp8266\tools\xtensa-lx106-elf-gcc\1.20.0-26-gb404fb9-2\xtensa-lx106-elf\include\c++\4.8.2\ext\type_traits.h(197): error C2238: unexpected token(s) preceding ';'
+c:\users\mikehole\appdata\roaming\arduino15\packages\esp8266\tools\xtensa-lx106-elf-gcc\1.20.0-26-gb404fb9-2\xtensa-lx106-elf\include\c++\4.8.2\ext\type_traits.h(207): error C2143: syntax error: missing ')' before '+'
+  c:\users\mikehole\appdata\roaming\arduino15\packages\esp8266\tools\xtensa-lx106-elf-gcc\1.20.0-26-gb404fb9-2\xtensa-lx106-elf\include\c++\4.8.2\ext\type_traits.h(208): note: see reference to class template instantiation '__gnu_cxx::__promote_4<_Tp,_Up,_Vp,_Wp,_Tp2,_Up2,_Vp2,_Wp2>' being compiled
+c:\users\mikehole\appdata\roaming\arduino15\packages\esp8266\tools\xtensa-lx106-elf-gcc\1.20.0-26-gb404fb9-2\xtensa-lx106-elf\include\c++\4.8.2\ext\type_traits.h(207): error C2143: syntax error: missing ';' before '+'
+c:\users\mikehole\appdata\roaming\arduino15\packages\esp8266\tools\xtensa-lx106-elf-gcc\1.20.0-26-gb404fb9-2\xtensa-lx106-elf\include\c++\4.8.2\ext\type_traits.h(207): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\mikehole\appdata\roaming\arduino15\packages\esp8266\tools\xtensa-lx106-elf-gcc\1.20.0-26-gb404fb9-2\xtensa-lx106-elf\include\c++\4.8.2\ext\type_traits.h(207): error C2059: syntax error: '+'
+c:\users\mikehole\appdata\roaming\arduino15\packages\esp8266\tools\xtensa-lx106-elf-gcc\1.20.0-26-gb404fb9-2\xtensa-lx106-elf\include\c++\4.8.2\ext\type_traits.h(207): error C2059: syntax error: ')'
+c:\users\mikehole\appdata\roaming\arduino15\packages\esp8266\tools\xtensa-lx106-elf-gcc\1.20.0-26-gb404fb9-2\xtensa-lx106-elf\include\c++\4.8.2\ext\type_traits.h(207): error C2238: unexpected token(s) preceding ';'
+c:\users\mikehole\appdata\roaming\arduino15\packages\esp8266\tools\xtensa-lx106-elf-gcc\1.20.0-26-gb404fb9-2\xtensa-lx106-elf\include\c++\4.8.2\ext\numeric_traits.h(32): warning C4068: unknown pragma
+c:\users\mikehole\appdata\roaming\arduino15\packages\esp8266\tools\xtensa-lx106-elf-gcc\1.20.0-26-gb404fb9-2\xtensa-lx106-elf\include\c++\4.8.2\bits\concept_check.h(33): warning C4068: unknown pragma
+c:\users\mikehole\appdata\roaming\arduino15\packages\esp8266\tools\xtensa-lx106-elf-gcc\1.20.0-26-gb404fb9-2\xtensa-lx106-elf\include\c++\4.8.2\bits\stl_pair.h(108): error C2059: syntax error: '['
+  c:\users\mikehole\appdata\roaming\arduino15\packages\esp8266\tools\xtensa-lx106-elf-gcc\1.20.0-26-gb404fb9-2\xtensa-lx106-elf\include\c++\4.8.2\bits\stl_pair.h(209): note: see reference to class template instantiation 'std::pair<_T1,_T2>' being compiled
+c:\users\mikehole\appdata\roaming\arduino15\packages\esp8266\tools\xtensa-lx106-elf-gcc\1.20.0-26-gb404fb9-2\xtensa-lx106-elf\include\c++\4.8.2\bits\stl_pair.h(108): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+c:\users\mikehole\appdata\roaming\arduino15\packages\esp8266\tools\xtensa-lx106-elf-gcc\1.20.0-26-gb404fb9-2\xtensa-lx106-elf\include\c++\4.8.2\bits\stl_pair.h(108): error C2059: syntax error: ')'
+c:\users\mikehole\appdata\roaming\arduino15\packages\esp8266\tools\xtensa-lx106-elf-gcc\1.20.0-26-gb404fb9-2\xtensa-lx106-elf\include\c++\4.8.2\bits\stl_pair.h(109): error C2334: unexpected token(s) preceding ':'; skipping apparent function body
+c:\users\mikehole\appdata\roaming\arduino15\packages\esp8266\tools\xtensa-lx106-elf-gcc\1.20.0-26-gb404fb9-2\xtensa-lx106-elf\include\c++\4.8.2\bits\stl_pair.h(66): fatal error C1075: the left brace '{' was unmatched at the end of the file
