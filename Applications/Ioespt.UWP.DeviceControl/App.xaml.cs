@@ -4,6 +4,10 @@ using Ioespt.UWP.DeviceControl.Services.SettingsServices;
 using Windows.ApplicationModel.Activation;
 using Template10.Controls;
 using Template10.Common;
+using System.Collections.ObjectModel;
+using Ioespt.UWP.DeviceControl.Models;
+using Ioespt.UWP.DeviceControl.Services.DataServices;
+using System.Linq;
 
 namespace Ioespt.UWP.DeviceControl
 {
@@ -12,6 +16,8 @@ namespace Ioespt.UWP.DeviceControl
 
     sealed partial class App : Template10.Common.BootStrapper
     {
+        public ObservableCollection<RegisteredDevice> devices { get; set; }
+
         public App()
         {
             InitializeComponent();
@@ -25,6 +31,8 @@ namespace Ioespt.UWP.DeviceControl
             ShowShellBackButton = _settings.UseShellBackButton;
 
             #endregion
+
+            devices = new ObservableCollection<RegisteredDevice>();
         }
 
         public override Task OnInitializeAsync(IActivatedEventArgs args)
@@ -47,6 +55,14 @@ namespace Ioespt.UWP.DeviceControl
         public override Task OnStartAsync(StartKind startKind, IActivatedEventArgs args)
         {
             // long-running startup tasks go here
+            DataService db = new DataService();
+
+            db.createDB();
+
+            foreach (var device in db.DevicesTable)
+            {
+                devices.Add(device);
+            }
 
             NavigationService.Navigate(typeof(Views.MainPage));
             return Task.CompletedTask;

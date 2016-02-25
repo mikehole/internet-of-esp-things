@@ -11,47 +11,53 @@ namespace Ioespt.UWP.DeviceControl.ViewModels
 {
     public class MainPageViewModel : ViewModelBase
     {
-        public ObservableCollection<RegisteredDevice> devices { get; set; }
-
+        public ObservableCollection<RegisteredDevice> devices
+        {
+            get
+            {
+                return ((App)App.Current).devices;
+            }
+        }
 
         public MainPageViewModel()
         {
-            devices = new ObservableCollection<RegisteredDevice>();
-
             if (Windows.ApplicationModel.DesignMode.DesignModeEnabled)
             {
+                #region Design Time Info
 
+                //devices.Add(new RegisteredDevice()
+                //{
+                //    details = new Devices.DeviceDetails() { FirmwareName = "IOESPT-Slave", FirmwareVersion = "0,1,0", ModuleType = "ESP8266-01" },
+                //    GivenName = "Lamp 1",
+                //    Status = DeviceStatus.Offline,
+                //    ConnectedTo = "Adafruit IO (MQTT)"
+                //});
+                //devices.Add(new RegisteredDevice()
+                //{
+                //    details = new Devices.DeviceDetails() { FirmwareName = "IOESPT-Master", FirmwareVersion = "0,1,0", ModuleType = "ESP8266-01" },
+                //    GivenName = "Socket 1",
+                //    Status = DeviceStatus.Online,
+                //    ConnectedTo = "Amazon AWS"
+                //});
+                //devices.Add(new RegisteredDevice()
+                //{
+                //    details = new Devices.DeviceDetails() { FirmwareName = "IOESPT-Slave", FirmwareVersion = "0,1,0", ModuleType = "ESP8266-12" },
+                //    GivenName = "Weather Station",
+                //    Status = DeviceStatus.Online,
+                //    ConnectedTo = "Azure IoT Hub"
+                //});
+
+                //devices.Add(new RegisteredDevice()
+                //{
+                //    details = new Devices.DeviceDetails() { FirmwareName = "IOESPT-Master", FirmwareVersion = "0,1,0", ModuleType = "ESP8266-01" },
+                //    GivenName = "Doorbell",
+                //    Status = DeviceStatus.UnProvisioned,
+                //    ConnectedTo = "N/A"
+                //});
+
+                #endregion /Design Time Info
             }
 
-            devices.Add(new RegisteredDevice()
-            {
-                details = new Devices.DeviceDetails() { FirmwareName = "IOESPT-Slave", FirmwareVersion="0,1,0", ModuleType = "ESP8266-01" },
-                GivenName = "Lamp 1",
-                Status = DeviceStatus.Offline,
-                ConnectedTo = "Adafruit IO (MQTT)"
-            });
-            devices.Add(new RegisteredDevice()
-            {
-                details = new Devices.DeviceDetails() { FirmwareName = "IOESPT-Master", FirmwareVersion = "0,1,0", ModuleType = "ESP8266-01" },
-                GivenName = "Socket 1",
-                Status = DeviceStatus.Online,
-                ConnectedTo = "Amazon AWS"
-            });
-            devices.Add(new RegisteredDevice()
-            {
-                details = new Devices.DeviceDetails() { FirmwareName = "IOESPT-Slave", FirmwareVersion = "0,1,0", ModuleType = "ESP8266-12" },
-                GivenName = "Weather Station",
-                Status = DeviceStatus.Online,
-                ConnectedTo = "Azure IoT Hub"
-            });
-
-            devices.Add(new RegisteredDevice()
-            {
-                details = new Devices.DeviceDetails() { FirmwareName = "IOESPT-Master", FirmwareVersion = "0,1,0", ModuleType = "ESP8266-01" },
-                GivenName = "Doorbell",
-                Status = DeviceStatus.UnProvisioned,
-                ConnectedTo = "N/A"
-            });
 
         }
 

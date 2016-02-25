@@ -47,16 +47,16 @@
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
 
-        <controls:PageHeader x:ConnectionId='7' x:Name="pageHeader" Text="Add Device">
+        <controls:PageHeader x:ConnectionId='7' x:Name="pageHeader" Text="Search For Devices">
             <!--  place stretched, across top  -->
             <RelativePanel.AlignTopWithPanel>True</RelativePanel.AlignTopWithPanel>
             <RelativePanel.AlignRightWithPanel>True</RelativePanel.AlignRightWithPanel>
             <RelativePanel.AlignLeftWithPanel>True</RelativePanel.AlignLeftWithPanel>
             <!--  secondary commands  -->
             <controls:PageHeader.SecondaryCommands>
-                <AppBarButton x:ConnectionId='12'                                         Label="Settings" />
-                <AppBarButton x:ConnectionId='13'                                        Label="Privacy" />
-                <AppBarButton x:ConnectionId='14'                                      Label="About" />
+                <AppBarButton x:ConnectionId='10'                                         Label="Settings" />
+                <AppBarButton x:ConnectionId='11'                                        Label="Privacy" />
+                <AppBarButton x:ConnectionId='12'                                      Label="About" />
             </controls:PageHeader.SecondaryCommands>
         </controls:PageHeader>
 
@@ -74,7 +74,7 @@
             <StackPanel Grid.Row="1">
                 <TextBlock Text="Please Note the process of adding a new device will require use of your WiFi interface. You will lose your Internet connection during this process. " TextWrapping="Wrap" TextAlignment="Center" />
 
-                <Button x:ConnectionId='11' Content="Start" Margin="12" HorizontalAlignment="Center"                                       Width="100"/>
+                <Button x:ConnectionId='9' Content="Start" Margin="12" HorizontalAlignment="Center"                                       Width="100"/>
 
             </StackPanel>
 
@@ -87,22 +87,19 @@
             <RelativePanel.AlignLeftWithPanel>True</RelativePanel.AlignLeftWithPanel>
 
             <StackPanel Grid.Row="1">
-                <TextBlock Text="Device Details" Style="{ThemeResource SubheaderTextBlockStyle}" />
-                <TextBlock Text="Chip Id" Margin="0,15,0,0" />
-                <TextBlock Text="{Binding device.ChipId}"  Style="{ThemeResource TitleTextBlockStyle}" />
-                <TextBlock Text="Firmware"  />
-                <TextBlock Text="{Binding device.FirmwareName}" Style="{ThemeResource TitleTextBlockStyle}" />
-                <TextBlock Text="Firmware Version"  />
-                <TextBlock Text="{Binding device.FirmwareVersion}" Style="{ThemeResource TitleTextBlockStyle}" />
-                <TextBlock Text="Module Type"  />
-                <TextBlock Text="{Binding device.ModuleType}" Style="{ThemeResource TitleTextBlockStyle}" />
-                <TextBlock Text="Connect to WiFi" Style="{ThemeResource SubheaderTextBlockStyle}" />
-                <TextBlock Text="Wifi Network" Margin="0,15,0,0" />
-                <ComboBox x:ConnectionId='8'                                           DisplayMemberPath="Ssid"                                                                />
-                <TextBlock Text="Password" Margin="0,15,0,0" />
-                <PasswordBox x:ConnectionId='9'                                                    />
+                <TextBlock Text="Progress" Style="{ThemeResource SubheaderTextBlockStyle}" />
+                <TextBlock Text="Devices Found" Margin="0,15,0,0" />
+                <TextBlock Text="{Binding SearchStatus}"  Style="{ThemeResource TitleTextBlockStyle}" />
 
-                <Button x:ConnectionId='10' Content="Connect" Margin="0,15,0,0"                                       />
+                <TextBlock Text="Processing"  />
+                <TextBlock Text="{Binding DeviceName}" Style="{ThemeResource TitleTextBlockStyle}" />
+                <TextBlock Text="Connection Status"  />
+                <TextBlock Text="{Binding ConnectionStatus}" Style="{ThemeResource TitleTextBlockStyle}" />
+
+                <TextBlock Text="Details"  />
+                <TextBlock Text="{Binding DetailsStatus}" Style="{ThemeResource TitleTextBlockStyle}" />
+
+                <Button x:ConnectionId='8' Content="Back" Margin="0,15,0,0"                                />
             </StackPanel>
 
         </Grid>

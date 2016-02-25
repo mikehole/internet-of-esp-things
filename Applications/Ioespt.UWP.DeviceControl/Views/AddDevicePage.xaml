@@ -47,7 +47,7 @@
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
 
-        <controls:PageHeader x:Name="pageHeader" Text="Add Device">
+        <controls:PageHeader x:Name="pageHeader" Text="Search For Devices">
             <!--  place stretched, across top  -->
             <RelativePanel.AlignTopWithPanel>True</RelativePanel.AlignTopWithPanel>
             <RelativePanel.AlignRightWithPanel>True</RelativePanel.AlignRightWithPanel>
@@ -87,22 +87,19 @@
             <RelativePanel.AlignLeftWithPanel>True</RelativePanel.AlignLeftWithPanel>
 
             <StackPanel Grid.Row="1">
-                <TextBlock Text="Device Details" Style="{ThemeResource SubheaderTextBlockStyle}" />
-                <TextBlock Text="Chip Id" Margin="0,15,0,0" />
-                <TextBlock Text="{Binding device.ChipId}"  Style="{ThemeResource TitleTextBlockStyle}" />
-                <TextBlock Text="Firmware"  />
-                <TextBlock Text="{Binding device.FirmwareName}" Style="{ThemeResource TitleTextBlockStyle}" />
-                <TextBlock Text="Firmware Version"  />
-                <TextBlock Text="{Binding device.FirmwareVersion}" Style="{ThemeResource TitleTextBlockStyle}" />
-                <TextBlock Text="Module Type"  />
-                <TextBlock Text="{Binding device.ModuleType}" Style="{ThemeResource TitleTextBlockStyle}" />
-                <TextBlock Text="Connect to WiFi" Style="{ThemeResource SubheaderTextBlockStyle}" />
-                <TextBlock Text="Wifi Network" Margin="0,15,0,0" />
-                <ComboBox ItemsSource="{x:Bind ViewModel.networks}" DisplayMemberPath="Ssid" SelectedItem="{x:Bind ViewModel.selectedNetwork, Mode=TwoWay}" />
-                <TextBlock Text="Password" Margin="0,15,0,0" />
-                <PasswordBox Password="{x:Bind ViewModel.password, Mode=TwoWay}"/>
+                <TextBlock Text="Progress" Style="{ThemeResource SubheaderTextBlockStyle}" />
+                <TextBlock Text="Devices Found" Margin="0,15,0,0" />
+                <TextBlock Text="{Binding SearchStatus}"  Style="{ThemeResource TitleTextBlockStyle}" />
 
-                <Button Content="Connect" Margin="0,15,0,0" Click="{x:Bind ViewModel.ConnectWifi}"/>
+                <TextBlock Text="Processing"  />
+                <TextBlock Text="{Binding DeviceName}" Style="{ThemeResource TitleTextBlockStyle}" />
+                <TextBlock Text="Connection Status"  />
+                <TextBlock Text="{Binding ConnectionStatus}" Style="{ThemeResource TitleTextBlockStyle}" />
+
+                <TextBlock Text="Details"  />
+                <TextBlock Text="{Binding DetailsStatus}" Style="{ThemeResource TitleTextBlockStyle}" />
+
+                <Button Content="Back" Margin="0,15,0,0" Click="{x:Bind ViewModel.Done}"/>
             </StackPanel>
 
         </Grid>

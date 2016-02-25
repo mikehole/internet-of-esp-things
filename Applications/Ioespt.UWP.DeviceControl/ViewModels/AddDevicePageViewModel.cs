@@ -1,4 +1,6 @@
-﻿using Ioespt.UWP.Devices;
+﻿using Ioespt.UWP.DeviceControl.Models;
+using Ioespt.UWP.DeviceControl.Services.DataServices;
+using Ioespt.UWP.Devices;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
@@ -26,18 +28,16 @@ namespace Ioespt.UWP.DeviceControl.ViewModels
 
         public Visibility detailsPanelVisible { get; set; }
 
-        public DeviceDetails device { get; set; }
+        public string SearchStatus { get; set; }
 
-        public ObservableCollection<WiFiAvailableNetwork> networks = new ObservableCollection<WiFiAvailableNetwork>();
+        public string DeviceName { get; set; }
 
-        public object selectedNetwork;
+        public string ConnectionStatus { get; set; }
 
-        public string password { get; set; }
-        
+        public string DetailsStatus { get; set; }
+
 
         #endregion /Properties
-
-
 
         public AddDevicePageViewModel()
         {
@@ -51,9 +51,6 @@ namespace Ioespt.UWP.DeviceControl.ViewModels
                 detailsPanelVisible = Visibility.Visible;
             }
         }
-
-        private string _Value = "Default";
-        public string Value { get { return _Value; } set { Set(ref _Value, value); } }
 
         public override Task OnNavigatedToAsync(object parameter, NavigationMode mode, IDictionary<string, object> suspensionState)
         {
@@ -90,91 +87,98 @@ namespace Ioespt.UWP.DeviceControl.ViewModels
             startPanelVisible = Visibility.Collapsed;
             detailsPanelVisible = Visibility.Visible;
 
-            Views.Busy.SetBusy(true, "Looking for device WiFi connection");
-
             var result = await Windows.Devices.Enumeration.DeviceInformation.FindAllAsync(WiFiAdapter.GetDeviceSelector());
             if (result.Count >= 1)
             {
                 var firstAdapter = await WiFiAdapter.FromIdAsync(result[0].Id);
 
-                Views.Busy.SetBusy(true, "Looking for device WiFi connection ... scanning... ");
+                SearchStatus = $"Scanning";
 
                 await firstAdapter.ScanAsync();
 
-                var deviceWifi = firstAdapter.NetworkReport.AvailableNetworks.FirstOrDefault(N => N.Ssid.ToLower() == "ioespt-thing");
+                var qualifyingWifi = firstAdapter.NetworkReport.AvailableNetworks.Where(N => N.Ssid.ToLower().StartsWith("ioespt-thing"));
 
-                if(deviceWifi != null)
+                SearchStatus = $"Found {qualifyingWifi.Count()} devices";
+
+                foreach(WiFiAvailableNetwork deviceWifi in qualifyingWifi)
                 {
-                    Views.Busy.SetBusy(true, "Looking for device WiFi connection ... connecting... ");
+                    DetailsStatus = "";
+
+                    DeviceName = deviceWifi.Ssid;
+
+                    ConnectionStatus = "Connecting...";
 
                     var connectionResult = await firstAdapter.ConnectAsync(deviceWifi, WiFiReconnectionKind.Automatic);
 
                     if(connectionResult.ConnectionStatus == WiFiConnectionStatus.Success)
                     {
-                        Views.Busy.SetBusy(true, "Looking device WiFi connected ... looking for device... ");
-
+                        ConnectionStatus = "Connected";
                         try
                         {
+
                             HttpClient httpClient = new HttpClient();
 
                             var stringRes = await httpClient.GetStringAsync("http://192.168.4.1/");
 
-                            device = JsonConvert.DeserializeObject<DeviceDetails>(stringRes);
+                            var details = JsonConvert.DeserializeObject<DeviceDetails>(stringRes);
 
-                            Views.Busy.SetBusy(false);
-
-                            networks.Clear();
-
-                            foreach(var network in firstAdapter.NetworkReport.AvailableNetworks.Where(N => N.Ssid.ToLower() != "ioespt-thing"))
+                            RegisteredDevice newRegisteredDevice = new RegisteredDevice()
                             {
-                                networks.Add(network);
-                            }
+                                Status = DeviceStatus.UnProvisioned,
+                                ConnectedTo = "None",
+                                GivenName = deviceWifi.Ssid,
+                                ChipId = details.ChipId,
+                                FirmwareName = details.FirmwareName,
+                                FirmwareVersion = details.FirmwareVersion,
+                                ModuleType = details.ModuleType
+                            };
 
-                            selectedNetwork = networks.FirstOrDefault();
+                            DataService db = new DataService();
+
+                            db.InsertNewDevice(newRegisteredDevice);
+                            ((App)App.Current).devices.Add(newRegisteredDevice);
+
+                            DetailsStatus = "Done";
 
                         }
                         catch(Exception)
                         {
-                            Views.Busy.SetBusy(false);
-
-                            //Say something
+                            DetailsStatus = "Failed :(";
                         }
-
-
                     }
                     else
                     {
-
+                        ConnectionStatus = "Failed :(";
                     }
                 }
-
             }
             else
             {
-                Views.Busy.SetBusy(false);
-
-                ///TODO: Add message for no WiFi found
+                SearchStatus = "No Devices Found";
             }
+        }
 
+        public void Done()
+        {
 
         }
 
-        public async void ConnectWifi()
+        public void ConnectWifi()
         {
-            if(selectedNetwork != null)
-            {
-                HttpClient httpClient = new HttpClient();
+            //if(selectedNetwork != null)
+            //{
+            //    HttpClient httpClient = new HttpClient();
 
-                WifiConfig wifi = new WifiConfig()
-                {
-                    ssid = ((WiFiAvailableNetwork)selectedNetwork).Ssid,
-                    password = password
-                };
+            //    WifiConfig wifi = new WifiConfig()
+            //    {
+            //        ssid = ((WiFiAvailableNetwork)selectedNetwork).Ssid,
+            //        password = password
+            //    };
 
-                StringContent sc = new StringContent(JsonConvert.SerializeObject(wifi));
+            //    StringContent sc = new StringContent(JsonConvert.SerializeObject(wifi));
 
-                await httpClient.PostAsync("http://192.168.4.1/wifisettings", sc);
-            }
+            //    await httpClient.PostAsync("http://192.168.4.1/wifisettings", sc);
+            //}
         }
 
     }

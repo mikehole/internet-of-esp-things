@@ -21,10 +21,15 @@ namespace Ioespt.UWP.DeviceControl.Models
     {
         public DeviceStatus Status { get; set; }
 
-
         public string GivenName { get; set;  }
 
-        public DeviceDetails details { get; set; }
+        public string ModuleType { get; set; }
+
+        public string FirmwareName { get; set; }
+
+        public string FirmwareVersion { get; set; }
+
+        public string ChipId { get; set; }
 
         public string Ip { get; set; }
 
@@ -66,7 +71,7 @@ namespace Ioespt.UWP.DeviceControl.Models
         {
             get
             {
-                switch( details.FirmwareName )
+                switch( FirmwareName )
                 {
                     case "IOESPT-Slave":
                         return "ms-appx:///Assets/DeviceTypes/SlaveDevice.png";
