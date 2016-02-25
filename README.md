@@ -75,10 +75,10 @@ Any other cloud based provider yet to be identified as a worthwhile addition.
 ##MCU Master Libraries##
 
 ###Python###
-Looking for contributors are you willing to help by building this application?
+Looking for contributors are you willing to help by building this library?
 
 ###C# ###
-Looking for contributors are you willing to help by building this application?
+Looking for contributors are you willing to help by building this library?
 
 ##Applications##
 
