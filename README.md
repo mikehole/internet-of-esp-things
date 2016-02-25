@@ -36,10 +36,10 @@ Complete:
 ##Firmware Packages##
 The firmware will be delivered as two main packages that can fulfil the requirements of the beginner or expert user.  
 
-###![](https://raw.githubusercontent.com/mikehole/internet-of-esp-things/master/Artwork/MasterDevice.png)Slave###
+###![](https://raw.githubusercontent.com/mikehole/internet-of-esp-things/master/Artwork/SlaveDevice.png)Slave###
 The slave firmware is for when the module is used by a connected MCU that communicates via the serial port to the chip. The idea behind this package is that the pre compiled binary can be flashed to the chip without any compilation or configuration changes.     
 
-###![](https://raw.githubusercontent.com/mikehole/internet-of-esp-things/master/Artwork/SlaveDevice.png)Master###
+###![](https://raw.githubusercontent.com/mikehole/internet-of-esp-things/master/Artwork/MasterDevice.png)Master###
 This package is to allow developers to extend the core functionality to include any custom functionality that falls outside of the given libraries. This could include the interfacing with sensors that are connected to the modules GPIO. 
 
 ##Arduino Libraries##
