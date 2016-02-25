@@ -1,4 +1,4 @@
-# Internet of ESP Things
+#<img src="https://raw.githubusercontent.com/mikehole/internet-of-esp-things/master/Artwork/MasterDevice.png" width="70" height=70> Internet of ESP Things
 
 **_NOTE:_ I am looking for contributors are you interested in helping grow this project?**
 
@@ -28,7 +28,7 @@ To Do:
 - C# Master Library
    
 
-Complete:
+Complete: 
 
 - Connect to WiFi AP via JSON message.
 - Settings Library to save and load data from EPROM.
