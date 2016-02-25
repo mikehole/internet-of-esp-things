@@ -96,6 +96,13 @@
                 <TextBlock Text="{Binding device.FirmwareVersion}" Style="{ThemeResource TitleTextBlockStyle}" />
                 <TextBlock Text="Module Type"  />
                 <TextBlock Text="{Binding device.ModuleType}" Style="{ThemeResource TitleTextBlockStyle}" />
+                <TextBlock Text="Connect to WiFi" Style="{ThemeResource SubheaderTextBlockStyle}" />
+                <TextBlock Text="Wifi Network" Margin="0,15,0,0" />
+                <ComboBox ItemsSource="{x:Bind ViewModel.networks}" DisplayMemberPath="Ssid" SelectedItem="{x:Bind ViewModel.selectedNetwork, Mode=TwoWay}" />
+                <TextBlock Text="Password" Margin="0,15,0,0" />
+                <PasswordBox Password="{x:Bind ViewModel.password, Mode=TwoWay}"/>
+
+                <Button Content="Connect" Margin="0,15,0,0" Click="{x:Bind ViewModel.ConnectWifi}"/>
             </StackPanel>
 
         </Grid>

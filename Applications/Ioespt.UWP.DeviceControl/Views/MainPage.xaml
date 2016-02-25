@@ -24,7 +24,6 @@
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
                         <!--  TODO: change properties for narrow view  -->
-                        <Setter Target="stateTextBox.Text" Value="Narrow Visual State" />
                     </VisualState.Setters>
                 </VisualState>
                 <VisualState x:Name="VisualStateNormal">
@@ -33,7 +32,6 @@
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
                         <!--  TODO: change properties for normal view  -->
-                        <Setter Target="stateTextBox.Text" Value="Normal Visual State" />
                     </VisualState.Setters>
                 </VisualState>
                 <VisualState x:Name="VisualStateWide">
@@ -61,37 +59,57 @@
             </controls:PageHeader.SecondaryCommands>
         </controls:PageHeader>
 
-        <controls:Resizer x:Name="parameterResizer" Margin="16,16,16,0">
+        <Grid Margin="12">
             <!--  place below page header  -->
             <RelativePanel.Below>pageHeader</RelativePanel.Below>
             <RelativePanel.AlignLeftWithPanel>True</RelativePanel.AlignLeftWithPanel>
-            <TextBox MinWidth="250" MinHeight="62"
-                     Header="Parameter to pass"
-                     Text="{Binding Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
-                <Interactivity:Interaction.Behaviors>
-                    <!--  enable submit on enter key  -->
-                    <Behaviors:KeyBehavior Key="Enter">
-                        <Core:CallMethodAction MethodName="GotoDetailsPage" TargetObject="{Binding}" />
-                    </Behaviors:KeyBehavior>
-                    <!--  focus on textbox when page loads  -->
-                    <Core:EventTriggerBehavior>
-                        <Behaviors:FocusAction />
-                    </Core:EventTriggerBehavior>
-                </Interactivity:Interaction.Behaviors>
-            </TextBox>
-        </controls:Resizer>
+            <RelativePanel.AlignBottomWithPanel>True</RelativePanel.AlignBottomWithPanel>
 
-        <Button x:Name="submitButton" Click="{x:Bind ViewModel.GotoDetailsPage}" Content="Submit">
-            <!--  place next to textbox  -->
-            <RelativePanel.RightOf>parameterResizer</RelativePanel.RightOf>
-            <RelativePanel.AlignBottomWith>parameterResizer</RelativePanel.AlignBottomWith>
-        </Button>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60" />
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
 
-        <TextBlock x:Name="stateTextBox" Margin="16,16,0,0" Text="Current Visual State">
-            <!--  place under to textbox  -->
-            <RelativePanel.Below>parameterResizer</RelativePanel.Below>
-            <RelativePanel.AlignLeftWith>parameterResizer</RelativePanel.AlignLeftWith>
-        </TextBlock>
+            <TextBlock Text="Devices" Style="{ThemeResource SubheaderTextBlockStyle}"/>
+            <ListView Grid.Row="1" ItemsSource="{x:Bind ViewModel.devices}" >
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Margin="0,12,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Rectangle Width="100" Height="70" Fill="AliceBlue"/>
+                                <Image Width="70" Height="70" Source="{Binding DeviceIcon}" />
+                                <Rectangle Grid.Row="1" Width="100" Height="30" Fill="{Binding StatusColor}"/>
+                                <TextBlock Grid.Row="1" Text="{Binding StatusText}" Margin="5" Foreground="Black" />
+                            </Grid>
+
+                            <StackPanel Grid.Column="1" Margin="12,0,0,0" VerticalAlignment="Top">
+                                <TextBlock Text="{Binding GivenName}" Style="{StaticResource TitleTextBlockStyle}"  />
+                                <TextBlock Text="{Binding details.ModuleType}" Style="{StaticResource SubtitleTextBlockStyle}" />
+                                <TextBlock Text="Firmware: " Style="{StaticResource BodyTextBlockStyle}" >
+                                    <Run Text="{Binding details.FirmwareName}" /><Run Text=" : " /><Run Text="{Binding details.FirmwareVersion}" />
+                                </TextBlock>
+                                <TextBlock Text="Connected To: " Style="{StaticResource BodyTextBlockStyle}" >
+                                    <Run Text="{Binding ConnectedTo}" />
+                                </TextBlock>
+                            </StackPanel>
+
+                        </Grid>                  
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+        
+            </ListView>
+        </Grid>
+
 
     </RelativePanel>
 </Page>

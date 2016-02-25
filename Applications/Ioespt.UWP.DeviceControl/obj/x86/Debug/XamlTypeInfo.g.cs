@@ -156,7 +156,7 @@ namespace Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[78];
+            _typeNameTable = new string[71];
             _typeNameTable[0] = "Template10.Common.BootStrapper";
             _typeNameTable[1] = "Windows.UI.Xaml.Application";
             _typeNameTable[2] = "Template10.Common.StateItems";
@@ -221,22 +221,15 @@ namespace Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo
             _typeNameTable[61] = "Template10.Behaviors.EllipsisBehavior.Visibilities";
             _typeNameTable[62] = "Ioespt.UWP.DeviceControl.Views.DetailPage";
             _typeNameTable[63] = "Ioespt.UWP.DeviceControl.ViewModels.MainPageViewModel";
-            _typeNameTable[64] = "Template10.Behaviors.KeyBehavior";
-            _typeNameTable[65] = "Microsoft.Xaml.Interactivity.ActionCollection";
-            _typeNameTable[66] = "Windows.System.VirtualKey";
-            _typeNameTable[67] = "Template10.Behaviors.KeyBehavior.Kinds";
-            _typeNameTable[68] = "Microsoft.Xaml.Interactions.Core.EventTriggerBehavior";
-            _typeNameTable[69] = "Template10.Behaviors.FocusAction";
-            _typeNameTable[70] = "Microsoft.Xaml.Interactions.Core.CallMethodAction";
-            _typeNameTable[71] = "Ioespt.UWP.DeviceControl.Views.MainPage";
-            _typeNameTable[72] = "Ioespt.UWP.DeviceControl.ViewModels.SettingsPageViewModel";
-            _typeNameTable[73] = "Ioespt.UWP.DeviceControl.ViewModels.SettingsPartViewModel";
-            _typeNameTable[74] = "Ioespt.UWP.DeviceControl.ViewModels.AboutPartViewModel";
-            _typeNameTable[75] = "Ioespt.UWP.DeviceControl.Views.SettingsPage";
-            _typeNameTable[76] = "Ioespt.UWP.DeviceControl.Views.Shell";
-            _typeNameTable[77] = "Ioespt.UWP.DeviceControl.Views.Splash";
+            _typeNameTable[64] = "Ioespt.UWP.DeviceControl.Views.MainPage";
+            _typeNameTable[65] = "Ioespt.UWP.DeviceControl.ViewModels.SettingsPageViewModel";
+            _typeNameTable[66] = "Ioespt.UWP.DeviceControl.ViewModels.SettingsPartViewModel";
+            _typeNameTable[67] = "Ioespt.UWP.DeviceControl.ViewModels.AboutPartViewModel";
+            _typeNameTable[68] = "Ioespt.UWP.DeviceControl.Views.SettingsPage";
+            _typeNameTable[69] = "Ioespt.UWP.DeviceControl.Views.Shell";
+            _typeNameTable[70] = "Ioespt.UWP.DeviceControl.Views.Splash";
 
-            _typeTable = new global::System.Type[78];
+            _typeTable = new global::System.Type[71];
             _typeTable[0] = typeof(global::Template10.Common.BootStrapper);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Application);
             _typeTable[2] = typeof(global::Template10.Common.StateItems);
@@ -301,20 +294,13 @@ namespace Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo
             _typeTable[61] = typeof(global::Template10.Behaviors.EllipsisBehavior.Visibilities);
             _typeTable[62] = typeof(global::Ioespt.UWP.DeviceControl.Views.DetailPage);
             _typeTable[63] = typeof(global::Ioespt.UWP.DeviceControl.ViewModels.MainPageViewModel);
-            _typeTable[64] = typeof(global::Template10.Behaviors.KeyBehavior);
-            _typeTable[65] = typeof(global::Microsoft.Xaml.Interactivity.ActionCollection);
-            _typeTable[66] = typeof(global::Windows.System.VirtualKey);
-            _typeTable[67] = typeof(global::Template10.Behaviors.KeyBehavior.Kinds);
-            _typeTable[68] = typeof(global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior);
-            _typeTable[69] = typeof(global::Template10.Behaviors.FocusAction);
-            _typeTable[70] = typeof(global::Microsoft.Xaml.Interactions.Core.CallMethodAction);
-            _typeTable[71] = typeof(global::Ioespt.UWP.DeviceControl.Views.MainPage);
-            _typeTable[72] = typeof(global::Ioespt.UWP.DeviceControl.ViewModels.SettingsPageViewModel);
-            _typeTable[73] = typeof(global::Ioespt.UWP.DeviceControl.ViewModels.SettingsPartViewModel);
-            _typeTable[74] = typeof(global::Ioespt.UWP.DeviceControl.ViewModels.AboutPartViewModel);
-            _typeTable[75] = typeof(global::Ioespt.UWP.DeviceControl.Views.SettingsPage);
-            _typeTable[76] = typeof(global::Ioespt.UWP.DeviceControl.Views.Shell);
-            _typeTable[77] = typeof(global::Ioespt.UWP.DeviceControl.Views.Splash);
+            _typeTable[64] = typeof(global::Ioespt.UWP.DeviceControl.Views.MainPage);
+            _typeTable[65] = typeof(global::Ioespt.UWP.DeviceControl.ViewModels.SettingsPageViewModel);
+            _typeTable[66] = typeof(global::Ioespt.UWP.DeviceControl.ViewModels.SettingsPartViewModel);
+            _typeTable[67] = typeof(global::Ioespt.UWP.DeviceControl.ViewModels.AboutPartViewModel);
+            _typeTable[68] = typeof(global::Ioespt.UWP.DeviceControl.Views.SettingsPage);
+            _typeTable[69] = typeof(global::Ioespt.UWP.DeviceControl.Views.Shell);
+            _typeTable[70] = typeof(global::Ioespt.UWP.DeviceControl.Views.Splash);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -367,17 +353,12 @@ namespace Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo
         private object Activate_60_EllipsisBehavior() { return new global::Template10.Behaviors.EllipsisBehavior(); }
         private object Activate_62_DetailPage() { return new global::Ioespt.UWP.DeviceControl.Views.DetailPage(); }
         private object Activate_63_MainPageViewModel() { return new global::Ioespt.UWP.DeviceControl.ViewModels.MainPageViewModel(); }
-        private object Activate_64_KeyBehavior() { return new global::Template10.Behaviors.KeyBehavior(); }
-        private object Activate_65_ActionCollection() { return new global::Microsoft.Xaml.Interactivity.ActionCollection(); }
-        private object Activate_68_EventTriggerBehavior() { return new global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior(); }
-        private object Activate_69_FocusAction() { return new global::Template10.Behaviors.FocusAction(); }
-        private object Activate_70_CallMethodAction() { return new global::Microsoft.Xaml.Interactions.Core.CallMethodAction(); }
-        private object Activate_71_MainPage() { return new global::Ioespt.UWP.DeviceControl.Views.MainPage(); }
-        private object Activate_72_SettingsPageViewModel() { return new global::Ioespt.UWP.DeviceControl.ViewModels.SettingsPageViewModel(); }
-        private object Activate_73_SettingsPartViewModel() { return new global::Ioespt.UWP.DeviceControl.ViewModels.SettingsPartViewModel(); }
-        private object Activate_74_AboutPartViewModel() { return new global::Ioespt.UWP.DeviceControl.ViewModels.AboutPartViewModel(); }
-        private object Activate_75_SettingsPage() { return new global::Ioespt.UWP.DeviceControl.Views.SettingsPage(); }
-        private object Activate_76_Shell() { return new global::Ioespt.UWP.DeviceControl.Views.Shell(); }
+        private object Activate_64_MainPage() { return new global::Ioespt.UWP.DeviceControl.Views.MainPage(); }
+        private object Activate_65_SettingsPageViewModel() { return new global::Ioespt.UWP.DeviceControl.ViewModels.SettingsPageViewModel(); }
+        private object Activate_66_SettingsPartViewModel() { return new global::Ioespt.UWP.DeviceControl.ViewModels.SettingsPartViewModel(); }
+        private object Activate_67_AboutPartViewModel() { return new global::Ioespt.UWP.DeviceControl.ViewModels.AboutPartViewModel(); }
+        private object Activate_68_SettingsPage() { return new global::Ioespt.UWP.DeviceControl.Views.SettingsPage(); }
+        private object Activate_69_Shell() { return new global::Ioespt.UWP.DeviceControl.Views.Shell(); }
         private void MapAdd_2_StateItems(object instance, object key, object item)
         {
             var collection = (global::System.Collections.Generic.IDictionary<global::System.String, global::System.Object>)instance;
@@ -405,12 +386,6 @@ namespace Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo
             collection.Add(newItem);
         }
         private void VectorAdd_58_BehaviorCollection(object instance, object item)
-        {
-            var collection = (global::System.Collections.Generic.ICollection<global::Windows.UI.Xaml.DependencyObject>)instance;
-            var newItem = (global::Windows.UI.Xaml.DependencyObject)item;
-            collection.Add(newItem);
-        }
-        private void VectorAdd_65_ActionCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Windows.UI.Xaml.DependencyObject>)instance;
             var newItem = (global::Windows.UI.Xaml.DependencyObject)item;
@@ -739,6 +714,7 @@ namespace Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo
                 userType.AddMemberName("startPanelVisible");
                 userType.AddMemberName("detailsPanelVisible");
                 userType.AddMemberName("device");
+                userType.AddMemberName("password");
                 userType.AddMemberName("Value");
                 userType.SetIsLocalType();
                 xamlType = userType;
@@ -846,284 +822,55 @@ namespace Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo
             case 63:   //  Ioespt.UWP.DeviceControl.ViewModels.MainPageViewModel
                 userType = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Template10.Mvvm.ViewModelBase"));
                 userType.Activator = Activate_63_MainPageViewModel;
-                userType.AddMemberName("Value");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 64:   //  Template10.Behaviors.KeyBehavior
-                userType = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_64_KeyBehavior;
-                userType.SetContentPropertyName("Template10.Behaviors.KeyBehavior.Actions");
-                userType.AddMemberName("Actions");
-                userType.AddMemberName("Key");
-                userType.AddMemberName("AssociatedObject");
-                userType.AddMemberName("AndControl");
-                userType.AddMemberName("AndAlt");
-                userType.AddMemberName("AndShift");
-                userType.AddMemberName("Event");
-                xamlType = userType;
-                break;
-
-            case 65:   //  Microsoft.Xaml.Interactivity.ActionCollection
-                userType = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObjectCollection"));
-                userType.CollectionAdd = VectorAdd_65_ActionCollection;
-                userType.SetIsReturnTypeStub();
-                xamlType = userType;
-                break;
-
-            case 66:   //  Windows.System.VirtualKey
-                userType = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
-                userType.AddEnumValue("None", global::Windows.System.VirtualKey.None);
-                userType.AddEnumValue("LeftButton", global::Windows.System.VirtualKey.LeftButton);
-                userType.AddEnumValue("RightButton", global::Windows.System.VirtualKey.RightButton);
-                userType.AddEnumValue("Cancel", global::Windows.System.VirtualKey.Cancel);
-                userType.AddEnumValue("MiddleButton", global::Windows.System.VirtualKey.MiddleButton);
-                userType.AddEnumValue("XButton1", global::Windows.System.VirtualKey.XButton1);
-                userType.AddEnumValue("XButton2", global::Windows.System.VirtualKey.XButton2);
-                userType.AddEnumValue("Back", global::Windows.System.VirtualKey.Back);
-                userType.AddEnumValue("Tab", global::Windows.System.VirtualKey.Tab);
-                userType.AddEnumValue("Clear", global::Windows.System.VirtualKey.Clear);
-                userType.AddEnumValue("Enter", global::Windows.System.VirtualKey.Enter);
-                userType.AddEnumValue("Shift", global::Windows.System.VirtualKey.Shift);
-                userType.AddEnumValue("Control", global::Windows.System.VirtualKey.Control);
-                userType.AddEnumValue("Menu", global::Windows.System.VirtualKey.Menu);
-                userType.AddEnumValue("Pause", global::Windows.System.VirtualKey.Pause);
-                userType.AddEnumValue("CapitalLock", global::Windows.System.VirtualKey.CapitalLock);
-                userType.AddEnumValue("Kana", global::Windows.System.VirtualKey.Kana);
-                userType.AddEnumValue("Hangul", global::Windows.System.VirtualKey.Hangul);
-                userType.AddEnumValue("Junja", global::Windows.System.VirtualKey.Junja);
-                userType.AddEnumValue("Final", global::Windows.System.VirtualKey.Final);
-                userType.AddEnumValue("Hanja", global::Windows.System.VirtualKey.Hanja);
-                userType.AddEnumValue("Kanji", global::Windows.System.VirtualKey.Kanji);
-                userType.AddEnumValue("Escape", global::Windows.System.VirtualKey.Escape);
-                userType.AddEnumValue("Convert", global::Windows.System.VirtualKey.Convert);
-                userType.AddEnumValue("NonConvert", global::Windows.System.VirtualKey.NonConvert);
-                userType.AddEnumValue("Accept", global::Windows.System.VirtualKey.Accept);
-                userType.AddEnumValue("ModeChange", global::Windows.System.VirtualKey.ModeChange);
-                userType.AddEnumValue("Space", global::Windows.System.VirtualKey.Space);
-                userType.AddEnumValue("PageUp", global::Windows.System.VirtualKey.PageUp);
-                userType.AddEnumValue("PageDown", global::Windows.System.VirtualKey.PageDown);
-                userType.AddEnumValue("End", global::Windows.System.VirtualKey.End);
-                userType.AddEnumValue("Home", global::Windows.System.VirtualKey.Home);
-                userType.AddEnumValue("Left", global::Windows.System.VirtualKey.Left);
-                userType.AddEnumValue("Up", global::Windows.System.VirtualKey.Up);
-                userType.AddEnumValue("Right", global::Windows.System.VirtualKey.Right);
-                userType.AddEnumValue("Down", global::Windows.System.VirtualKey.Down);
-                userType.AddEnumValue("Select", global::Windows.System.VirtualKey.Select);
-                userType.AddEnumValue("Print", global::Windows.System.VirtualKey.Print);
-                userType.AddEnumValue("Execute", global::Windows.System.VirtualKey.Execute);
-                userType.AddEnumValue("Snapshot", global::Windows.System.VirtualKey.Snapshot);
-                userType.AddEnumValue("Insert", global::Windows.System.VirtualKey.Insert);
-                userType.AddEnumValue("Delete", global::Windows.System.VirtualKey.Delete);
-                userType.AddEnumValue("Help", global::Windows.System.VirtualKey.Help);
-                userType.AddEnumValue("Number0", global::Windows.System.VirtualKey.Number0);
-                userType.AddEnumValue("Number1", global::Windows.System.VirtualKey.Number1);
-                userType.AddEnumValue("Number2", global::Windows.System.VirtualKey.Number2);
-                userType.AddEnumValue("Number3", global::Windows.System.VirtualKey.Number3);
-                userType.AddEnumValue("Number4", global::Windows.System.VirtualKey.Number4);
-                userType.AddEnumValue("Number5", global::Windows.System.VirtualKey.Number5);
-                userType.AddEnumValue("Number6", global::Windows.System.VirtualKey.Number6);
-                userType.AddEnumValue("Number7", global::Windows.System.VirtualKey.Number7);
-                userType.AddEnumValue("Number8", global::Windows.System.VirtualKey.Number8);
-                userType.AddEnumValue("Number9", global::Windows.System.VirtualKey.Number9);
-                userType.AddEnumValue("A", global::Windows.System.VirtualKey.A);
-                userType.AddEnumValue("B", global::Windows.System.VirtualKey.B);
-                userType.AddEnumValue("C", global::Windows.System.VirtualKey.C);
-                userType.AddEnumValue("D", global::Windows.System.VirtualKey.D);
-                userType.AddEnumValue("E", global::Windows.System.VirtualKey.E);
-                userType.AddEnumValue("F", global::Windows.System.VirtualKey.F);
-                userType.AddEnumValue("G", global::Windows.System.VirtualKey.G);
-                userType.AddEnumValue("H", global::Windows.System.VirtualKey.H);
-                userType.AddEnumValue("I", global::Windows.System.VirtualKey.I);
-                userType.AddEnumValue("J", global::Windows.System.VirtualKey.J);
-                userType.AddEnumValue("K", global::Windows.System.VirtualKey.K);
-                userType.AddEnumValue("L", global::Windows.System.VirtualKey.L);
-                userType.AddEnumValue("M", global::Windows.System.VirtualKey.M);
-                userType.AddEnumValue("N", global::Windows.System.VirtualKey.N);
-                userType.AddEnumValue("O", global::Windows.System.VirtualKey.O);
-                userType.AddEnumValue("P", global::Windows.System.VirtualKey.P);
-                userType.AddEnumValue("Q", global::Windows.System.VirtualKey.Q);
-                userType.AddEnumValue("R", global::Windows.System.VirtualKey.R);
-                userType.AddEnumValue("S", global::Windows.System.VirtualKey.S);
-                userType.AddEnumValue("T", global::Windows.System.VirtualKey.T);
-                userType.AddEnumValue("U", global::Windows.System.VirtualKey.U);
-                userType.AddEnumValue("V", global::Windows.System.VirtualKey.V);
-                userType.AddEnumValue("W", global::Windows.System.VirtualKey.W);
-                userType.AddEnumValue("X", global::Windows.System.VirtualKey.X);
-                userType.AddEnumValue("Y", global::Windows.System.VirtualKey.Y);
-                userType.AddEnumValue("Z", global::Windows.System.VirtualKey.Z);
-                userType.AddEnumValue("LeftWindows", global::Windows.System.VirtualKey.LeftWindows);
-                userType.AddEnumValue("RightWindows", global::Windows.System.VirtualKey.RightWindows);
-                userType.AddEnumValue("Application", global::Windows.System.VirtualKey.Application);
-                userType.AddEnumValue("Sleep", global::Windows.System.VirtualKey.Sleep);
-                userType.AddEnumValue("NumberPad0", global::Windows.System.VirtualKey.NumberPad0);
-                userType.AddEnumValue("NumberPad1", global::Windows.System.VirtualKey.NumberPad1);
-                userType.AddEnumValue("NumberPad2", global::Windows.System.VirtualKey.NumberPad2);
-                userType.AddEnumValue("NumberPad3", global::Windows.System.VirtualKey.NumberPad3);
-                userType.AddEnumValue("NumberPad4", global::Windows.System.VirtualKey.NumberPad4);
-                userType.AddEnumValue("NumberPad5", global::Windows.System.VirtualKey.NumberPad5);
-                userType.AddEnumValue("NumberPad6", global::Windows.System.VirtualKey.NumberPad6);
-                userType.AddEnumValue("NumberPad7", global::Windows.System.VirtualKey.NumberPad7);
-                userType.AddEnumValue("NumberPad8", global::Windows.System.VirtualKey.NumberPad8);
-                userType.AddEnumValue("NumberPad9", global::Windows.System.VirtualKey.NumberPad9);
-                userType.AddEnumValue("Multiply", global::Windows.System.VirtualKey.Multiply);
-                userType.AddEnumValue("Add", global::Windows.System.VirtualKey.Add);
-                userType.AddEnumValue("Separator", global::Windows.System.VirtualKey.Separator);
-                userType.AddEnumValue("Subtract", global::Windows.System.VirtualKey.Subtract);
-                userType.AddEnumValue("Decimal", global::Windows.System.VirtualKey.Decimal);
-                userType.AddEnumValue("Divide", global::Windows.System.VirtualKey.Divide);
-                userType.AddEnumValue("F1", global::Windows.System.VirtualKey.F1);
-                userType.AddEnumValue("F2", global::Windows.System.VirtualKey.F2);
-                userType.AddEnumValue("F3", global::Windows.System.VirtualKey.F3);
-                userType.AddEnumValue("F4", global::Windows.System.VirtualKey.F4);
-                userType.AddEnumValue("F5", global::Windows.System.VirtualKey.F5);
-                userType.AddEnumValue("F6", global::Windows.System.VirtualKey.F6);
-                userType.AddEnumValue("F7", global::Windows.System.VirtualKey.F7);
-                userType.AddEnumValue("F8", global::Windows.System.VirtualKey.F8);
-                userType.AddEnumValue("F9", global::Windows.System.VirtualKey.F9);
-                userType.AddEnumValue("F10", global::Windows.System.VirtualKey.F10);
-                userType.AddEnumValue("F11", global::Windows.System.VirtualKey.F11);
-                userType.AddEnumValue("F12", global::Windows.System.VirtualKey.F12);
-                userType.AddEnumValue("F13", global::Windows.System.VirtualKey.F13);
-                userType.AddEnumValue("F14", global::Windows.System.VirtualKey.F14);
-                userType.AddEnumValue("F15", global::Windows.System.VirtualKey.F15);
-                userType.AddEnumValue("F16", global::Windows.System.VirtualKey.F16);
-                userType.AddEnumValue("F17", global::Windows.System.VirtualKey.F17);
-                userType.AddEnumValue("F18", global::Windows.System.VirtualKey.F18);
-                userType.AddEnumValue("F19", global::Windows.System.VirtualKey.F19);
-                userType.AddEnumValue("F20", global::Windows.System.VirtualKey.F20);
-                userType.AddEnumValue("F21", global::Windows.System.VirtualKey.F21);
-                userType.AddEnumValue("F22", global::Windows.System.VirtualKey.F22);
-                userType.AddEnumValue("F23", global::Windows.System.VirtualKey.F23);
-                userType.AddEnumValue("F24", global::Windows.System.VirtualKey.F24);
-                userType.AddEnumValue("NavigationView", global::Windows.System.VirtualKey.NavigationView);
-                userType.AddEnumValue("NavigationMenu", global::Windows.System.VirtualKey.NavigationMenu);
-                userType.AddEnumValue("NavigationUp", global::Windows.System.VirtualKey.NavigationUp);
-                userType.AddEnumValue("NavigationDown", global::Windows.System.VirtualKey.NavigationDown);
-                userType.AddEnumValue("NavigationLeft", global::Windows.System.VirtualKey.NavigationLeft);
-                userType.AddEnumValue("NavigationRight", global::Windows.System.VirtualKey.NavigationRight);
-                userType.AddEnumValue("NavigationAccept", global::Windows.System.VirtualKey.NavigationAccept);
-                userType.AddEnumValue("NavigationCancel", global::Windows.System.VirtualKey.NavigationCancel);
-                userType.AddEnumValue("NumberKeyLock", global::Windows.System.VirtualKey.NumberKeyLock);
-                userType.AddEnumValue("Scroll", global::Windows.System.VirtualKey.Scroll);
-                userType.AddEnumValue("LeftShift", global::Windows.System.VirtualKey.LeftShift);
-                userType.AddEnumValue("RightShift", global::Windows.System.VirtualKey.RightShift);
-                userType.AddEnumValue("LeftControl", global::Windows.System.VirtualKey.LeftControl);
-                userType.AddEnumValue("RightControl", global::Windows.System.VirtualKey.RightControl);
-                userType.AddEnumValue("LeftMenu", global::Windows.System.VirtualKey.LeftMenu);
-                userType.AddEnumValue("RightMenu", global::Windows.System.VirtualKey.RightMenu);
-                userType.AddEnumValue("GoBack", global::Windows.System.VirtualKey.GoBack);
-                userType.AddEnumValue("GoForward", global::Windows.System.VirtualKey.GoForward);
-                userType.AddEnumValue("Refresh", global::Windows.System.VirtualKey.Refresh);
-                userType.AddEnumValue("Stop", global::Windows.System.VirtualKey.Stop);
-                userType.AddEnumValue("Search", global::Windows.System.VirtualKey.Search);
-                userType.AddEnumValue("Favorites", global::Windows.System.VirtualKey.Favorites);
-                userType.AddEnumValue("GoHome", global::Windows.System.VirtualKey.GoHome);
-                userType.AddEnumValue("GamepadA", global::Windows.System.VirtualKey.GamepadA);
-                userType.AddEnumValue("GamepadB", global::Windows.System.VirtualKey.GamepadB);
-                userType.AddEnumValue("GamepadX", global::Windows.System.VirtualKey.GamepadX);
-                userType.AddEnumValue("GamepadY", global::Windows.System.VirtualKey.GamepadY);
-                userType.AddEnumValue("GamepadRightShoulder", global::Windows.System.VirtualKey.GamepadRightShoulder);
-                userType.AddEnumValue("GamepadLeftShoulder", global::Windows.System.VirtualKey.GamepadLeftShoulder);
-                userType.AddEnumValue("GamepadLeftTrigger", global::Windows.System.VirtualKey.GamepadLeftTrigger);
-                userType.AddEnumValue("GamepadRightTrigger", global::Windows.System.VirtualKey.GamepadRightTrigger);
-                userType.AddEnumValue("GamepadDPadUp", global::Windows.System.VirtualKey.GamepadDPadUp);
-                userType.AddEnumValue("GamepadDPadDown", global::Windows.System.VirtualKey.GamepadDPadDown);
-                userType.AddEnumValue("GamepadDPadLeft", global::Windows.System.VirtualKey.GamepadDPadLeft);
-                userType.AddEnumValue("GamepadDPadRight", global::Windows.System.VirtualKey.GamepadDPadRight);
-                userType.AddEnumValue("GamepadMenu", global::Windows.System.VirtualKey.GamepadMenu);
-                userType.AddEnumValue("GamepadView", global::Windows.System.VirtualKey.GamepadView);
-                userType.AddEnumValue("GamepadLeftThumbstickButton", global::Windows.System.VirtualKey.GamepadLeftThumbstickButton);
-                userType.AddEnumValue("GamepadRightThumbstickButton", global::Windows.System.VirtualKey.GamepadRightThumbstickButton);
-                userType.AddEnumValue("GamepadLeftThumbstickUp", global::Windows.System.VirtualKey.GamepadLeftThumbstickUp);
-                userType.AddEnumValue("GamepadLeftThumbstickDown", global::Windows.System.VirtualKey.GamepadLeftThumbstickDown);
-                userType.AddEnumValue("GamepadLeftThumbstickRight", global::Windows.System.VirtualKey.GamepadLeftThumbstickRight);
-                userType.AddEnumValue("GamepadLeftThumbstickLeft", global::Windows.System.VirtualKey.GamepadLeftThumbstickLeft);
-                userType.AddEnumValue("GamepadRightThumbstickUp", global::Windows.System.VirtualKey.GamepadRightThumbstickUp);
-                userType.AddEnumValue("GamepadRightThumbstickDown", global::Windows.System.VirtualKey.GamepadRightThumbstickDown);
-                userType.AddEnumValue("GamepadRightThumbstickRight", global::Windows.System.VirtualKey.GamepadRightThumbstickRight);
-                userType.AddEnumValue("GamepadRightThumbstickLeft", global::Windows.System.VirtualKey.GamepadRightThumbstickLeft);
-                xamlType = userType;
-                break;
-
-            case 67:   //  Template10.Behaviors.KeyBehavior.Kinds
-                userType = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
-                userType.AddEnumValue("KeyUp", global::Template10.Behaviors.KeyBehavior.Kinds.KeyUp);
-                userType.AddEnumValue("KeyDown", global::Template10.Behaviors.KeyBehavior.Kinds.KeyDown);
-                xamlType = userType;
-                break;
-
-            case 68:   //  Microsoft.Xaml.Interactions.Core.EventTriggerBehavior
-                userType = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_68_EventTriggerBehavior;
-                userType.SetContentPropertyName("Microsoft.Xaml.Interactions.Core.EventTriggerBehavior.Actions");
-                userType.AddMemberName("Actions");
-                userType.AddMemberName("EventName");
-                userType.AddMemberName("SourceObject");
-                userType.AddMemberName("AssociatedObject");
-                xamlType = userType;
-                break;
-
-            case 69:   //  Template10.Behaviors.FocusAction
-                userType = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_69_FocusAction;
-                xamlType = userType;
-                break;
-
-            case 70:   //  Microsoft.Xaml.Interactions.Core.CallMethodAction
-                userType = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_70_CallMethodAction;
-                userType.AddMemberName("MethodName");
-                userType.AddMemberName("TargetObject");
-                xamlType = userType;
-                break;
-
-            case 71:   //  Ioespt.UWP.DeviceControl.Views.MainPage
+            case 64:   //  Ioespt.UWP.DeviceControl.Views.MainPage
                 userType = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_71_MainPage;
+                userType.Activator = Activate_64_MainPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 72:   //  Ioespt.UWP.DeviceControl.ViewModels.SettingsPageViewModel
+            case 65:   //  Ioespt.UWP.DeviceControl.ViewModels.SettingsPageViewModel
                 userType = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Template10.Mvvm.ViewModelBase"));
-                userType.Activator = Activate_72_SettingsPageViewModel;
+                userType.Activator = Activate_65_SettingsPageViewModel;
                 userType.AddMemberName("SettingsPartViewModel");
                 userType.AddMemberName("AboutPartViewModel");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 73:   //  Ioespt.UWP.DeviceControl.ViewModels.SettingsPartViewModel
+            case 66:   //  Ioespt.UWP.DeviceControl.ViewModels.SettingsPartViewModel
                 userType = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Template10.Mvvm.ViewModelBase"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 74:   //  Ioespt.UWP.DeviceControl.ViewModels.AboutPartViewModel
+            case 67:   //  Ioespt.UWP.DeviceControl.ViewModels.AboutPartViewModel
                 userType = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Template10.Mvvm.ViewModelBase"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 75:   //  Ioespt.UWP.DeviceControl.Views.SettingsPage
+            case 68:   //  Ioespt.UWP.DeviceControl.Views.SettingsPage
                 userType = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_75_SettingsPage;
+                userType.Activator = Activate_68_SettingsPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 76:   //  Ioespt.UWP.DeviceControl.Views.Shell
+            case 69:   //  Ioespt.UWP.DeviceControl.Views.Shell
                 userType = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_76_Shell;
+                userType.Activator = Activate_69_Shell;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 77:   //  Ioespt.UWP.DeviceControl.Views.Splash
+            case 70:   //  Ioespt.UWP.DeviceControl.Views.Splash
                 userType = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
                 userType.SetIsLocalType();
                 xamlType = userType;
@@ -1812,225 +1559,115 @@ namespace Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo
             var that = (global::Ioespt.UWP.DeviceControl.ViewModels.AddDevicePageViewModel)instance;
             that.device = (global::Ioespt.UWP.Devices.DeviceDetails)Value;
         }
-        private object get_65_AddDevicePageViewModel_Value(object instance)
+        private object get_65_AddDevicePageViewModel_password(object instance)
+        {
+            var that = (global::Ioespt.UWP.DeviceControl.ViewModels.AddDevicePageViewModel)instance;
+            return that.password;
+        }
+        private void set_65_AddDevicePageViewModel_password(object instance, object Value)
+        {
+            var that = (global::Ioespt.UWP.DeviceControl.ViewModels.AddDevicePageViewModel)instance;
+            that.password = (global::System.String)Value;
+        }
+        private object get_66_AddDevicePageViewModel_Value(object instance)
         {
             var that = (global::Ioespt.UWP.DeviceControl.ViewModels.AddDevicePageViewModel)instance;
             return that.Value;
         }
-        private void set_65_AddDevicePageViewModel_Value(object instance, object Value)
+        private void set_66_AddDevicePageViewModel_Value(object instance, object Value)
         {
             var that = (global::Ioespt.UWP.DeviceControl.ViewModels.AddDevicePageViewModel)instance;
             that.Value = (global::System.String)Value;
         }
-        private object get_66_ViewModelBase_NavigationService(object instance)
+        private object get_67_ViewModelBase_NavigationService(object instance)
         {
             var that = (global::Template10.Mvvm.ViewModelBase)instance;
             return that.NavigationService;
         }
-        private void set_66_ViewModelBase_NavigationService(object instance, object Value)
+        private void set_67_ViewModelBase_NavigationService(object instance, object Value)
         {
             var that = (global::Template10.Mvvm.ViewModelBase)instance;
             that.NavigationService = (global::Template10.Services.NavigationService.INavigationService)Value;
         }
-        private object get_67_ViewModelBase_Dispatcher(object instance)
+        private object get_68_ViewModelBase_Dispatcher(object instance)
         {
             var that = (global::Template10.Mvvm.ViewModelBase)instance;
             return that.Dispatcher;
         }
-        private void set_67_ViewModelBase_Dispatcher(object instance, object Value)
+        private void set_68_ViewModelBase_Dispatcher(object instance, object Value)
         {
             var that = (global::Template10.Mvvm.ViewModelBase)instance;
             that.Dispatcher = (global::Template10.Common.IDispatcherWrapper)Value;
         }
-        private object get_68_ViewModelBase_SessionState(object instance)
+        private object get_69_ViewModelBase_SessionState(object instance)
         {
             var that = (global::Template10.Mvvm.ViewModelBase)instance;
             return that.SessionState;
         }
-        private void set_68_ViewModelBase_SessionState(object instance, object Value)
+        private void set_69_ViewModelBase_SessionState(object instance, object Value)
         {
             var that = (global::Template10.Mvvm.ViewModelBase)instance;
             that.SessionState = (global::Template10.Common.IStateItems)Value;
         }
-        private object get_69_Busy_BusyText(object instance)
+        private object get_70_Busy_BusyText(object instance)
         {
             var that = (global::Ioespt.UWP.DeviceControl.Views.Busy)instance;
             return that.BusyText;
         }
-        private void set_69_Busy_BusyText(object instance, object Value)
+        private void set_70_Busy_BusyText(object instance, object Value)
         {
             var that = (global::Ioespt.UWP.DeviceControl.Views.Busy)instance;
             that.BusyText = (global::System.String)Value;
         }
-        private object get_70_Busy_IsBusy(object instance)
+        private object get_71_Busy_IsBusy(object instance)
         {
             var that = (global::Ioespt.UWP.DeviceControl.Views.Busy)instance;
             return that.IsBusy;
         }
-        private void set_70_Busy_IsBusy(object instance, object Value)
+        private void set_71_Busy_IsBusy(object instance, object Value)
         {
             var that = (global::Ioespt.UWP.DeviceControl.Views.Busy)instance;
             that.IsBusy = (global::System.Boolean)Value;
         }
-        private object get_71_DetailPageViewModel_Value(object instance)
+        private object get_72_DetailPageViewModel_Value(object instance)
         {
             var that = (global::Ioespt.UWP.DeviceControl.ViewModels.DetailPageViewModel)instance;
             return that.Value;
         }
-        private void set_71_DetailPageViewModel_Value(object instance, object Value)
+        private void set_72_DetailPageViewModel_Value(object instance, object Value)
         {
             var that = (global::Ioespt.UWP.DeviceControl.ViewModels.DetailPageViewModel)instance;
             that.Value = (global::System.String)Value;
         }
-        private object get_72_Interaction_Behaviors(object instance)
+        private object get_73_Interaction_Behaviors(object instance)
         {
             return global::Microsoft.Xaml.Interactivity.Interaction.GetBehaviors((global::Windows.UI.Xaml.DependencyObject)instance);
         }
-        private void set_72_Interaction_Behaviors(object instance, object Value)
+        private void set_73_Interaction_Behaviors(object instance, object Value)
         {
             global::Microsoft.Xaml.Interactivity.Interaction.SetBehaviors((global::Windows.UI.Xaml.DependencyObject)instance, (global::Microsoft.Xaml.Interactivity.BehaviorCollection)Value);
         }
-        private object get_73_EllipsisBehavior_Visibility(object instance)
+        private object get_74_EllipsisBehavior_Visibility(object instance)
         {
             var that = (global::Template10.Behaviors.EllipsisBehavior)instance;
             return that.Visibility;
         }
-        private void set_73_EllipsisBehavior_Visibility(object instance, object Value)
+        private void set_74_EllipsisBehavior_Visibility(object instance, object Value)
         {
             var that = (global::Template10.Behaviors.EllipsisBehavior)instance;
             that.Visibility = (global::Template10.Behaviors.EllipsisBehavior.Visibilities)Value;
         }
-        private object get_74_EllipsisBehavior_AssociatedObject(object instance)
+        private object get_75_EllipsisBehavior_AssociatedObject(object instance)
         {
             var that = (global::Template10.Behaviors.EllipsisBehavior)instance;
             return that.AssociatedObject;
         }
-        private object get_75_MainPageViewModel_Value(object instance)
-        {
-            var that = (global::Ioespt.UWP.DeviceControl.ViewModels.MainPageViewModel)instance;
-            return that.Value;
-        }
-        private void set_75_MainPageViewModel_Value(object instance, object Value)
-        {
-            var that = (global::Ioespt.UWP.DeviceControl.ViewModels.MainPageViewModel)instance;
-            that.Value = (global::System.String)Value;
-        }
-        private object get_76_KeyBehavior_Actions(object instance)
-        {
-            var that = (global::Template10.Behaviors.KeyBehavior)instance;
-            return that.Actions;
-        }
-        private object get_77_KeyBehavior_Key(object instance)
-        {
-            var that = (global::Template10.Behaviors.KeyBehavior)instance;
-            return that.Key;
-        }
-        private void set_77_KeyBehavior_Key(object instance, object Value)
-        {
-            var that = (global::Template10.Behaviors.KeyBehavior)instance;
-            that.Key = (global::Windows.System.VirtualKey)Value;
-        }
-        private object get_78_KeyBehavior_AssociatedObject(object instance)
-        {
-            var that = (global::Template10.Behaviors.KeyBehavior)instance;
-            return that.AssociatedObject;
-        }
-        private object get_79_KeyBehavior_AndControl(object instance)
-        {
-            var that = (global::Template10.Behaviors.KeyBehavior)instance;
-            return that.AndControl;
-        }
-        private void set_79_KeyBehavior_AndControl(object instance, object Value)
-        {
-            var that = (global::Template10.Behaviors.KeyBehavior)instance;
-            that.AndControl = (global::System.Boolean)Value;
-        }
-        private object get_80_KeyBehavior_AndAlt(object instance)
-        {
-            var that = (global::Template10.Behaviors.KeyBehavior)instance;
-            return that.AndAlt;
-        }
-        private void set_80_KeyBehavior_AndAlt(object instance, object Value)
-        {
-            var that = (global::Template10.Behaviors.KeyBehavior)instance;
-            that.AndAlt = (global::System.Boolean)Value;
-        }
-        private object get_81_KeyBehavior_AndShift(object instance)
-        {
-            var that = (global::Template10.Behaviors.KeyBehavior)instance;
-            return that.AndShift;
-        }
-        private void set_81_KeyBehavior_AndShift(object instance, object Value)
-        {
-            var that = (global::Template10.Behaviors.KeyBehavior)instance;
-            that.AndShift = (global::System.Boolean)Value;
-        }
-        private object get_82_KeyBehavior_Event(object instance)
-        {
-            var that = (global::Template10.Behaviors.KeyBehavior)instance;
-            return that.Event;
-        }
-        private void set_82_KeyBehavior_Event(object instance, object Value)
-        {
-            var that = (global::Template10.Behaviors.KeyBehavior)instance;
-            that.Event = (global::Template10.Behaviors.KeyBehavior.Kinds)Value;
-        }
-        private object get_83_EventTriggerBehavior_Actions(object instance)
-        {
-            var that = (global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior)instance;
-            return that.Actions;
-        }
-        private object get_84_EventTriggerBehavior_EventName(object instance)
-        {
-            var that = (global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior)instance;
-            return that.EventName;
-        }
-        private void set_84_EventTriggerBehavior_EventName(object instance, object Value)
-        {
-            var that = (global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior)instance;
-            that.EventName = (global::System.String)Value;
-        }
-        private object get_85_EventTriggerBehavior_SourceObject(object instance)
-        {
-            var that = (global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior)instance;
-            return that.SourceObject;
-        }
-        private void set_85_EventTriggerBehavior_SourceObject(object instance, object Value)
-        {
-            var that = (global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior)instance;
-            that.SourceObject = (global::System.Object)Value;
-        }
-        private object get_86_EventTriggerBehavior_AssociatedObject(object instance)
-        {
-            var that = (global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior)instance;
-            return that.AssociatedObject;
-        }
-        private object get_87_CallMethodAction_MethodName(object instance)
-        {
-            var that = (global::Microsoft.Xaml.Interactions.Core.CallMethodAction)instance;
-            return that.MethodName;
-        }
-        private void set_87_CallMethodAction_MethodName(object instance, object Value)
-        {
-            var that = (global::Microsoft.Xaml.Interactions.Core.CallMethodAction)instance;
-            that.MethodName = (global::System.String)Value;
-        }
-        private object get_88_CallMethodAction_TargetObject(object instance)
-        {
-            var that = (global::Microsoft.Xaml.Interactions.Core.CallMethodAction)instance;
-            return that.TargetObject;
-        }
-        private void set_88_CallMethodAction_TargetObject(object instance, object Value)
-        {
-            var that = (global::Microsoft.Xaml.Interactions.Core.CallMethodAction)instance;
-            that.TargetObject = (global::System.Object)Value;
-        }
-        private object get_89_SettingsPageViewModel_SettingsPartViewModel(object instance)
+        private object get_76_SettingsPageViewModel_SettingsPartViewModel(object instance)
         {
             var that = (global::Ioespt.UWP.DeviceControl.ViewModels.SettingsPageViewModel)instance;
             return that.SettingsPartViewModel;
         }
-        private object get_90_SettingsPageViewModel_AboutPartViewModel(object instance)
+        private object get_77_SettingsPageViewModel_AboutPartViewModel(object instance)
         {
             var that = (global::Ioespt.UWP.DeviceControl.ViewModels.SettingsPageViewModel)instance;
             return that.AboutPartViewModel;
@@ -2472,171 +2109,87 @@ namespace Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo
                 xamlMember.Getter = get_64_AddDevicePageViewModel_device;
                 xamlMember.Setter = set_64_AddDevicePageViewModel_device;
                 break;
+            case "Ioespt.UWP.DeviceControl.ViewModels.AddDevicePageViewModel.password":
+                userType = (global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Ioespt.UWP.DeviceControl.ViewModels.AddDevicePageViewModel");
+                xamlMember = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlMember(this, "password", "String");
+                xamlMember.Getter = get_65_AddDevicePageViewModel_password;
+                xamlMember.Setter = set_65_AddDevicePageViewModel_password;
+                break;
             case "Ioespt.UWP.DeviceControl.ViewModels.AddDevicePageViewModel.Value":
                 userType = (global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Ioespt.UWP.DeviceControl.ViewModels.AddDevicePageViewModel");
                 xamlMember = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlMember(this, "Value", "String");
-                xamlMember.Getter = get_65_AddDevicePageViewModel_Value;
-                xamlMember.Setter = set_65_AddDevicePageViewModel_Value;
+                xamlMember.Getter = get_66_AddDevicePageViewModel_Value;
+                xamlMember.Setter = set_66_AddDevicePageViewModel_Value;
                 break;
             case "Template10.Mvvm.ViewModelBase.NavigationService":
                 userType = (global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Mvvm.ViewModelBase");
                 xamlMember = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlMember(this, "NavigationService", "Template10.Services.NavigationService.INavigationService");
-                xamlMember.Getter = get_66_ViewModelBase_NavigationService;
-                xamlMember.Setter = set_66_ViewModelBase_NavigationService;
+                xamlMember.Getter = get_67_ViewModelBase_NavigationService;
+                xamlMember.Setter = set_67_ViewModelBase_NavigationService;
                 break;
             case "Template10.Mvvm.ViewModelBase.Dispatcher":
                 userType = (global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Mvvm.ViewModelBase");
                 xamlMember = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlMember(this, "Dispatcher", "Template10.Common.IDispatcherWrapper");
-                xamlMember.Getter = get_67_ViewModelBase_Dispatcher;
-                xamlMember.Setter = set_67_ViewModelBase_Dispatcher;
+                xamlMember.Getter = get_68_ViewModelBase_Dispatcher;
+                xamlMember.Setter = set_68_ViewModelBase_Dispatcher;
                 break;
             case "Template10.Mvvm.ViewModelBase.SessionState":
                 userType = (global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Mvvm.ViewModelBase");
                 xamlMember = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlMember(this, "SessionState", "Template10.Common.IStateItems");
-                xamlMember.Getter = get_68_ViewModelBase_SessionState;
-                xamlMember.Setter = set_68_ViewModelBase_SessionState;
+                xamlMember.Getter = get_69_ViewModelBase_SessionState;
+                xamlMember.Setter = set_69_ViewModelBase_SessionState;
                 break;
             case "Ioespt.UWP.DeviceControl.Views.Busy.BusyText":
                 userType = (global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Ioespt.UWP.DeviceControl.Views.Busy");
                 xamlMember = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlMember(this, "BusyText", "String");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_69_Busy_BusyText;
-                xamlMember.Setter = set_69_Busy_BusyText;
+                xamlMember.Getter = get_70_Busy_BusyText;
+                xamlMember.Setter = set_70_Busy_BusyText;
                 break;
             case "Ioespt.UWP.DeviceControl.Views.Busy.IsBusy":
                 userType = (global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Ioespt.UWP.DeviceControl.Views.Busy");
                 xamlMember = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlMember(this, "IsBusy", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_70_Busy_IsBusy;
-                xamlMember.Setter = set_70_Busy_IsBusy;
+                xamlMember.Getter = get_71_Busy_IsBusy;
+                xamlMember.Setter = set_71_Busy_IsBusy;
                 break;
             case "Ioespt.UWP.DeviceControl.ViewModels.DetailPageViewModel.Value":
                 userType = (global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Ioespt.UWP.DeviceControl.ViewModels.DetailPageViewModel");
                 xamlMember = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlMember(this, "Value", "String");
-                xamlMember.Getter = get_71_DetailPageViewModel_Value;
-                xamlMember.Setter = set_71_DetailPageViewModel_Value;
+                xamlMember.Getter = get_72_DetailPageViewModel_Value;
+                xamlMember.Setter = set_72_DetailPageViewModel_Value;
                 break;
             case "Microsoft.Xaml.Interactivity.Interaction.Behaviors":
                 userType = (global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactivity.Interaction");
                 xamlMember = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlMember(this, "Behaviors", "Microsoft.Xaml.Interactivity.BehaviorCollection");
                 xamlMember.SetTargetTypeName("Windows.UI.Xaml.DependencyObject");
                 xamlMember.SetIsAttachable();
-                xamlMember.Getter = get_72_Interaction_Behaviors;
-                xamlMember.Setter = set_72_Interaction_Behaviors;
+                xamlMember.Getter = get_73_Interaction_Behaviors;
+                xamlMember.Setter = set_73_Interaction_Behaviors;
                 break;
             case "Template10.Behaviors.EllipsisBehavior.Visibility":
                 userType = (global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Behaviors.EllipsisBehavior");
                 xamlMember = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlMember(this, "Visibility", "Template10.Behaviors.EllipsisBehavior.Visibilities");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_73_EllipsisBehavior_Visibility;
-                xamlMember.Setter = set_73_EllipsisBehavior_Visibility;
+                xamlMember.Getter = get_74_EllipsisBehavior_Visibility;
+                xamlMember.Setter = set_74_EllipsisBehavior_Visibility;
                 break;
             case "Template10.Behaviors.EllipsisBehavior.AssociatedObject":
                 userType = (global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Behaviors.EllipsisBehavior");
                 xamlMember = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlMember(this, "AssociatedObject", "Windows.UI.Xaml.DependencyObject");
-                xamlMember.Getter = get_74_EllipsisBehavior_AssociatedObject;
+                xamlMember.Getter = get_75_EllipsisBehavior_AssociatedObject;
                 xamlMember.SetIsReadOnly();
-                break;
-            case "Ioespt.UWP.DeviceControl.ViewModels.MainPageViewModel.Value":
-                userType = (global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Ioespt.UWP.DeviceControl.ViewModels.MainPageViewModel");
-                xamlMember = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlMember(this, "Value", "String");
-                xamlMember.Getter = get_75_MainPageViewModel_Value;
-                xamlMember.Setter = set_75_MainPageViewModel_Value;
-                break;
-            case "Template10.Behaviors.KeyBehavior.Actions":
-                userType = (global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Behaviors.KeyBehavior");
-                xamlMember = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlMember(this, "Actions", "Microsoft.Xaml.Interactivity.ActionCollection");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_76_KeyBehavior_Actions;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "Template10.Behaviors.KeyBehavior.Key":
-                userType = (global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Behaviors.KeyBehavior");
-                xamlMember = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlMember(this, "Key", "Windows.System.VirtualKey");
-                xamlMember.Getter = get_77_KeyBehavior_Key;
-                xamlMember.Setter = set_77_KeyBehavior_Key;
-                break;
-            case "Template10.Behaviors.KeyBehavior.AssociatedObject":
-                userType = (global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Behaviors.KeyBehavior");
-                xamlMember = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlMember(this, "AssociatedObject", "Windows.UI.Xaml.DependencyObject");
-                xamlMember.Getter = get_78_KeyBehavior_AssociatedObject;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "Template10.Behaviors.KeyBehavior.AndControl":
-                userType = (global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Behaviors.KeyBehavior");
-                xamlMember = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlMember(this, "AndControl", "Boolean");
-                xamlMember.Getter = get_79_KeyBehavior_AndControl;
-                xamlMember.Setter = set_79_KeyBehavior_AndControl;
-                break;
-            case "Template10.Behaviors.KeyBehavior.AndAlt":
-                userType = (global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Behaviors.KeyBehavior");
-                xamlMember = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlMember(this, "AndAlt", "Boolean");
-                xamlMember.Getter = get_80_KeyBehavior_AndAlt;
-                xamlMember.Setter = set_80_KeyBehavior_AndAlt;
-                break;
-            case "Template10.Behaviors.KeyBehavior.AndShift":
-                userType = (global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Behaviors.KeyBehavior");
-                xamlMember = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlMember(this, "AndShift", "Boolean");
-                xamlMember.Getter = get_81_KeyBehavior_AndShift;
-                xamlMember.Setter = set_81_KeyBehavior_AndShift;
-                break;
-            case "Template10.Behaviors.KeyBehavior.Event":
-                userType = (global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Behaviors.KeyBehavior");
-                xamlMember = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlMember(this, "Event", "Template10.Behaviors.KeyBehavior.Kinds");
-                xamlMember.Getter = get_82_KeyBehavior_Event;
-                xamlMember.Setter = set_82_KeyBehavior_Event;
-                break;
-            case "Microsoft.Xaml.Interactions.Core.EventTriggerBehavior.Actions":
-                userType = (global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.EventTriggerBehavior");
-                xamlMember = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlMember(this, "Actions", "Microsoft.Xaml.Interactivity.ActionCollection");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_83_EventTriggerBehavior_Actions;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "Microsoft.Xaml.Interactions.Core.EventTriggerBehavior.EventName":
-                userType = (global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.EventTriggerBehavior");
-                xamlMember = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlMember(this, "EventName", "String");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_84_EventTriggerBehavior_EventName;
-                xamlMember.Setter = set_84_EventTriggerBehavior_EventName;
-                break;
-            case "Microsoft.Xaml.Interactions.Core.EventTriggerBehavior.SourceObject":
-                userType = (global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.EventTriggerBehavior");
-                xamlMember = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlMember(this, "SourceObject", "Object");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_85_EventTriggerBehavior_SourceObject;
-                xamlMember.Setter = set_85_EventTriggerBehavior_SourceObject;
-                break;
-            case "Microsoft.Xaml.Interactions.Core.EventTriggerBehavior.AssociatedObject":
-                userType = (global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.EventTriggerBehavior");
-                xamlMember = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlMember(this, "AssociatedObject", "Windows.UI.Xaml.DependencyObject");
-                xamlMember.Getter = get_86_EventTriggerBehavior_AssociatedObject;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "Microsoft.Xaml.Interactions.Core.CallMethodAction.MethodName":
-                userType = (global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.CallMethodAction");
-                xamlMember = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlMember(this, "MethodName", "String");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_87_CallMethodAction_MethodName;
-                xamlMember.Setter = set_87_CallMethodAction_MethodName;
-                break;
-            case "Microsoft.Xaml.Interactions.Core.CallMethodAction.TargetObject":
-                userType = (global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.CallMethodAction");
-                xamlMember = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlMember(this, "TargetObject", "Object");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_88_CallMethodAction_TargetObject;
-                xamlMember.Setter = set_88_CallMethodAction_TargetObject;
                 break;
             case "Ioespt.UWP.DeviceControl.ViewModels.SettingsPageViewModel.SettingsPartViewModel":
                 userType = (global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Ioespt.UWP.DeviceControl.ViewModels.SettingsPageViewModel");
                 xamlMember = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlMember(this, "SettingsPartViewModel", "Ioespt.UWP.DeviceControl.ViewModels.SettingsPartViewModel");
-                xamlMember.Getter = get_89_SettingsPageViewModel_SettingsPartViewModel;
+                xamlMember.Getter = get_76_SettingsPageViewModel_SettingsPartViewModel;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Ioespt.UWP.DeviceControl.ViewModels.SettingsPageViewModel.AboutPartViewModel":
                 userType = (global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Ioespt.UWP.DeviceControl.ViewModels.SettingsPageViewModel");
                 xamlMember = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlMember(this, "AboutPartViewModel", "Ioespt.UWP.DeviceControl.ViewModels.AboutPartViewModel");
-                xamlMember.Getter = get_90_SettingsPageViewModel_AboutPartViewModel;
+                xamlMember.Getter = get_77_SettingsPageViewModel_AboutPartViewModel;
                 xamlMember.SetIsReadOnly();
                 break;
             }

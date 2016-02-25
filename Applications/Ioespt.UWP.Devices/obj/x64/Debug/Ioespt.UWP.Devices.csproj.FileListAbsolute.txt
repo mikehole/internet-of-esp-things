@@ -1,0 +1,16 @@
+D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.Devices\bin\x64\Debug\Ioespt.UWP.Devices.dll
+D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.Devices\bin\x64\Debug\Ioespt.UWP.Devices.pdb
+D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.Devices\bin\x64\Debug\Ioespt.UWP.Devices.pri
+D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.Devices\obj\x64\Debug\Ioespt.UWP.Devices.dll
+D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.Devices\obj\x64\Debug\Ioespt.UWP.Devices.pdb
+D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.Devices\obj\x64\Debug\priconfig.xml
+D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.Devices\obj\x64\Debug\priconfig.xml.intermediate
+D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.Devices\obj\x64\Debug\layout.resfiles
+D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.Devices\obj\x64\Debug\layout.resfiles.intermediate
+D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.Devices\obj\x64\Debug\resources.resfiles
+D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.Devices\obj\x64\Debug\resources.resfiles.intermediate
+D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.Devices\obj\x64\Debug\pri.resfiles
+D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.Devices\obj\x64\Debug\pri.resfiles.intermediate
+D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.Devices\obj\x64\Debug\qualifiers.txt
+D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.Devices\obj\x64\Debug\qualifiers.txt.intermediate
+D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.Devices\obj\x64\Debug\MultipleQualifiersPerDimensionFound.txt

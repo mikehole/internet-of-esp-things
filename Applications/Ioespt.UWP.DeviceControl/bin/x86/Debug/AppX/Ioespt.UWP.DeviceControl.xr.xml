@@ -2,6 +2,7 @@
 <Roots >
   <Roots.PropertyPathNames>
     <RootPropertyPathName Name="detailsPanelVisible" />
+    <RootPropertyPathName Name="Ssid" />
     <RootPropertyPathName Name="device" />
     <RootPropertyPathName Name="ModuleType" />
     <RootPropertyPathName Name="FirmwareVersion" />
@@ -144,8 +145,13 @@
       <RootProperty Name="Inlines" />
       <RootProperty Name="LineHeight" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition">
-      <RootProperty Name="Height" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
+      <RootProperty Name="ItemsSource" />
+      <RootProperty Name="DisplayMemberPath" />
+      <RootProperty Name="SelectedItem" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.PasswordBox">
+      <RootProperty Name="Password" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Content" />
@@ -158,6 +164,9 @@
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.BindExtension">
       <RootProperty Name="Mode" />
       <RootProperty Name="FallbackValue" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition">
+      <RootProperty Name="Height" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.AppBarButton">
       <RootProperty Name="Label" />

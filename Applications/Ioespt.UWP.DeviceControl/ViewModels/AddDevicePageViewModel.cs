@@ -3,6 +3,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
@@ -26,6 +27,13 @@ namespace Ioespt.UWP.DeviceControl.ViewModels
         public Visibility detailsPanelVisible { get; set; }
 
         public DeviceDetails device { get; set; }
+
+        public ObservableCollection<WiFiAvailableNetwork> networks = new ObservableCollection<WiFiAvailableNetwork>();
+
+        public object selectedNetwork;
+
+        public string password { get; set; }
+        
 
         #endregion /Properties
 
@@ -114,6 +122,16 @@ namespace Ioespt.UWP.DeviceControl.ViewModels
                             device = JsonConvert.DeserializeObject<DeviceDetails>(stringRes);
 
                             Views.Busy.SetBusy(false);
+
+                            networks.Clear();
+
+                            foreach(var network in firstAdapter.NetworkReport.AvailableNetworks.Where(N => N.Ssid.ToLower() != "ioespt-thing"))
+                            {
+                                networks.Add(network);
+                            }
+
+                            selectedNetwork = networks.FirstOrDefault();
+
                         }
                         catch(Exception)
                         {
@@ -139,6 +157,24 @@ namespace Ioespt.UWP.DeviceControl.ViewModels
             }
 
 
+        }
+
+        public async void ConnectWifi()
+        {
+            if(selectedNetwork != null)
+            {
+                HttpClient httpClient = new HttpClient();
+
+                WifiConfig wifi = new WifiConfig()
+                {
+                    ssid = ((WiFiAvailableNetwork)selectedNetwork).Ssid,
+                    password = password
+                };
+
+                StringContent sc = new StringContent(JsonConvert.SerializeObject(wifi));
+
+                await httpClient.PostAsync("http://192.168.4.1/wifisettings", sc);
+            }
         }
 
     }

@@ -4,28 +4,61 @@ using System.Linq;
 using System.Threading.Tasks;
 using Template10.Services.NavigationService;
 using Windows.UI.Xaml.Navigation;
+using System.Collections.ObjectModel;
+using Ioespt.UWP.DeviceControl.Models;
 
 namespace Ioespt.UWP.DeviceControl.ViewModels
 {
     public class MainPageViewModel : ViewModelBase
     {
+        public ObservableCollection<RegisteredDevice> devices { get; set; }
+
+
         public MainPageViewModel()
         {
+            devices = new ObservableCollection<RegisteredDevice>();
+
             if (Windows.ApplicationModel.DesignMode.DesignModeEnabled)
             {
-                Value = "Designtime value";
 
             }
-        }
 
-        string _Value = "Gas";
-        public string Value { get { return _Value; } set { Set(ref _Value, value); } }
+            devices.Add(new RegisteredDevice()
+            {
+                details = new Devices.DeviceDetails() { FirmwareName = "IOESPT-Slave", FirmwareVersion="0,1,0", ModuleType = "ESP8266-01" },
+                GivenName = "Lamp 1",
+                Status = DeviceStatus.Offline,
+                ConnectedTo = "Adafruit IO (MQTT)"
+            });
+            devices.Add(new RegisteredDevice()
+            {
+                details = new Devices.DeviceDetails() { FirmwareName = "IOESPT-Master", FirmwareVersion = "0,1,0", ModuleType = "ESP8266-01" },
+                GivenName = "Socket 1",
+                Status = DeviceStatus.Online,
+                ConnectedTo = "Amazon AWS"
+            });
+            devices.Add(new RegisteredDevice()
+            {
+                details = new Devices.DeviceDetails() { FirmwareName = "IOESPT-Slave", FirmwareVersion = "0,1,0", ModuleType = "ESP8266-12" },
+                GivenName = "Weather Station",
+                Status = DeviceStatus.Online,
+                ConnectedTo = "Azure IoT Hub"
+            });
+
+            devices.Add(new RegisteredDevice()
+            {
+                details = new Devices.DeviceDetails() { FirmwareName = "IOESPT-Master", FirmwareVersion = "0,1,0", ModuleType = "ESP8266-01" },
+                GivenName = "Doorbell",
+                Status = DeviceStatus.UnProvisioned,
+                ConnectedTo = "N/A"
+            });
+
+        }
 
         public override Task OnNavigatedToAsync(object parameter, NavigationMode mode, IDictionary<string, object> suspensionState)
         {
             if (suspensionState.Any())
             {
-                Value = suspensionState[nameof(Value)]?.ToString();
             }
             return Task.CompletedTask;
         }
@@ -34,7 +67,7 @@ namespace Ioespt.UWP.DeviceControl.ViewModels
         {
             if (suspending)
             {
-                suspensionState[nameof(Value)] = Value;
+                
             }
             return Task.CompletedTask;
         }
@@ -46,7 +79,7 @@ namespace Ioespt.UWP.DeviceControl.ViewModels
         }
 
         public void GotoDetailsPage() =>
-            NavigationService.Navigate(typeof(Views.DetailPage), Value);
+            NavigationService.Navigate(typeof(Views.DetailPage), null);
 
         public void GotoSettings() =>
             NavigationService.Navigate(typeof(Views.SettingsPage), 0);
