@@ -42,7 +42,7 @@ The slave firmware is for when the module is used by a connected MCU that commun
 ###Stand Alone###
 This package is to allow developers to extend the core functionality to include any custom functionality that falls outside of the given libraries. This could include the interfacing with sensors that are connected to the modules GPIO. 
 
-##Libraries##
+##Arduino Libraries##
 
 Due to Arduino project structures the libraries have to be placed within their own repository that can be found here:
 
