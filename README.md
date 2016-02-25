@@ -1,6 +1,6 @@
-Please note this code is not ready for use. 
-
 # Internet of ESP Things
+
+**_NOTE:_ I am looking for contributors are you interested in helping grow this project?**
 
 The main aim of this repository is to simplify the process of connecting Espressif ESP chips/modules to the main cloud based IoT infrastructures. 
 
@@ -11,6 +11,27 @@ https://en.wikipedia.org/wiki/ESP8266
 This project will take advantage of the community base Arduino development environment support that is available for the ESP8266:
 
 https://github.com/esp8266/Arduino
+
+##Work In Progress##
+This list contains the general list of things to be completed in this project:
+
+To Do:
+
+- Add device discovery when connected to any WiFi network.
+- Azure settings configuration via JSON.
+- Optimise code.
+- iOS application.
+- Android application.
+- Define serial protocol for devices connected via serial port.
+- Add protocol and methods to the slave firmware.
+- Python MCU master library
+- C# Master Library
+   
+
+Complete:
+
+- Connect to WiFi AP via JSON message.
+- Settings Library to save and load data from EPROM.
 
 ##Firmware Packages##
 The firmware will be delivered as two main packages that can fulfil the requirements of the beginner or expert user.  
@@ -54,10 +75,38 @@ Any other cloud based provider yet to be identified as a worthwhile addition.
 ##MCU Master Libraries##
 
 ###Python###
+Looking for contributors are you willing to help by building this application?
 
 ###C# ###
+Looking for contributors are you willing to help by building this application?
 
 ##Applications##
+
+###Windows###
+The application code can be found here:
+
+https://github.com/mikehole/internet-of-esp-things/tree/master/Applications
+
+Current functionality includes:
+
+- Find device access point when device is in a provisioning state.
+- Gather device information.
+- Connect device to network.
+
+Planned Functionality to include:
+
+- Upload of firmware via serial interface
+- Discover device on current network
+- Query and change Azure settings 
+
+
+
+###iOS###
+Looking for contributors are you willing to help by building this application?
+
+###Android###
+Looking for contributors are you willing to help by building this application?
+
 
 
 
