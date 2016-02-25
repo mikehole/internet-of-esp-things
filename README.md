@@ -32,6 +32,8 @@ This solution will rely on a core set of libraries that will provide the followi
 ####Set-up and Provisioning:####
 Normally one of the first things you need to do with an ESP based device is connect to a WiFi network this can be achieved by hard coding the access point into the binary that is uploaded to the chip. There are however much neater solutions that allow the module to provide an out of the box method of connection.
 
+![isyoutube](https://youtu.be/nMpJDldm9oA)
+
 These solutions check for given access point setting held on the device persistent storage and if none are found then it offers up a temporary access point so that the user can connect and provide the desired access point settings. A good example of this can be found here: https://github.com/tzapu/WiFiManager 
 
 ####Azure: 
