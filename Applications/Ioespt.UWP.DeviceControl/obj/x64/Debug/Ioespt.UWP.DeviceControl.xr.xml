@@ -7,6 +7,7 @@
     <RootPropertyPathName Name="DeviceName" />
     <RootPropertyPathName Name="SearchStatus" />
     <RootPropertyPathName Name="startPanelVisible" />
+    <RootPropertyPathName Name="Value" />
     <RootPropertyPathName Name="ConnectedTo" />
     <RootPropertyPathName Name="FirmwareVersion" />
     <RootPropertyPathName Name="FirmwareName" />
@@ -46,6 +47,7 @@
       <RootProperty Name="Text" />
       <RootProperty Name="SecondaryCommands" />
       <RootProperty Name="Frame" />
+      <RootProperty Name="PrimaryCommands" />
       <RootProperty Name="Content" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Control">
@@ -165,6 +167,7 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.AppBarButton">
       <RootProperty Name="Label" />
+      <RootProperty Name="Icon" />
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Ioespt.UWP.DeviceControl.Views.AddDevicePage" />
@@ -211,6 +214,7 @@
     <RootType FullName="Ioespt.UWP.DeviceControl.ViewModels.MainPageViewModel" />
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
       <RootProperty Name="ItemsSource" />
+      <RootProperty Name="SelectedItem" />
       <RootProperty Name="ItemTemplate" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.DataTemplate">

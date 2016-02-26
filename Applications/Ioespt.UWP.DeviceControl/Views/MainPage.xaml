@@ -46,12 +46,14 @@
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
 
-        <controls:PageHeader x:Name="pageHeader" Text="Main Page">
+        <controls:PageHeader x:Name="pageHeader" Text="Devices">
             <!--  place stretched, across top  -->
             <RelativePanel.AlignTopWithPanel>True</RelativePanel.AlignTopWithPanel>
             <RelativePanel.AlignRightWithPanel>True</RelativePanel.AlignRightWithPanel>
             <RelativePanel.AlignLeftWithPanel>True</RelativePanel.AlignLeftWithPanel>
-            <!--  secondary commands  -->
+            <!--  Main commands  -->
+            <AppBarButton Click="{x:Bind ViewModel.Search}" Icon="Add" Label="Device Search" />
+            
             <controls:PageHeader.SecondaryCommands>
                 <AppBarButton Click="{x:Bind ViewModel.GotoSettings}" Label="Settings" />
                 <AppBarButton Click="{x:Bind ViewModel.GotoPrivacy}" Label="Privacy" />
@@ -65,13 +67,7 @@
             <RelativePanel.AlignLeftWithPanel>True</RelativePanel.AlignLeftWithPanel>
             <RelativePanel.AlignBottomWithPanel>True</RelativePanel.AlignBottomWithPanel>
 
-            <Grid.RowDefinitions>
-                <RowDefinition Height="60" />
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-
-            <TextBlock Text="Devices" Style="{ThemeResource SubheaderTextBlockStyle}"/>
-            <ListView Grid.Row="1" ItemsSource="{x:Bind ViewModel.devices}" >
+            <ListView ItemsSource="{x:Bind ViewModel.devices}" SelectedItem="{Binding Value, Mode=TwoWay}" >
 
                 <ListView.ItemTemplate>
                     <DataTemplate>

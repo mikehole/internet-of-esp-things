@@ -474,3 +474,5 @@ C:\Source\github\internet-of-esp-things\Applications\Ioespt.UWP.DeviceControl\ob
 C:\Source\github\internet-of-esp-things\Applications\Ioespt.UWP.DeviceControl\obj\x64\Debug\ProjectArchitectures.txt
 C:\Source\github\internet-of-esp-things\Applications\Ioespt.UWP.DeviceControl\bin\x64\Debug\SQLite.Net.Platform.WinRT.dll
 C:\Source\github\internet-of-esp-things\Applications\Ioespt.UWP.DeviceControl\bin\x64\Debug\SQLite.Net.dll
+D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.DeviceControl\bin\x64\Debug\SQLite.Net.Platform.WinRT.dll
+D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.DeviceControl\bin\x64\Debug\SQLite.Net.dll

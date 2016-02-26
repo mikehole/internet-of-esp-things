@@ -62,7 +62,6 @@
             <ScrollViewer Padding="12,8,0,0" VerticalScrollBarVisibility="Auto">
                 <StackPanel>
                     <TextBlock Style="{StaticResource TitleTextBlockStyle}" Text="You passed:" />
-                    <TextBlock x:ConnectionId='8' Style="{StaticResource SubtitleTextBlockStyle}"                                                                             />
                 </StackPanel>
             </ScrollViewer>
         </Grid>

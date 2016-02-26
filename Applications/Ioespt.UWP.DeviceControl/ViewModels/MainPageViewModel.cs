@@ -6,11 +6,20 @@ using Template10.Services.NavigationService;
 using Windows.UI.Xaml.Navigation;
 using System.Collections.ObjectModel;
 using Ioespt.UWP.DeviceControl.Models;
+using System;
+using Ioespt.UWP.DeviceControl.Services.DataServices;
+using Newtonsoft.Json;
+using System.Net.Http;
+using Windows.Devices.WiFi;
+using Ioespt.UWP.Devices;
 
 namespace Ioespt.UWP.DeviceControl.ViewModels
 {
     public class MainPageViewModel : ViewModelBase
     {
+        RegisteredDevice _Value = null;
+        public RegisteredDevice Value { get { return _Value; } set { Set(ref _Value, value); } }
+
         public ObservableCollection<RegisteredDevice> devices
         {
             get
@@ -57,12 +66,20 @@ namespace Ioespt.UWP.DeviceControl.ViewModels
 
                 #endregion /Design Time Info
             }
+            this.PropertyChanged += MainPageViewModel_PropertyChanged; 
+        }
 
-
+        private void MainPageViewModel_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+        {
+            if(e.PropertyName == "Value" && Value != null)
+            {
+                NavigationService.Navigate(typeof(Views.DetailPage), Value);
+            }
         }
 
         public override Task OnNavigatedToAsync(object parameter, NavigationMode mode, IDictionary<string, object> suspensionState)
         {
+            Value = null;
             if (suspensionState.Any())
             {
             }
@@ -95,6 +112,70 @@ namespace Ioespt.UWP.DeviceControl.ViewModels
 
         public void GotoAbout() =>
             NavigationService.Navigate(typeof(Views.SettingsPage), 2);
+
+        public async void Search()
+        {
+            var result = await Windows.Devices.Enumeration.DeviceInformation.FindAllAsync(WiFiAdapter.GetDeviceSelector());
+            if (result.Count >= 1)
+            {
+                Views.Busy.SetBusy(true, "WiFi searching ...");
+
+                var firstAdapter = await WiFiAdapter.FromIdAsync(result[0].Id);
+
+                await firstAdapter.ScanAsync();
+
+                var qualifyingWifi = firstAdapter.NetworkReport.AvailableNetworks.Where(N => N.Ssid.ToLower().StartsWith("ioespt-thing"));
+
+                Views.Busy.SetBusy(true, $"WiFi found  {qualifyingWifi.Count()} devices...");
+
+
+                foreach (WiFiAvailableNetwork deviceWifi in qualifyingWifi)
+                {
+                    Views.Busy.SetBusy(true, $"WiFi connecting to  {deviceWifi.Ssid}");
+
+                    var connectionResult = await firstAdapter.ConnectAsync(deviceWifi, WiFiReconnectionKind.Automatic);
+
+                    if (connectionResult.ConnectionStatus == WiFiConnectionStatus.Success)
+                    {
+                        try
+                        {
+
+                            HttpClient httpClient = new HttpClient();
+
+                            var stringRes = await httpClient.GetStringAsync("http://192.168.4.1/");
+
+                            var details = JsonConvert.DeserializeObject<DeviceDetails>(stringRes);
+
+                            RegisteredDevice newRegisteredDevice = new RegisteredDevice()
+                            {
+                                Status = DeviceStatus.UnProvisioned,
+                                ConnectedTo = "None",
+                                GivenName = deviceWifi.Ssid,
+                                ChipId = details.ChipId,
+                                FirmwareName = details.FirmwareName,
+                                FirmwareVersion = details.FirmwareVersion,
+                                ModuleType = details.ModuleType
+                            };
+
+                            DataService db = new DataService();
+
+                            db.InsertNewDevice(newRegisteredDevice);
+                            ((App)App.Current).devices.Add(newRegisteredDevice);
+                        }
+                        catch (Exception)
+                        {
+                        }
+                    }
+                    else
+                    {
+                    }
+                }
+            }
+            else
+            {
+            }
+            Views.Busy.SetBusy(false);
+        }
 
     }
 }

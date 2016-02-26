@@ -21,12 +21,12 @@
                     <TextBlock Margin="12,0,0,0" VerticalAlignment="Center" Text="Home" />
                 </StackPanel>
             </Controls:HamburgerButtonInfo>
-            <Controls:HamburgerButtonInfo ClearHistory="True" PageType="views:AddDevicePage">
+            <!--<Controls:HamburgerButtonInfo ClearHistory="True" PageType="views:AddDevicePage">
                 <StackPanel Orientation="Horizontal">
                     <SymbolIcon Width="48" Height="48" Symbol="Add" />
                     <TextBlock Margin="12,0,0,0" VerticalAlignment="Center" Text="Add New Device" />
                 </StackPanel>
-            </Controls:HamburgerButtonInfo>
+            </Controls:HamburgerButtonInfo>-->
         </Controls:HamburgerMenu.PrimaryButtons>
 
         <Controls:HamburgerMenu.SecondaryButtons>

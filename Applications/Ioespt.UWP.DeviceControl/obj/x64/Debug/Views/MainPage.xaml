@@ -46,16 +46,18 @@
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
 
-        <controls:PageHeader x:ConnectionId='7' x:Name="pageHeader" Text="Main Page">
+        <controls:PageHeader x:ConnectionId='7' x:Name="pageHeader" Text="Devices">
             <!--  place stretched, across top  -->
             <RelativePanel.AlignTopWithPanel>True</RelativePanel.AlignTopWithPanel>
             <RelativePanel.AlignRightWithPanel>True</RelativePanel.AlignRightWithPanel>
             <RelativePanel.AlignLeftWithPanel>True</RelativePanel.AlignLeftWithPanel>
-            <!--  secondary commands  -->
+            <!--  Main commands  -->
+            <AppBarButton x:ConnectionId='9'                                   Icon="Add" Label="Device Search" />
+            
             <controls:PageHeader.SecondaryCommands>
-                <AppBarButton x:ConnectionId='9'                                         Label="Settings" />
-                <AppBarButton x:ConnectionId='10'                                        Label="Privacy" />
-                <AppBarButton x:ConnectionId='11'                                      Label="About" />
+                <AppBarButton x:ConnectionId='10'                                         Label="Settings" />
+                <AppBarButton x:ConnectionId='11'                                        Label="Privacy" />
+                <AppBarButton x:ConnectionId='12'                                      Label="About" />
             </controls:PageHeader.SecondaryCommands>
         </controls:PageHeader>
 
@@ -65,13 +67,7 @@
             <RelativePanel.AlignLeftWithPanel>True</RelativePanel.AlignLeftWithPanel>
             <RelativePanel.AlignBottomWithPanel>True</RelativePanel.AlignBottomWithPanel>
 
-            <Grid.RowDefinitions>
-                <RowDefinition Height="60" />
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-
-            <TextBlock Text="Devices" Style="{ThemeResource SubheaderTextBlockStyle}"/>
-            <ListView x:ConnectionId='8' Grid.Row="1"                                          >
+            <ListView x:ConnectionId='8'                                          SelectedItem="{Binding Value, Mode=TwoWay}" >
 
                 <ListView.ItemTemplate>
                     <DataTemplate>

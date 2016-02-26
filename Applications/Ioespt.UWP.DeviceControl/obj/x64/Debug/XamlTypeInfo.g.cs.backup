@@ -789,7 +789,7 @@ namespace Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo
             case 55:   //  Ioespt.UWP.DeviceControl.ViewModels.DetailPageViewModel
                 userType = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Template10.Mvvm.ViewModelBase"));
                 userType.Activator = Activate_55_DetailPageViewModel;
-                userType.AddMemberName("Value");
+                userType.AddMemberName("SelectedDevice");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -855,7 +855,7 @@ namespace Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo
             case 63:   //  Ioespt.UWP.DeviceControl.ViewModels.MainPageViewModel
                 userType = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Template10.Mvvm.ViewModelBase"));
                 userType.Activator = Activate_63_MainPageViewModel;
-                userType.AddMemberName("Value");
+                userType.AddMemberName("SelectedDevice");
                 userType.AddMemberName("devices");
                 userType.SetIsLocalType();
                 xamlType = userType;
@@ -1697,15 +1697,15 @@ namespace Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo
             var that = (global::Ioespt.UWP.DeviceControl.Views.Busy)instance;
             that.IsBusy = (global::System.Boolean)Value;
         }
-        private object get_73_DetailPageViewModel_Value(object instance)
+        private object get_73_DetailPageViewModel_SelectedDevice(object instance)
         {
             var that = (global::Ioespt.UWP.DeviceControl.ViewModels.DetailPageViewModel)instance;
-            return that.Value;
+            return that.SelectedDevice;
         }
-        private void set_73_DetailPageViewModel_Value(object instance, object Value)
+        private void set_73_DetailPageViewModel_SelectedDevice(object instance, object Value)
         {
             var that = (global::Ioespt.UWP.DeviceControl.ViewModels.DetailPageViewModel)instance;
-            that.Value = (global::Ioespt.UWP.DeviceControl.Models.RegisteredDevice)Value;
+            that.SelectedDevice = (global::Ioespt.UWP.DeviceControl.Models.RegisteredDevice)Value;
         }
         private object get_74_Interaction_Behaviors(object instance)
         {
@@ -1730,15 +1730,15 @@ namespace Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo
             var that = (global::Template10.Behaviors.EllipsisBehavior)instance;
             return that.AssociatedObject;
         }
-        private object get_77_MainPageViewModel_Value(object instance)
+        private object get_77_MainPageViewModel_SelectedDevice(object instance)
         {
             var that = (global::Ioespt.UWP.DeviceControl.ViewModels.MainPageViewModel)instance;
-            return that.Value;
+            return that.SelectedDevice;
         }
-        private void set_77_MainPageViewModel_Value(object instance, object Value)
+        private void set_77_MainPageViewModel_SelectedDevice(object instance, object Value)
         {
             var that = (global::Ioespt.UWP.DeviceControl.ViewModels.MainPageViewModel)instance;
-            that.Value = (global::Ioespt.UWP.DeviceControl.Models.RegisteredDevice)Value;
+            that.SelectedDevice = (global::Ioespt.UWP.DeviceControl.Models.RegisteredDevice)Value;
         }
         private object get_78_MainPageViewModel_devices(object instance)
         {
@@ -2337,11 +2337,11 @@ namespace Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo
                 xamlMember.Getter = get_72_Busy_IsBusy;
                 xamlMember.Setter = set_72_Busy_IsBusy;
                 break;
-            case "Ioespt.UWP.DeviceControl.ViewModels.DetailPageViewModel.Value":
+            case "Ioespt.UWP.DeviceControl.ViewModels.DetailPageViewModel.SelectedDevice":
                 userType = (global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Ioespt.UWP.DeviceControl.ViewModels.DetailPageViewModel");
-                xamlMember = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlMember(this, "Value", "Ioespt.UWP.DeviceControl.Models.RegisteredDevice");
-                xamlMember.Getter = get_73_DetailPageViewModel_Value;
-                xamlMember.Setter = set_73_DetailPageViewModel_Value;
+                xamlMember = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlMember(this, "SelectedDevice", "Ioespt.UWP.DeviceControl.Models.RegisteredDevice");
+                xamlMember.Getter = get_73_DetailPageViewModel_SelectedDevice;
+                xamlMember.Setter = set_73_DetailPageViewModel_SelectedDevice;
                 break;
             case "Microsoft.Xaml.Interactivity.Interaction.Behaviors":
                 userType = (global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactivity.Interaction");
@@ -2364,11 +2364,11 @@ namespace Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo
                 xamlMember.Getter = get_76_EllipsisBehavior_AssociatedObject;
                 xamlMember.SetIsReadOnly();
                 break;
-            case "Ioespt.UWP.DeviceControl.ViewModels.MainPageViewModel.Value":
+            case "Ioespt.UWP.DeviceControl.ViewModels.MainPageViewModel.SelectedDevice":
                 userType = (global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Ioespt.UWP.DeviceControl.ViewModels.MainPageViewModel");
-                xamlMember = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlMember(this, "Value", "Ioespt.UWP.DeviceControl.Models.RegisteredDevice");
-                xamlMember.Getter = get_77_MainPageViewModel_Value;
-                xamlMember.Setter = set_77_MainPageViewModel_Value;
+                xamlMember = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlMember(this, "SelectedDevice", "Ioespt.UWP.DeviceControl.Models.RegisteredDevice");
+                xamlMember.Getter = get_77_MainPageViewModel_SelectedDevice;
+                xamlMember.Setter = set_77_MainPageViewModel_SelectedDevice;
                 break;
             case "Ioespt.UWP.DeviceControl.ViewModels.MainPageViewModel.devices":
                 userType = (global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Ioespt.UWP.DeviceControl.ViewModels.MainPageViewModel");

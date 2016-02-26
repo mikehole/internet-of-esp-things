@@ -1,3 +1,4 @@
+using Ioespt.UWP.DeviceControl.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,20 +13,21 @@ namespace Ioespt.UWP.DeviceControl.ViewModels
 {
     public class DetailPageViewModel : ViewModelBase
     {
+        RegisteredDevice _Value = null;
+        public RegisteredDevice Value { get { return _Value; } set { Set(ref _Value, value); } }
+
         public DetailPageViewModel()
         {
             if (Windows.ApplicationModel.DesignMode.DesignModeEnabled)
             {
-                Value = "Designtime value";
+                
             }
         }
 
-        private string _Value = "Default";
-        public string Value { get { return _Value; } set { Set(ref _Value, value); } }
 
         public override Task OnNavigatedToAsync(object parameter, NavigationMode mode, IDictionary<string, object> suspensionState)
         {
-            Value = (suspensionState.ContainsKey(nameof(Value))) ? suspensionState[nameof(Value)]?.ToString() : parameter?.ToString();
+            Value = (suspensionState.ContainsKey(nameof(Value))) ? suspensionState[nameof(Value)] as RegisteredDevice : parameter as RegisteredDevice;
             return Task.CompletedTask;
         }
 
