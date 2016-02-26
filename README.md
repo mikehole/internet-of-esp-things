@@ -55,7 +55,7 @@ Normally one of the first things you need to do with an ESP based device is conn
 
 Here is a quick video demonstration:
 
-[![Video](https://i.ytimg.com/vi/nMpJDldm9oA/1.jpg?time=1456394675842)](https://youtu.be/nMpJDldm9oA)
+[![Video](https://i.ytimg.com/vi/XckdOUQxJKE/3.jpg?time=1456500489407)](https://youtu.be/XckdOUQxJKE)
 
 These solutions check for given access point setting held on the device persistent storage and if none are found then it offers up a temporary access point so that the user can connect and provide the desired access point settings. A good example of this can be found here: https://github.com/tzapu/WiFiManager 
 
