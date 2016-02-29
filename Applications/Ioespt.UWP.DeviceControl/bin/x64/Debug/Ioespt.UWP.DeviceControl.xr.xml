@@ -210,19 +210,25 @@
     <RootType FullName="Ioespt.UWP.DeviceControl.Views.DetailPage" />
     <RootType FullName="Ioespt.UWP.DeviceControl.ViewModels.MainPageViewModel" />
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
+      <RootProperty Name="SelectionMode" />
       <RootProperty Name="ItemsSource" />
+      <RootProperty Name="IsItemClickEnabled" />
       <RootProperty Name="ItemTemplate" />
+    </RootType>
+    <RootType FullName="Ioespt.UWP.DeviceControl.Helpers.ItemClickCommand">
+      <RootMethod Name="GetCommand" />
+      <RootMethod Name="SetCommand" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.DataTemplate">
       <RootProperty Name="Template" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Documents.Run">
-      <RootProperty Name="Text" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Shapes.Rectangle">
+      <RootProperty Name="Fill" />
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
-      <RootProperty Name="Fill" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Documents.Run">
+      <RootProperty Name="Text" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
       <RootProperty Name="Width" />

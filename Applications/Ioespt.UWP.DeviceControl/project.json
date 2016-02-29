@@ -1,11 +1,13 @@
 ﻿{
   "dependencies": {
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.0.0",
-    "Microsoft.Xaml.Behaviors.Uwp.Managed": "1.0.3",
+    "Microsoft.Xaml.Behaviors.Uwp.Managed": "1.1.0",
+    "MvvmLightLibs": "5.2.0",
     "Newtonsoft.Json": "8.0.2",
     "PropertyChanged.Fody": "1.50.4",
     "SQLite.Net-PCL": "3.1.1",
-    "Template10": "1.1.4"
+    "Template10": "1.1.5",
+    "WinRTTriggers": "1.6.0"
   },
   "frameworks": {
     "uap10.0": {}

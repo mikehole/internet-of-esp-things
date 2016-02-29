@@ -1,4 +1,5 @@
 ﻿using Ioespt.UWP.Devices;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,22 +18,31 @@ namespace Ioespt.UWP.DeviceControl.Models
     }
 
 
+    [JsonObject(MemberSerialization.OptIn)]
     public class RegisteredDevice
     {
+        [JsonProperty]
         public DeviceStatus Status { get; set; }
 
+        [JsonProperty]
         public string GivenName { get; set;  }
 
+        [JsonProperty]
         public string ModuleType { get; set; }
 
+        [JsonProperty]
         public string FirmwareName { get; set; }
 
+        [JsonProperty]
         public string FirmwareVersion { get; set; }
 
+        [JsonProperty]
         public string ChipId { get; set; }
 
+        [JsonProperty]
         public string Ip { get; set; }
 
+        [JsonProperty]
         public string ConnectedTo { get; set; }
 
         public string StatusText

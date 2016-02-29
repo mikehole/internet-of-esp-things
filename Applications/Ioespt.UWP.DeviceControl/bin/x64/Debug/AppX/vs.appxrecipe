@@ -22,13 +22,17 @@
     <AppXManifest Include="C:\Source\github\internet-of-esp-things\Applications\Ioespt.UWP.DeviceControl\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-02-25T21:40:31.767</Modified>
+      <Modified>2016-02-29T21:25:53.965</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Source\github\internet-of-esp-things\Applications\Ioespt.UWP.DeviceControl\bin\x64\Debug\Ioespt.UWP.DeviceControl.exe">
       <PackagePath>entrypoint\Ioespt.UWP.DeviceControl.exe</PackagePath>
-      <Modified>2016-02-25T21:40:29.383</Modified>
+      <Modified>2016-02-29T21:25:51.350</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mike\.nuget\packages\CommonServiceLocator\1.3.0\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll">
+      <PackagePath>Microsoft.Practices.ServiceLocation.dll</PackagePath>
+      <Modified>2015-08-04T20:42:31.681</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mike\.nuget\packages\Microsoft.CSharp\4.0.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -90,13 +94,25 @@
       <PackagePath>Microsoft.Win32.Primitives.dll</PackagePath>
       <Modified>2015-08-04T19:16:40.314</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mike\.nuget\packages\Microsoft.Xaml.Behaviors.Uwp.Managed\1.0.3\lib\uap10.0\Microsoft.Xaml.Interactions.dll">
+    <AppxPackagedFile Include="C:\Users\mike\.nuget\packages\Microsoft.Xaml.Behaviors.Uwp.Managed\1.1.0\lib\uap10.0\Microsoft.Xaml.Interactions.dll">
       <PackagePath>Microsoft.Xaml.Interactions.dll</PackagePath>
-      <Modified>2016-02-15T20:35:10.490</Modified>
+      <Modified>2016-02-29T19:26:07.404</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mike\.nuget\packages\Microsoft.Xaml.Behaviors.Uwp.Managed\1.0.3\lib\uap10.0\Microsoft.Xaml.Interactivity.dll">
+    <AppxPackagedFile Include="C:\Users\mike\.nuget\packages\Microsoft.Xaml.Behaviors.Uwp.Managed\1.1.0\lib\uap10.0\Microsoft.Xaml.Interactivity.dll">
       <PackagePath>Microsoft.Xaml.Interactivity.dll</PackagePath>
-      <Modified>2016-02-15T20:35:10.429</Modified>
+      <Modified>2016-02-29T19:26:07.340</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mike\.nuget\packages\MvvmLightLibs\5.2.0\lib\windows81\GalaSoft.MvvmLight.dll">
+      <PackagePath>GalaSoft.MvvmLight.dll</PackagePath>
+      <Modified>2015-10-12T18:58:01.059</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mike\.nuget\packages\MvvmLightLibs\5.2.0\lib\windows81\GalaSoft.MvvmLight.Extras.dll">
+      <PackagePath>GalaSoft.MvvmLight.Extras.dll</PackagePath>
+      <Modified>2015-10-12T18:58:01.075</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mike\.nuget\packages\MvvmLightLibs\5.2.0\lib\windows81\GalaSoft.MvvmLight.Platform.dll">
+      <PackagePath>GalaSoft.MvvmLight.Platform.dll</PackagePath>
+      <Modified>2015-10-12T18:58:01.090</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mike\.nuget\packages\Newtonsoft.Json\8.0.2\lib\portable-net45+wp80+win8+wpa81+dnxcore50\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
@@ -466,13 +482,17 @@
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
       <Modified>2015-08-04T19:16:42.845</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mike\.nuget\packages\Template10\1.1.4\lib\uap10.0\Template10Library.dll">
+    <AppxPackagedFile Include="C:\Users\mike\.nuget\packages\Template10\1.1.5\lib\uap10.0\Template10Library.dll">
       <PackagePath>Template10Library.dll</PackagePath>
-      <Modified>2016-02-24T19:18:14.905</Modified>
+      <Modified>2016-02-29T19:26:07.357</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mike\.nuget\packages\WinRTTriggers\1.6.0\lib\winrt45\WinRT.Triggers.dll">
+      <PackagePath>WinRT.Triggers.dll</PackagePath>
+      <Modified>2016-02-29T19:25:25.588</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Source\github\internet-of-esp-things\Applications\Ioespt.UWP.Devices\bin\x64\Debug\Ioespt.UWP.Devices.dll">
       <PackagePath>Ioespt.UWP.Devices.dll</PackagePath>
-      <Modified>2016-02-25T20:04:20.443</Modified>
+      <Modified>2016-02-29T20:02:36.815</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UAP\v0.8.0.0\ExtensionSDKs\SQLite.UAP.2015\3.10.2\Redist\Debug\x64\sqlite3.dll">
       <PackagePath>sqlite3.dll</PackagePath>
@@ -530,55 +550,47 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Source\github\internet-of-esp-things\Applications\Ioespt.UWP.DeviceControl\bin\x64\Debug\Ioespt.UWP.DeviceControl.xr.xml">
       <PackagePath>Ioespt.UWP.DeviceControl.xr.xml</PackagePath>
-      <Modified>2016-02-25T21:26:05.625</Modified>
+      <Modified>2016-02-29T20:53:47.564</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2016-01-21T18:08:36.748</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mike\.nuget\packages\Microsoft.Xaml.Behaviors.Uwp.Managed\1.0.3\lib\uap10.0\Microsoft.Xaml.Interactions\Properties\Microsoft.Xaml.Interactions.rd.xml">
-      <PackagePath>Microsoft.Xaml.Interactions\Properties\Microsoft.Xaml.Interactions.rd.xml</PackagePath>
-      <Modified>2016-02-15T20:35:10.618</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mike\.nuget\packages\Microsoft.Xaml.Behaviors.Uwp.Managed\1.0.3\lib\uap10.0\Microsoft.Xaml.Interactivity\Properties\Microsoft.Xaml.Interactivity.rd.xml">
-      <PackagePath>Microsoft.Xaml.Interactivity\Properties\Microsoft.Xaml.Interactivity.rd.xml</PackagePath>
-      <Modified>2016-02-15T20:35:10.605</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mike\.nuget\packages\Template10\1.1.4\lib\uap10.0\Template10Library\Template10Library.xr.xml">
+    <AppxPackagedFile Include="C:\Users\mike\.nuget\packages\Template10\1.1.5\lib\uap10.0\Template10Library\Template10Library.xr.xml">
       <PackagePath>Template10Library\Template10Library.xr.xml</PackagePath>
-      <Modified>2016-02-24T19:18:14.921</Modified>
+      <Modified>2016-02-29T19:26:07.375</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mike\.nuget\packages\Template10\1.1.4\lib\uap10.0\Template10Library\Controls\HamburgerMenu.xaml">
+    <AppxPackagedFile Include="C:\Users\mike\.nuget\packages\Template10\1.1.5\lib\uap10.0\Template10Library\Controls\HamburgerMenu.xaml">
       <PackagePath>Template10Library\Controls\HamburgerMenu.xaml</PackagePath>
-      <Modified>2016-02-24T19:18:14.943</Modified>
+      <Modified>2016-02-29T19:26:07.387</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mike\.nuget\packages\Template10\1.1.4\lib\uap10.0\Template10Library\Properties\Template10Library.rd.xml">
+    <AppxPackagedFile Include="C:\Users\mike\.nuget\packages\Template10\1.1.5\lib\uap10.0\Template10Library\Properties\Template10Library.rd.xml">
       <PackagePath>Template10Library\Properties\Template10Library.rd.xml</PackagePath>
-      <Modified>2016-02-24T19:18:14.943</Modified>
+      <Modified>2016-02-29T19:26:07.402</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mike\.nuget\packages\Template10\1.1.4\lib\uap10.0\Template10Library\Themes\Generic.xaml">
+    <AppxPackagedFile Include="C:\Users\mike\.nuget\packages\Template10\1.1.5\lib\uap10.0\Template10Library\Themes\Generic.xaml">
       <PackagePath>Template10Library\Themes\Generic.xaml</PackagePath>
-      <Modified>2016-02-24T19:18:14.959</Modified>
+      <Modified>2016-02-29T19:26:07.405</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mike\.nuget\packages\Template10\1.1.4\lib\uap10.0\Template10Library\Themes\ModalDialog.xaml">
+    <AppxPackagedFile Include="C:\Users\mike\.nuget\packages\Template10\1.1.5\lib\uap10.0\Template10Library\Themes\ModalDialog.xaml">
       <PackagePath>Template10Library\Themes\ModalDialog.xaml</PackagePath>
-      <Modified>2016-02-24T19:18:14.959</Modified>
+      <Modified>2016-02-29T19:26:07.414</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mike\.nuget\packages\Template10\1.1.4\lib\uap10.0\Template10Library\Themes\PageHeader.xaml">
+    <AppxPackagedFile Include="C:\Users\mike\.nuget\packages\Template10\1.1.5\lib\uap10.0\Template10Library\Themes\PageHeader.xaml">
       <PackagePath>Template10Library\Themes\PageHeader.xaml</PackagePath>
-      <Modified>2016-02-24T19:18:14.974</Modified>
+      <Modified>2016-02-29T19:26:07.428</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\mike\.nuget\packages\Template10\1.1.4\lib\uap10.0\Template10Library\Themes\Resizer.xaml">
+    <AppxPackagedFile Include="C:\Users\mike\.nuget\packages\Template10\1.1.5\lib\uap10.0\Template10Library\Themes\Resizer.xaml">
       <PackagePath>Template10Library\Themes\Resizer.xaml</PackagePath>
-      <Modified>2016-02-24T19:18:14.974</Modified>
+      <Modified>2016-02-29T19:26:07.431</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Source\github\internet-of-esp-things\Applications\Ioespt.UWP.DeviceControl\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2016-02-25T21:40:31.315</Modified>
+      <Modified>2016-02-29T21:25:53.468</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Source\github\internet-of-esp-things\Applications\Ioespt.UWP.DeviceControl\bin\x64\Debug\Core\Ioespt.UWP.DeviceControl.exe">
       <PackagePath>Ioespt.UWP.DeviceControl.exe</PackagePath>
-      <Modified>2016-02-25T21:40:31.761</Modified>
+      <Modified>2016-02-29T21:25:53.963</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

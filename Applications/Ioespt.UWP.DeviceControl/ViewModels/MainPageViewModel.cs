@@ -6,21 +6,19 @@ using Template10.Services.NavigationService;
 using Windows.UI.Xaml.Navigation;
 using System.Collections.ObjectModel;
 using Ioespt.UWP.DeviceControl.Models;
+using Ioespt.UWP.DeviceControl.Services.DataServices;
+using GalaSoft.MvvmLight.Command;
 
 namespace Ioespt.UWP.DeviceControl.ViewModels
 {
     public class MainPageViewModel : ViewModelBase
     {
-        public ObservableCollection<RegisteredDevice> devices
-        {
-            get
-            {
-                return ((App)App.Current).devices;
-            }
-        }
+        public ObservableCollection<RegisteredDevice> devices { get; set; }
 
         public MainPageViewModel()
         {
+            devices = new ObservableCollection<RegisteredDevice>();
+
             if (Windows.ApplicationModel.DesignMode.DesignModeEnabled)
             {
                 #region Design Time Info
@@ -57,8 +55,19 @@ namespace Ioespt.UWP.DeviceControl.ViewModels
 
                 #endregion /Design Time Info
             }
+            else
+            {
+                DataService db = new DataService();
+
+                db.createDB();
+
+                foreach (var device in db.DevicesTable)
+                {
+                    devices.Add(device);
+                }
 
 
+            }
         }
 
         public override Task OnNavigatedToAsync(object parameter, NavigationMode mode, IDictionary<string, object> suspensionState)
@@ -81,11 +90,28 @@ namespace Ioespt.UWP.DeviceControl.ViewModels
         public override Task OnNavigatingFromAsync(NavigatingEventArgs args)
         {
             args.Cancel = false;
+
             return Task.CompletedTask;
         }
 
-        public void GotoDetailsPage() =>
-            NavigationService.Navigate(typeof(Views.DetailPage), null);
+
+        private RelayCommand<RegisteredDevice> _GotoDetailsPage;
+        public RelayCommand<RegisteredDevice> GotoDetailsPage
+        {
+            get
+            {
+                if (_GotoDetailsPage == null)
+                {
+                    _GotoDetailsPage = new RelayCommand<RegisteredDevice>(
+                        (selectedDevice) =>
+                    {
+                        NavigationService.Navigate(typeof(Views.DetailPage), selectedDevice);
+                    });
+                }
+
+                return _GotoDetailsPage;
+            }
+        }
 
         public void GotoSettings() =>
             NavigationService.Navigate(typeof(Views.SettingsPage), 0);
