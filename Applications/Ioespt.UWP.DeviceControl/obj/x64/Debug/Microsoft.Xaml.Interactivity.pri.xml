@@ -2,19 +2,8 @@
 <PriInfo>
 	<ResourceMap name="Microsoft.Xaml.Interactivity" version="1.0" primary="true">
 		<Qualifiers>
-			<Language>EN-US,DE-DE,ES-ES,FR-FR,IT-IT,JA-JP,KO-KR,PT-BR,RU-RU,ZH-CN,ZH-TW</Language>
+			<Language>EN-US,DE-DE,ES-ES,FR-FR,IT-IT,JA-JP,KO-KR,PT-BR,RU-RU,UK-UA,ZH-CN,ZH-TW</Language>
 		</Qualifiers>
-		<ResourceMapSubtree name="Files">
-			<ResourceMapSubtree name="Microsoft.Xaml.Interactivity">
-				<ResourceMapSubtree name="Properties">
-					<NamedResource name="Microsoft.Xaml.Interactivity.rd.xml" uri="ms-resource://Microsoft.Xaml.Interactivity/Files/Microsoft.Xaml.Interactivity/Properties/Microsoft.Xaml.Interactivity.rd.xml">
-						<Candidate type="Path">
-							<Value>Microsoft.Xaml.Interactivity\Properties\Microsoft.Xaml.Interactivity.rd.xml</Value>
-						</Candidate>
-					</NamedResource>
-				</ResourceMapSubtree>
-			</ResourceMapSubtree>
-		</ResourceMapSubtree>
 		<ResourceMapSubtree name="Microsoft.Xaml.Interactivity">
 			<ResourceMapSubtree name="Strings">
 				<NamedResource name="CannotAttachBehaviorMultipleTimesExceptionMessage" uri="ms-resource://Microsoft.Xaml.Interactivity/Microsoft.Xaml.Interactivity/Strings/CannotAttachBehaviorMultipleTimesExceptionMessage">
@@ -23,6 +12,9 @@
 					</Candidate>
 					<Candidate qualifiers="Language-ZH-CN" type="String">
 						<Value>行为的实例不能一次附加到多个对象。</Value>
+					</Candidate>
+					<Candidate qualifiers="Language-UK-UA" type="String">
+						<Value>Неможливо прикріпити екземпляр поведінки до декількох об'єктів одночасно.</Value>
 					</Candidate>
 					<Candidate qualifiers="Language-RU-RU" type="String">
 						<Value>Невозможно прикрепить экземпляр поведения к нескольким объектам одновременно.</Value>
@@ -58,6 +50,9 @@
 					</Candidate>
 					<Candidate qualifiers="Language-ZH-CN" type="String">
 						<Value>不能多次将行为的实例添加到 BehaviorCollection。</Value>
+					</Candidate>
+					<Candidate qualifiers="Language-UK-UA" type="String">
+						<Value>Неможливо додати екземпляр поведінки в колекцію BehaviorCollection більше одного разу.</Value>
 					</Candidate>
 					<Candidate qualifiers="Language-RU-RU" type="String">
 						<Value>Невозможно добавить экземпляр поведения в коллекцию BehaviorCollection более одного раза.</Value>
@@ -99,6 +94,9 @@
 					<Candidate qualifiers="Language-ZH-CN" type="String">
 						<Value>在 ActionCollection 中只支持 IAction 类型。</Value>
 					</Candidate>
+					<Candidate qualifiers="Language-UK-UA" type="String">
+						<Value>В колекції ActionCollection підтримуються тільки типи Action.</Value>
+					</Candidate>
 					<Candidate qualifiers="Language-RU-RU" type="String">
 						<Value>В коллекции ActionCollection поддерживаются только типы IAction.</Value>
 					</Candidate>
@@ -133,6 +131,9 @@
 					</Candidate>
 					<Candidate qualifiers="Language-ZH-CN" type="String">
 						<Value>在 BehaviorCollection 中只支持 IBehavior 类型。</Value>
+					</Candidate>
+					<Candidate qualifiers="Language-UK-UA" type="String">
+						<Value>В колекції BehaviorCollection підтримуються тільки типи Behavior.</Value>
 					</Candidate>
 					<Candidate qualifiers="Language-RU-RU" type="String">
 						<Value>В коллекции BehaviorCollection поддерживаются только типы IBehavior.</Value>

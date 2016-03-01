@@ -2,19 +2,8 @@
 <PriInfo>
 	<ResourceMap name="Microsoft.Xaml.Interactions" version="1.0" primary="true">
 		<Qualifiers>
-			<Language>EN-US,DE-DE,ES-ES,FR-FR,IT-IT,JA-JP,KO-KR,PT-BR,RU-RU,ZH-CN,ZH-TW</Language>
+			<Language>EN-US,DE-DE,ES-ES,FR-FR,IT-IT,JA-JP,KO-KR,PT-BR,RU-RU,UK-UA,ZH-CN,ZH-TW</Language>
 		</Qualifiers>
-		<ResourceMapSubtree name="Files">
-			<ResourceMapSubtree name="Microsoft.Xaml.Interactions">
-				<ResourceMapSubtree name="Properties">
-					<NamedResource name="Microsoft.Xaml.Interactions.rd.xml" uri="ms-resource://Microsoft.Xaml.Interactions/Files/Microsoft.Xaml.Interactions/Properties/Microsoft.Xaml.Interactions.rd.xml">
-						<Candidate type="Path">
-							<Value>Microsoft.Xaml.Interactions\Properties\Microsoft.Xaml.Interactions.rd.xml</Value>
-						</Candidate>
-					</NamedResource>
-				</ResourceMapSubtree>
-			</ResourceMapSubtree>
-		</ResourceMapSubtree>
 		<ResourceMapSubtree name="Microsoft.Xaml.Interactions">
 			<ResourceMapSubtree name="Strings">
 				<NamedResource name="CallMethodActionValidMethodNotFoundExceptionMessage" uri="ms-resource://Microsoft.Xaml.Interactions/Microsoft.Xaml.Interactions/Strings/CallMethodActionValidMethodNotFoundExceptionMessage">
@@ -23,6 +12,9 @@
 					</Candidate>
 					<Candidate qualifiers="Language-ZH-CN" type="String">
 						<Value>在 {1} 类型的对象上找不到符合正确签名的名为 {0} 的方法。</Value>
+					</Candidate>
+					<Candidate qualifiers="Language-UK-UA" type="String">
+						<Value>Неможливо знайти метод з ім'ям {0} в об'єкті типу {1}, який відповідав би очікуваному підпису.</Value>
 					</Candidate>
 					<Candidate qualifiers="Language-RU-RU" type="String">
 						<Value>Невозможно найти метод с именем {0} в объекте типа {1}, который соответствовал бы ожидаемой подписи.</Value>
@@ -60,6 +52,9 @@
 					<Candidate qualifiers="Language-ZH-CN" type="String">
 						<Value>行为的实例不能一次附加到多个对象。</Value>
 					</Candidate>
+					<Candidate qualifiers="Language-UK-UA" type="String">
+						<Value>Неможливо прикріпити екземпляр поведінки до декількох об'єктів одночасно.</Value>
+					</Candidate>
 					<Candidate qualifiers="Language-RU-RU" type="String">
 						<Value>Невозможно прикрепить экземпляр поведения к нескольким объектам одновременно.</Value>
 					</Candidate>
@@ -94,6 +89,9 @@
 					</Candidate>
 					<Candidate qualifiers="Language-ZH-CN" type="String">
 						<Value>在类型 {1} 上找不到名为 {0} 的事件。</Value>
+					</Candidate>
+					<Candidate qualifiers="Language-UK-UA" type="String">
+						<Value>Неможливо знайти подію з ім'ям {0} в типі {1}.</Value>
 					</Candidate>
 					<Candidate qualifiers="Language-RU-RU" type="String">
 						<Value>Невозможно найти событие с именем {0} в типе {1}.</Value>
@@ -130,6 +128,9 @@
 					<Candidate qualifiers="Language-ZH-CN" type="String">
 						<Value>在类型 {1} 上找不到名为 {0} 的属性。</Value>
 					</Candidate>
+					<Candidate qualifiers="Language-UK-UA" type="String">
+						<Value>Неможливо знайти властивість з ім'ям {0} в типі {1}.</Value>
+					</Candidate>
 					<Candidate qualifiers="Language-RU-RU" type="String">
 						<Value>Невозможно найти свойство с именем {0} в типе {1}.</Value>
 					</Candidate>
@@ -164,6 +165,9 @@
 					</Candidate>
 					<Candidate qualifiers="Language-ZH-CN" type="String">
 						<Value>无法将 {0} 类型的值赋予 {2} 类型的属性 {1}。{1} 属性只可接受 {2} 类型的赋值。</Value>
+					</Candidate>
+					<Candidate qualifiers="Language-UK-UA" type="String">
+						<Value>Неможливо призначити значення типу {0} властивості {1} типу {2}. Властивості {1} можна призначити тільки значення типу {2}.</Value>
 					</Candidate>
 					<Candidate qualifiers="Language-RU-RU" type="String">
 						<Value>Невозможно назначить значение типа {0} свойству {1} типа {2}. Свойству {1} можно назначить только значения типа {2}.</Value>
@@ -200,6 +204,9 @@
 					<Candidate qualifiers="Language-ZH-CN" type="String">
 						<Value>类型 {1} 定义的属性 {0} 不 揭示 set 方法，因此不可修改。</Value>
 					</Candidate>
+					<Candidate qualifiers="Language-UK-UA" type="String">
+						<Value>Властивість {0}, яке визначається типом {1}, не надає заданий метод і, отже, не може бути змінено.</Value>
+					</Candidate>
 					<Candidate qualifiers="Language-RU-RU" type="String">
 						<Value>Свойство {0}, определяемое типом {1}, не предоставляет заданный метод и, следовательно, не может быть изменено.</Value>
 					</Candidate>
@@ -234,6 +241,9 @@
 					</Candidate>
 					<Candidate qualifiers="Language-ZH-CN" type="String">
 						<Value>不支持事件 {0}。请考虑实现自定义 IBehavior 以响应此事件。</Value>
+					</Candidate>
+					<Candidate qualifiers="Language-UK-UA" type="String">
+						<Value>Подія {0} не підтримується. Для відгуку на дану подію рекомендується реалізувати користувальницьку поведінку IBehavior.</Value>
 					</Candidate>
 					<Candidate qualifiers="Language-RU-RU" type="String">
 						<Value>Событие {0} не поддерживается. Для отклика на данное событие рекомендуется реализовать пользовательское поведение IBehavior.</Value>
@@ -270,6 +280,9 @@
 					<Candidate qualifiers="Language-ZH-CN" type="String">
 						<Value>目标 {0} 不定义任何 VisualStateGroups。</Value>
 					</Candidate>
+					<Candidate qualifiers="Language-UK-UA" type="String">
+						<Value>Цільовий об'єкт {0} не визначає ніяких груп VisualStateGroups.</Value>
+					</Candidate>
 					<Candidate qualifiers="Language-RU-RU" type="String">
 						<Value>Целевой объект {0} не определяет никаких групп VisualStateGroups.</Value>
 					</Candidate>
@@ -305,6 +318,9 @@
 					<Candidate qualifiers="Language-ZH-CN" type="String">
 						<Value>{0} 类型的 Binding 属性无法用于运算符 {1}。</Value>
 					</Candidate>
+					<Candidate qualifiers="Language-UK-UA" type="String">
+						<Value>Властивість прив'язки типу {0} неможливо використовувати з оператором {1}.</Value>
+					</Candidate>
 					<Candidate qualifiers="Language-RU-RU" type="String">
 						<Value>Свойство привязки типа {0} невозможно использовать с оператором {1}.</Value>
 					</Candidate>
@@ -339,6 +355,9 @@
 					</Candidate>
 					<Candidate qualifiers="Language-ZH-CN" type="String">
 						<Value>{0} 类型的 Binding 属性以及 {1} 类型的 Value 属性无法用于运算符 {2}。</Value>
+					</Candidate>
+					<Candidate qualifiers="Language-UK-UA" type="String">
+						<Value>Властивість прив'язки типу {0} і властивість значення типу {1} неможливо використовувати з оператором {2}.</Value>
 					</Candidate>
 					<Candidate qualifiers="Language-RU-RU" type="String">
 						<Value>Свойство привязки типа {0} и свойство значения типа {1} невозможно использовать с оператором {2}.</Value>
@@ -376,6 +395,9 @@
 					</Candidate>
 					<Candidate qualifiers="Language-ZH-CN" type="String">
 						<Value>{0} 类型的 Value 属性无法用于运算符 {1}。</Value>
+					</Candidate>
+					<Candidate qualifiers="Language-UK-UA" type="String">
+						<Value>Властивість значення типу {0} неможливо використовувати з оператором {1}.</Value>
 					</Candidate>
 					<Candidate qualifiers="Language-RU-RU" type="String">
 						<Value>Свойство значения типа {0} невозможно использовать с оператором {1}.</Value>

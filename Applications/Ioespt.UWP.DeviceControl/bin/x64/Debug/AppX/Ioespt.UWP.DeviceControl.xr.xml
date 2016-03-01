@@ -7,7 +7,6 @@
     <RootPropertyPathName Name="DeviceName" />
     <RootPropertyPathName Name="SearchStatus" />
     <RootPropertyPathName Name="startPanelVisible" />
-    <RootPropertyPathName Name="Value" />
     <RootPropertyPathName Name="ConnectedTo" />
     <RootPropertyPathName Name="FirmwareVersion" />
     <RootPropertyPathName Name="FirmwareName" />
@@ -47,7 +46,6 @@
       <RootProperty Name="Text" />
       <RootProperty Name="SecondaryCommands" />
       <RootProperty Name="Frame" />
-      <RootProperty Name="PrimaryCommands" />
       <RootProperty Name="Content" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Control">
@@ -167,7 +165,6 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.AppBarButton">
       <RootProperty Name="Label" />
-      <RootProperty Name="Icon" />
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Ioespt.UWP.DeviceControl.Views.AddDevicePage" />
@@ -213,20 +210,25 @@
     <RootType FullName="Ioespt.UWP.DeviceControl.Views.DetailPage" />
     <RootType FullName="Ioespt.UWP.DeviceControl.ViewModels.MainPageViewModel" />
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
+      <RootProperty Name="SelectionMode" />
       <RootProperty Name="ItemsSource" />
-      <RootProperty Name="SelectedItem" />
+      <RootProperty Name="IsItemClickEnabled" />
       <RootProperty Name="ItemTemplate" />
+    </RootType>
+    <RootType FullName="Ioespt.UWP.DeviceControl.Helpers.ItemClickCommand">
+      <RootMethod Name="GetCommand" />
+      <RootMethod Name="SetCommand" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.DataTemplate">
       <RootProperty Name="Template" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Documents.Run">
-      <RootProperty Name="Text" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Shapes.Rectangle">
+      <RootProperty Name="Fill" />
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
-      <RootProperty Name="Fill" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Documents.Run">
+      <RootProperty Name="Text" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
       <RootProperty Name="Width" />

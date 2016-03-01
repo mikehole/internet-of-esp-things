@@ -55,16 +55,8 @@ namespace Ioespt.UWP.DeviceControl
         public override Task OnStartAsync(StartKind startKind, IActivatedEventArgs args)
         {
             // long-running startup tasks go here
-            DataService db = new DataService();
-
-            db.createDB();
-
-            foreach (var device in db.DevicesTable)
-            {
-                devices.Add(device);
-            }
-
             NavigationService.Navigate(typeof(Views.MainPage));
+
             return Task.CompletedTask;
         }
     }
