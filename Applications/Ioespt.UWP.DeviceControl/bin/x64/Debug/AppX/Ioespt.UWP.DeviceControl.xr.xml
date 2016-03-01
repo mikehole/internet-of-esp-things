@@ -7,15 +7,18 @@
     <RootPropertyPathName Name="DeviceName" />
     <RootPropertyPathName Name="SearchStatus" />
     <RootPropertyPathName Name="startPanelVisible" />
+    <RootPropertyPathName Name="showDeviceDetails" />
     <RootPropertyPathName Name="selectedDevice" />
-    <RootPropertyPathName Name="StatusText" />
-    <RootPropertyPathName Name="StatusColor" />
-    <RootPropertyPathName Name="DeviceIcon" />
     <RootPropertyPathName Name="ConnectedTo" />
     <RootPropertyPathName Name="FirmwareVersion" />
     <RootPropertyPathName Name="FirmwareName" />
     <RootPropertyPathName Name="ModuleType" />
     <RootPropertyPathName Name="GivenName" />
+    <RootPropertyPathName Name="StatusText" />
+    <RootPropertyPathName Name="StatusColor" />
+    <RootPropertyPathName Name="DeviceIcon" />
+    <RootPropertyPathName Name="showProvisioningDetails" />
+    <RootPropertyPathName Name="Ssid" />
     <RootPropertyPathName Name="AboutPartViewModel" />
     <RootPropertyPathName Name="Version" />
     <RootPropertyPathName Name="Publisher" />
@@ -122,6 +125,8 @@
       <RootProperty Name="Children" />
       <RootProperty Name="ColumnDefinitions" />
       <RootProperty Name="Background" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Height" />
       <RootMethod Name="GetRow" />
       <RootMethod Name="SetRow" />
       <RootMethod Name="GetColumn" />
@@ -136,6 +141,7 @@
       <RootProperty Name="Children" />
       <RootProperty Name="Margin" />
       <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Width" />
       <RootProperty Name="Orientation" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
@@ -147,6 +153,7 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Foreground" />
       <RootProperty Name="Inlines" />
+      <RootProperty Name="Width" />
       <RootProperty Name="FontSize" />
       <RootProperty Name="LineHeight" />
     </RootType>
@@ -161,6 +168,7 @@
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.BindExtension">
       <RootProperty Name="Mode" />
       <RootProperty Name="FallbackValue" />
+      <RootProperty Name="Path" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition">
       <RootProperty Name="Height" />
@@ -209,6 +217,9 @@
       <RootProperty Name="DataContext" />
       <RootProperty Name="Padding" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Documents.Run">
+      <RootProperty Name="Text" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Shapes.Rectangle">
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
@@ -220,6 +231,15 @@
       <RootProperty Name="Source" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Stretch" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
+      <RootProperty Name="SelectedItem" />
+      <RootProperty Name="ItemsSource" />
+      <RootProperty Name="DisplayMemberPath" />
+      <RootProperty Name="Width" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.PasswordBox">
+      <RootProperty Name="Password" />
     </RootType>
     <RootType FullName="Template10.Behaviors.EllipsisBehavior">
       <RootProperty Name="Visibility" />
@@ -238,9 +258,6 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.DataTemplate">
       <RootProperty Name="Template" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Documents.Run">
-      <RootProperty Name="Text" />
     </RootType>
     <RootType FullName="Ioespt.UWP.DeviceControl.Views.MainPage" />
     <RootType FullName="Ioespt.UWP.DeviceControl.ViewModels.SettingsPageViewModel" />

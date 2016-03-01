@@ -15,7 +15,8 @@ namespace Ioespt.UWP.DeviceControl.Models
     {
         Offline,
         Online,
-        UnProvisioned
+        UnProvisioned,
+        Missing
     }
 
 
@@ -53,6 +54,8 @@ namespace Ioespt.UWP.DeviceControl.Models
             get {
                 switch (Status)
                 {
+                    case DeviceStatus.Missing:
+                        return "missing";
                     case DeviceStatus.Offline:
                         return "offline";
                     case DeviceStatus.Online:
@@ -88,8 +91,10 @@ namespace Ioespt.UWP.DeviceControl.Models
                 {
                     case "IOESPT-Slave":
                         return "ms-appx:///Assets/DeviceTypes/SlaveDevice.png";
-                    default:
+                    case "IOESPT-Master":
                         return "ms-appx:///Assets/DeviceTypes/MasterDevice.png";
+                    default:
+                        return "ms-appx:///Assets/DeviceTypes/UnknownDevice.png";
                 }
             }
                 

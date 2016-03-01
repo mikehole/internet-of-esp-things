@@ -138,6 +138,7 @@
   <ItemGroup>
     <Content Include="Assets\DeviceTypes\MasterDevice.png" />
     <Content Include="Assets\DeviceTypes\SlaveDevice.png" />
+    <Content Include="Assets\DeviceTypes\UnknownDevice.png" />
     <Content Include="FodyWeavers.xml" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />

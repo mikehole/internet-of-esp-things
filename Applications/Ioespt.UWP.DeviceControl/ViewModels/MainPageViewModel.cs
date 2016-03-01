@@ -26,6 +26,8 @@ namespace Ioespt.UWP.DeviceControl.ViewModels
 
         DispatcherTimer dispatcherTimer = new DispatcherTimer();
 
+        private WiFiAdapter firstAdapter = null;
+
         public MainPageViewModel()
         {
             devices = new ObservableCollection<RegisteredDevice>();
@@ -82,6 +84,7 @@ namespace Ioespt.UWP.DeviceControl.ViewModels
                 ssdpClient.DeviceFound += SsdpClinet_DeviceFound;
 
                 ssdpClient.SearchForDevices();
+                SearchWifi();
 
                 dispatcherTimer.Tick += DispatcherTimer_Tick;
 
@@ -93,6 +96,7 @@ namespace Ioespt.UWP.DeviceControl.ViewModels
         private void DispatcherTimer_Tick(object sender, object e)
         {
             ssdpClient.SearchForDevices();
+            SearchWifi();
         }
 
         private void SsdpClinet_DeviceFound(object sender, DeviceFoundEventArgs e)
@@ -162,73 +166,76 @@ namespace Ioespt.UWP.DeviceControl.ViewModels
         public void GotoAbout() =>
             NavigationService.Navigate(typeof(Views.SettingsPage), 2);
 
-        public async void Search()
+        public async void SearchWifi()
         {
             var result = await Windows.Devices.Enumeration.DeviceInformation.FindAllAsync(WiFiAdapter.GetDeviceSelector());
 
             if (result.Count >= 1)
             {
 
-                Views.Busy.SetBusy(true, "WiFi searching ...");
-
-                var firstAdapter = await WiFiAdapter.FromIdAsync(result[0].Id);
+                firstAdapter = await WiFiAdapter.FromIdAsync(result[0].Id);
 
                 await firstAdapter.ScanAsync();
 
+                //firstAdapter.AvailableNetworksChanged += FirstAdapter_AvailableNetworksChanged;
+
                 var qualifyingWifi = firstAdapter.NetworkReport.AvailableNetworks.Where(N => N.Ssid.ToLower().StartsWith("ioespt-thing"));
 
-                Views.Busy.SetBusy(true, $"WiFi found  {qualifyingWifi.Count()} devices...");
 
                 foreach (WiFiAvailableNetwork deviceWifi in qualifyingWifi)
                 {
-                    Views.Busy.SetBusy(true, $"WiFi connecting to  {deviceWifi.Ssid}");
-
-                    var connectionResult = await firstAdapter.ConnectAsync(deviceWifi, WiFiReconnectionKind.Automatic);
-                    if (connectionResult.ConnectionStatus == WiFiConnectionStatus.Success)
+                    RegisteredDevice newRegisteredDevice = new RegisteredDevice()
                     {
-                        try
-                        {
-                            HttpClient httpClient = new HttpClient();
-                            var stringRes = await httpClient.GetStringAsync("http://192.168.4.1/");
-                            var details = JsonConvert.DeserializeObject<DeviceDetails>(stringRes);
+                        Status = DeviceStatus.UnProvisioned,
+                        ConnectedTo = "None",
+                        GivenName = deviceWifi.Ssid,
+                        ChipId = "Unknown",
+                        FirmwareName = "Unknown",
+                        FirmwareVersion = "Unknown",
+                        ModuleType = "Unknown"
+                    };
 
-                            RegisteredDevice newRegisteredDevice = new RegisteredDevice()
-                            {
-                                Status = DeviceStatus.UnProvisioned,
-                                ConnectedTo = "None",
-                                GivenName = deviceWifi.Ssid,
-                                ChipId = details.ChipId,
-                                FirmwareName = details.FirmwareName,
-                                FirmwareVersion = details.FirmwareVersion,
-
-                                ModuleType = details.ModuleType
-
-                            };
-
-                            DataService db = new DataService();
-                            db.InsertNewDevice(newRegisteredDevice);
-                            ((App)App.Current).devices.Add(newRegisteredDevice);
-                        }
-                        catch (Exception)
-                        {
-
-                        }
-                    }
-                    else
-                    {
-                    }
+                    devices.Add(newRegisteredDevice);
                 }
             }
             else
             {
 
             }
-            Views.Busy.SetBusy(false);
         }
+
+        //private void FirstAdapter_AvailableNetworksChanged(WiFiAdapter sender, object args)
+        //{
+        //    var qualifyingWifi = firstAdapter.NetworkReport.AvailableNetworks.Where(N => N.Ssid.ToLower().StartsWith("ioespt-thing"));
+
+        //    foreach (WiFiAvailableNetwork deviceWifi in qualifyingWifi)
+        //    {
+        //        if (!devices.Any(D => D.GivenName.ToLower() == deviceWifi.Ssid.ToLower()))
+        //        {
+        //            RegisteredDevice newRegisteredDevice = new RegisteredDevice()
+        //            {
+        //                Status = DeviceStatus.UnProvisioned,
+        //                ConnectedTo = "None",
+        //                GivenName = deviceWifi.Ssid,
+        //                ChipId = "Unknown",
+        //                FirmwareName = "Unknown",
+        //                FirmwareVersion = "Unknown",
+        //                ModuleType = "Unknown"
+        //            };
+
+
+        //            Dispatcher.Dispatch(()=>{
+        //                devices.Add(newRegisteredDevice);
+        //            });
+                    
+        //        }
+        //    }
+        // }
 
         public void Refresh()
         {
             ssdpClient.SearchForDevices();
+            SearchWifi();
         }
     }
     }

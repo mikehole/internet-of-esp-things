@@ -50,7 +50,6 @@
 
         <controls:PageHeader x:Name="pageHeader" Text="Main Page">
             <!--  Main commands  -->
-            <AppBarButton Click="{x:Bind ViewModel.Search}" Icon="Add" Label="Device Search" />
             <AppBarButton Click="{x:Bind ViewModel.Refresh}" Icon="Refresh" Label="Refresh List" />
             <!--  place stretched, across top  -->
             <RelativePanel.AlignTopWithPanel>True</RelativePanel.AlignTopWithPanel>

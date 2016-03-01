@@ -156,7 +156,7 @@ namespace Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[77];
+            _typeNameTable = new string[84];
             _typeNameTable[0] = "Template10.Common.BootStrapper";
             _typeNameTable[1] = "Windows.UI.Xaml.Application";
             _typeNameTable[2] = "Template10.Common.StateItems";
@@ -214,28 +214,35 @@ namespace Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo
             _typeNameTable[54] = "Ioespt.UWP.DeviceControl.Views.Busy";
             _typeNameTable[55] = "Ioespt.UWP.DeviceControl.ViewModels.DetailPageViewModel";
             _typeNameTable[56] = "Ioespt.UWP.DeviceControl.Models.RegisteredDevice";
-            _typeNameTable[57] = "Microsoft.Xaml.Interactivity.Interaction";
-            _typeNameTable[58] = "Microsoft.Xaml.Interactivity.BehaviorCollection";
-            _typeNameTable[59] = "Windows.UI.Xaml.DependencyObjectCollection";
-            _typeNameTable[60] = "Template10.Behaviors.EllipsisBehavior";
-            _typeNameTable[61] = "Template10.Behaviors.EllipsisBehavior.Visibilities";
-            _typeNameTable[62] = "Ioespt.UWP.DeviceControl.Views.DetailPage";
-            _typeNameTable[63] = "Ioespt.UWP.DeviceControl.ViewModels.MainPageViewModel";
-            _typeNameTable[64] = "System.Collections.ObjectModel.ObservableCollection`1<Ioespt.UWP.DeviceControl.Models.RegisteredDevice>";
-            _typeNameTable[65] = "System.Collections.ObjectModel.Collection`1<Ioespt.UWP.DeviceControl.Models.RegisteredDevice>";
-            _typeNameTable[66] = "Ioespt.UWP.DeviceControl.Models.DeviceStatus";
-            _typeNameTable[67] = "GalaSoft.MvvmLight.Command.RelayCommand`1<Ioespt.UWP.DeviceControl.Models.RegisteredDevice>";
-            _typeNameTable[68] = "Ioespt.UWP.DeviceControl.Helpers.ItemClickCommand";
-            _typeNameTable[69] = "System.Windows.Input.ICommand";
-            _typeNameTable[70] = "Ioespt.UWP.DeviceControl.Views.MainPage";
-            _typeNameTable[71] = "Ioespt.UWP.DeviceControl.ViewModels.SettingsPageViewModel";
-            _typeNameTable[72] = "Ioespt.UWP.DeviceControl.ViewModels.SettingsPartViewModel";
-            _typeNameTable[73] = "Ioespt.UWP.DeviceControl.ViewModels.AboutPartViewModel";
-            _typeNameTable[74] = "Ioespt.UWP.DeviceControl.Views.SettingsPage";
-            _typeNameTable[75] = "Ioespt.UWP.DeviceControl.Views.Shell";
-            _typeNameTable[76] = "Ioespt.UWP.DeviceControl.Views.Splash";
+            _typeNameTable[57] = "System.Collections.ObjectModel.ObservableCollection`1<Windows.Devices.WiFi.WiFiAvailableNetwork>";
+            _typeNameTable[58] = "System.Collections.ObjectModel.Collection`1<Windows.Devices.WiFi.WiFiAvailableNetwork>";
+            _typeNameTable[59] = "Windows.Devices.WiFi.WiFiAvailableNetwork";
+            _typeNameTable[60] = "Int32";
+            _typeNameTable[61] = "Windows.Devices.WiFi.WiFiNetworkKind";
+            _typeNameTable[62] = "Windows.Devices.WiFi.WiFiPhyKind";
+            _typeNameTable[63] = "Windows.Networking.Connectivity.NetworkSecuritySettings";
+            _typeNameTable[64] = "Microsoft.Xaml.Interactivity.Interaction";
+            _typeNameTable[65] = "Microsoft.Xaml.Interactivity.BehaviorCollection";
+            _typeNameTable[66] = "Windows.UI.Xaml.DependencyObjectCollection";
+            _typeNameTable[67] = "Template10.Behaviors.EllipsisBehavior";
+            _typeNameTable[68] = "Template10.Behaviors.EllipsisBehavior.Visibilities";
+            _typeNameTable[69] = "Ioespt.UWP.DeviceControl.Views.DetailPage";
+            _typeNameTable[70] = "Ioespt.UWP.DeviceControl.ViewModels.MainPageViewModel";
+            _typeNameTable[71] = "System.Collections.ObjectModel.ObservableCollection`1<Ioespt.UWP.DeviceControl.Models.RegisteredDevice>";
+            _typeNameTable[72] = "System.Collections.ObjectModel.Collection`1<Ioespt.UWP.DeviceControl.Models.RegisteredDevice>";
+            _typeNameTable[73] = "Ioespt.UWP.DeviceControl.Models.DeviceStatus";
+            _typeNameTable[74] = "GalaSoft.MvvmLight.Command.RelayCommand`1<Ioespt.UWP.DeviceControl.Models.RegisteredDevice>";
+            _typeNameTable[75] = "Ioespt.UWP.DeviceControl.Helpers.ItemClickCommand";
+            _typeNameTable[76] = "System.Windows.Input.ICommand";
+            _typeNameTable[77] = "Ioespt.UWP.DeviceControl.Views.MainPage";
+            _typeNameTable[78] = "Ioespt.UWP.DeviceControl.ViewModels.SettingsPageViewModel";
+            _typeNameTable[79] = "Ioespt.UWP.DeviceControl.ViewModels.SettingsPartViewModel";
+            _typeNameTable[80] = "Ioespt.UWP.DeviceControl.ViewModels.AboutPartViewModel";
+            _typeNameTable[81] = "Ioespt.UWP.DeviceControl.Views.SettingsPage";
+            _typeNameTable[82] = "Ioespt.UWP.DeviceControl.Views.Shell";
+            _typeNameTable[83] = "Ioespt.UWP.DeviceControl.Views.Splash";
 
-            _typeTable = new global::System.Type[77];
+            _typeTable = new global::System.Type[84];
             _typeTable[0] = typeof(global::Template10.Common.BootStrapper);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Application);
             _typeTable[2] = typeof(global::Template10.Common.StateItems);
@@ -293,26 +300,33 @@ namespace Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo
             _typeTable[54] = typeof(global::Ioespt.UWP.DeviceControl.Views.Busy);
             _typeTable[55] = typeof(global::Ioespt.UWP.DeviceControl.ViewModels.DetailPageViewModel);
             _typeTable[56] = typeof(global::Ioespt.UWP.DeviceControl.Models.RegisteredDevice);
-            _typeTable[57] = typeof(global::Microsoft.Xaml.Interactivity.Interaction);
-            _typeTable[58] = typeof(global::Microsoft.Xaml.Interactivity.BehaviorCollection);
-            _typeTable[59] = typeof(global::Windows.UI.Xaml.DependencyObjectCollection);
-            _typeTable[60] = typeof(global::Template10.Behaviors.EllipsisBehavior);
-            _typeTable[61] = typeof(global::Template10.Behaviors.EllipsisBehavior.Visibilities);
-            _typeTable[62] = typeof(global::Ioespt.UWP.DeviceControl.Views.DetailPage);
-            _typeTable[63] = typeof(global::Ioespt.UWP.DeviceControl.ViewModels.MainPageViewModel);
-            _typeTable[64] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::Ioespt.UWP.DeviceControl.Models.RegisteredDevice>);
-            _typeTable[65] = typeof(global::System.Collections.ObjectModel.Collection<global::Ioespt.UWP.DeviceControl.Models.RegisteredDevice>);
-            _typeTable[66] = typeof(global::Ioespt.UWP.DeviceControl.Models.DeviceStatus);
-            _typeTable[67] = typeof(global::GalaSoft.MvvmLight.Command.RelayCommand<global::Ioespt.UWP.DeviceControl.Models.RegisteredDevice>);
-            _typeTable[68] = typeof(global::Ioespt.UWP.DeviceControl.Helpers.ItemClickCommand);
-            _typeTable[69] = typeof(global::System.Windows.Input.ICommand);
-            _typeTable[70] = typeof(global::Ioespt.UWP.DeviceControl.Views.MainPage);
-            _typeTable[71] = typeof(global::Ioespt.UWP.DeviceControl.ViewModels.SettingsPageViewModel);
-            _typeTable[72] = typeof(global::Ioespt.UWP.DeviceControl.ViewModels.SettingsPartViewModel);
-            _typeTable[73] = typeof(global::Ioespt.UWP.DeviceControl.ViewModels.AboutPartViewModel);
-            _typeTable[74] = typeof(global::Ioespt.UWP.DeviceControl.Views.SettingsPage);
-            _typeTable[75] = typeof(global::Ioespt.UWP.DeviceControl.Views.Shell);
-            _typeTable[76] = typeof(global::Ioespt.UWP.DeviceControl.Views.Splash);
+            _typeTable[57] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::Windows.Devices.WiFi.WiFiAvailableNetwork>);
+            _typeTable[58] = typeof(global::System.Collections.ObjectModel.Collection<global::Windows.Devices.WiFi.WiFiAvailableNetwork>);
+            _typeTable[59] = typeof(global::Windows.Devices.WiFi.WiFiAvailableNetwork);
+            _typeTable[60] = typeof(global::System.Int32);
+            _typeTable[61] = typeof(global::Windows.Devices.WiFi.WiFiNetworkKind);
+            _typeTable[62] = typeof(global::Windows.Devices.WiFi.WiFiPhyKind);
+            _typeTable[63] = typeof(global::Windows.Networking.Connectivity.NetworkSecuritySettings);
+            _typeTable[64] = typeof(global::Microsoft.Xaml.Interactivity.Interaction);
+            _typeTable[65] = typeof(global::Microsoft.Xaml.Interactivity.BehaviorCollection);
+            _typeTable[66] = typeof(global::Windows.UI.Xaml.DependencyObjectCollection);
+            _typeTable[67] = typeof(global::Template10.Behaviors.EllipsisBehavior);
+            _typeTable[68] = typeof(global::Template10.Behaviors.EllipsisBehavior.Visibilities);
+            _typeTable[69] = typeof(global::Ioespt.UWP.DeviceControl.Views.DetailPage);
+            _typeTable[70] = typeof(global::Ioespt.UWP.DeviceControl.ViewModels.MainPageViewModel);
+            _typeTable[71] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::Ioespt.UWP.DeviceControl.Models.RegisteredDevice>);
+            _typeTable[72] = typeof(global::System.Collections.ObjectModel.Collection<global::Ioespt.UWP.DeviceControl.Models.RegisteredDevice>);
+            _typeTable[73] = typeof(global::Ioespt.UWP.DeviceControl.Models.DeviceStatus);
+            _typeTable[74] = typeof(global::GalaSoft.MvvmLight.Command.RelayCommand<global::Ioespt.UWP.DeviceControl.Models.RegisteredDevice>);
+            _typeTable[75] = typeof(global::Ioespt.UWP.DeviceControl.Helpers.ItemClickCommand);
+            _typeTable[76] = typeof(global::System.Windows.Input.ICommand);
+            _typeTable[77] = typeof(global::Ioespt.UWP.DeviceControl.Views.MainPage);
+            _typeTable[78] = typeof(global::Ioespt.UWP.DeviceControl.ViewModels.SettingsPageViewModel);
+            _typeTable[79] = typeof(global::Ioespt.UWP.DeviceControl.ViewModels.SettingsPartViewModel);
+            _typeTable[80] = typeof(global::Ioespt.UWP.DeviceControl.ViewModels.AboutPartViewModel);
+            _typeTable[81] = typeof(global::Ioespt.UWP.DeviceControl.Views.SettingsPage);
+            _typeTable[82] = typeof(global::Ioespt.UWP.DeviceControl.Views.Shell);
+            _typeTable[83] = typeof(global::Ioespt.UWP.DeviceControl.Views.Splash);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -361,18 +375,20 @@ namespace Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo
         private object Activate_54_Busy() { return new global::Ioespt.UWP.DeviceControl.Views.Busy(); }
         private object Activate_55_DetailPageViewModel() { return new global::Ioespt.UWP.DeviceControl.ViewModels.DetailPageViewModel(); }
         private object Activate_56_RegisteredDevice() { return new global::Ioespt.UWP.DeviceControl.Models.RegisteredDevice(); }
-        private object Activate_58_BehaviorCollection() { return new global::Microsoft.Xaml.Interactivity.BehaviorCollection(); }
-        private object Activate_60_EllipsisBehavior() { return new global::Template10.Behaviors.EllipsisBehavior(); }
-        private object Activate_62_DetailPage() { return new global::Ioespt.UWP.DeviceControl.Views.DetailPage(); }
-        private object Activate_63_MainPageViewModel() { return new global::Ioespt.UWP.DeviceControl.ViewModels.MainPageViewModel(); }
-        private object Activate_64_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::Ioespt.UWP.DeviceControl.Models.RegisteredDevice>(); }
-        private object Activate_65_Collection() { return new global::System.Collections.ObjectModel.Collection<global::Ioespt.UWP.DeviceControl.Models.RegisteredDevice>(); }
-        private object Activate_70_MainPage() { return new global::Ioespt.UWP.DeviceControl.Views.MainPage(); }
-        private object Activate_71_SettingsPageViewModel() { return new global::Ioespt.UWP.DeviceControl.ViewModels.SettingsPageViewModel(); }
-        private object Activate_72_SettingsPartViewModel() { return new global::Ioespt.UWP.DeviceControl.ViewModels.SettingsPartViewModel(); }
-        private object Activate_73_AboutPartViewModel() { return new global::Ioespt.UWP.DeviceControl.ViewModels.AboutPartViewModel(); }
-        private object Activate_74_SettingsPage() { return new global::Ioespt.UWP.DeviceControl.Views.SettingsPage(); }
-        private object Activate_75_Shell() { return new global::Ioespt.UWP.DeviceControl.Views.Shell(); }
+        private object Activate_57_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::Windows.Devices.WiFi.WiFiAvailableNetwork>(); }
+        private object Activate_58_Collection() { return new global::System.Collections.ObjectModel.Collection<global::Windows.Devices.WiFi.WiFiAvailableNetwork>(); }
+        private object Activate_65_BehaviorCollection() { return new global::Microsoft.Xaml.Interactivity.BehaviorCollection(); }
+        private object Activate_67_EllipsisBehavior() { return new global::Template10.Behaviors.EllipsisBehavior(); }
+        private object Activate_69_DetailPage() { return new global::Ioespt.UWP.DeviceControl.Views.DetailPage(); }
+        private object Activate_70_MainPageViewModel() { return new global::Ioespt.UWP.DeviceControl.ViewModels.MainPageViewModel(); }
+        private object Activate_71_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::Ioespt.UWP.DeviceControl.Models.RegisteredDevice>(); }
+        private object Activate_72_Collection() { return new global::System.Collections.ObjectModel.Collection<global::Ioespt.UWP.DeviceControl.Models.RegisteredDevice>(); }
+        private object Activate_77_MainPage() { return new global::Ioespt.UWP.DeviceControl.Views.MainPage(); }
+        private object Activate_78_SettingsPageViewModel() { return new global::Ioespt.UWP.DeviceControl.ViewModels.SettingsPageViewModel(); }
+        private object Activate_79_SettingsPartViewModel() { return new global::Ioespt.UWP.DeviceControl.ViewModels.SettingsPartViewModel(); }
+        private object Activate_80_AboutPartViewModel() { return new global::Ioespt.UWP.DeviceControl.ViewModels.AboutPartViewModel(); }
+        private object Activate_81_SettingsPage() { return new global::Ioespt.UWP.DeviceControl.Views.SettingsPage(); }
+        private object Activate_82_Shell() { return new global::Ioespt.UWP.DeviceControl.Views.Shell(); }
         private void MapAdd_2_StateItems(object instance, object key, object item)
         {
             var collection = (global::System.Collections.Generic.IDictionary<global::System.String, global::System.Object>)instance;
@@ -399,19 +415,31 @@ namespace Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo
             var newItem = (global::Template10.Controls.HamburgerButtonInfo)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_58_BehaviorCollection(object instance, object item)
+        private void VectorAdd_57_ObservableCollection(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::Windows.Devices.WiFi.WiFiAvailableNetwork>)instance;
+            var newItem = (global::Windows.Devices.WiFi.WiFiAvailableNetwork)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_58_Collection(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::Windows.Devices.WiFi.WiFiAvailableNetwork>)instance;
+            var newItem = (global::Windows.Devices.WiFi.WiFiAvailableNetwork)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_65_BehaviorCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Windows.UI.Xaml.DependencyObject>)instance;
             var newItem = (global::Windows.UI.Xaml.DependencyObject)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_64_ObservableCollection(object instance, object item)
+        private void VectorAdd_71_ObservableCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Ioespt.UWP.DeviceControl.Models.RegisteredDevice>)instance;
             var newItem = (global::Ioespt.UWP.DeviceControl.Models.RegisteredDevice)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_65_Collection(object instance, object item)
+        private void VectorAdd_72_Collection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Ioespt.UWP.DeviceControl.Models.RegisteredDevice>)instance;
             var newItem = (global::Ioespt.UWP.DeviceControl.Models.RegisteredDevice)item;
@@ -796,6 +824,11 @@ namespace Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo
                 userType = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Template10.Mvvm.ViewModelBase"));
                 userType.Activator = Activate_55_DetailPageViewModel;
                 userType.AddMemberName("selectedDevice");
+                userType.AddMemberName("showProvisioningDetails");
+                userType.AddMemberName("showDeviceDetails");
+                userType.AddMemberName("networks");
+                userType.AddMemberName("selectedNetwork");
+                userType.AddMemberName("password");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -818,32 +851,94 @@ namespace Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 57:   //  Microsoft.Xaml.Interactivity.Interaction
+            case 57:   //  System.Collections.ObjectModel.ObservableCollection`1<Windows.Devices.WiFi.WiFiAvailableNetwork>
+                userType = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<Windows.Devices.WiFi.WiFiAvailableNetwork>"));
+                userType.CollectionAdd = VectorAdd_57_ObservableCollection;
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 58:   //  System.Collections.ObjectModel.Collection`1<Windows.Devices.WiFi.WiFiAvailableNetwork>
+                userType = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_58_Collection;
+                userType.CollectionAdd = VectorAdd_58_Collection;
+                xamlType = userType;
+                break;
+
+            case 59:   //  Windows.Devices.WiFi.WiFiAvailableNetwork
+                userType = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.AddMemberName("BeaconInterval");
+                userType.AddMemberName("Bssid");
+                userType.AddMemberName("ChannelCenterFrequencyInKilohertz");
+                userType.AddMemberName("IsWiFiDirect");
+                userType.AddMemberName("NetworkKind");
+                userType.AddMemberName("NetworkRssiInDecibelMilliwatts");
+                userType.AddMemberName("PhyKind");
+                userType.AddMemberName("SecuritySettings");
+                userType.AddMemberName("SignalBars");
+                userType.AddMemberName("Ssid");
+                userType.AddMemberName("Uptime");
+                xamlType = userType;
+                break;
+
+            case 60:   //  Int32
+                xamlType = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 61:   //  Windows.Devices.WiFi.WiFiNetworkKind
+                userType = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType.AddEnumValue("Any", global::Windows.Devices.WiFi.WiFiNetworkKind.Any);
+                userType.AddEnumValue("Infrastructure", global::Windows.Devices.WiFi.WiFiNetworkKind.Infrastructure);
+                userType.AddEnumValue("Adhoc", global::Windows.Devices.WiFi.WiFiNetworkKind.Adhoc);
+                xamlType = userType;
+                break;
+
+            case 62:   //  Windows.Devices.WiFi.WiFiPhyKind
+                userType = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType.AddEnumValue("Unknown", global::Windows.Devices.WiFi.WiFiPhyKind.Unknown);
+                userType.AddEnumValue("Fhss", global::Windows.Devices.WiFi.WiFiPhyKind.Fhss);
+                userType.AddEnumValue("Dsss", global::Windows.Devices.WiFi.WiFiPhyKind.Dsss);
+                userType.AddEnumValue("IRBaseband", global::Windows.Devices.WiFi.WiFiPhyKind.IRBaseband);
+                userType.AddEnumValue("Ofdm", global::Windows.Devices.WiFi.WiFiPhyKind.Ofdm);
+                userType.AddEnumValue("Hrdsss", global::Windows.Devices.WiFi.WiFiPhyKind.Hrdsss);
+                userType.AddEnumValue("Erp", global::Windows.Devices.WiFi.WiFiPhyKind.Erp);
+                userType.AddEnumValue("HT", global::Windows.Devices.WiFi.WiFiPhyKind.HT);
+                userType.AddEnumValue("Vht", global::Windows.Devices.WiFi.WiFiPhyKind.Vht);
+                xamlType = userType;
+                break;
+
+            case 63:   //  Windows.Networking.Connectivity.NetworkSecuritySettings
+                userType = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 64:   //  Microsoft.Xaml.Interactivity.Interaction
                 userType = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.AddMemberName("Behaviors");
                 xamlType = userType;
                 break;
 
-            case 58:   //  Microsoft.Xaml.Interactivity.BehaviorCollection
+            case 65:   //  Microsoft.Xaml.Interactivity.BehaviorCollection
                 userType = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObjectCollection"));
-                userType.CollectionAdd = VectorAdd_58_BehaviorCollection;
+                userType.CollectionAdd = VectorAdd_65_BehaviorCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 59:   //  Windows.UI.Xaml.DependencyObjectCollection
+            case 66:   //  Windows.UI.Xaml.DependencyObjectCollection
                 xamlType = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 60:   //  Template10.Behaviors.EllipsisBehavior
+            case 67:   //  Template10.Behaviors.EllipsisBehavior
                 userType = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_60_EllipsisBehavior;
+                userType.Activator = Activate_67_EllipsisBehavior;
                 userType.AddMemberName("Visibility");
                 userType.AddMemberName("AssociatedObject");
                 xamlType = userType;
                 break;
 
-            case 61:   //  Template10.Behaviors.EllipsisBehavior.Visibilities
+            case 68:   //  Template10.Behaviors.EllipsisBehavior.Visibilities
                 userType = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Visible", global::Template10.Behaviors.EllipsisBehavior.Visibilities.Visible);
                 userType.AddEnumValue("Collapsed", global::Template10.Behaviors.EllipsisBehavior.Visibilities.Collapsed);
@@ -851,109 +946,110 @@ namespace Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 62:   //  Ioespt.UWP.DeviceControl.Views.DetailPage
+            case 69:   //  Ioespt.UWP.DeviceControl.Views.DetailPage
                 userType = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_62_DetailPage;
+                userType.Activator = Activate_69_DetailPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 63:   //  Ioespt.UWP.DeviceControl.ViewModels.MainPageViewModel
+            case 70:   //  Ioespt.UWP.DeviceControl.ViewModels.MainPageViewModel
                 userType = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Template10.Mvvm.ViewModelBase"));
-                userType.Activator = Activate_63_MainPageViewModel;
+                userType.Activator = Activate_70_MainPageViewModel;
                 userType.AddMemberName("devices");
                 userType.AddMemberName("GotoDetailsPage");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 64:   //  System.Collections.ObjectModel.ObservableCollection`1<Ioespt.UWP.DeviceControl.Models.RegisteredDevice>
+            case 71:   //  System.Collections.ObjectModel.ObservableCollection`1<Ioespt.UWP.DeviceControl.Models.RegisteredDevice>
                 userType = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<Ioespt.UWP.DeviceControl.Models.RegisteredDevice>"));
-                userType.CollectionAdd = VectorAdd_64_ObservableCollection;
+                userType.CollectionAdd = VectorAdd_71_ObservableCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 65:   //  System.Collections.ObjectModel.Collection`1<Ioespt.UWP.DeviceControl.Models.RegisteredDevice>
+            case 72:   //  System.Collections.ObjectModel.Collection`1<Ioespt.UWP.DeviceControl.Models.RegisteredDevice>
                 userType = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_65_Collection;
-                userType.CollectionAdd = VectorAdd_65_Collection;
+                userType.Activator = Activate_72_Collection;
+                userType.CollectionAdd = VectorAdd_72_Collection;
                 xamlType = userType;
                 break;
 
-            case 66:   //  Ioespt.UWP.DeviceControl.Models.DeviceStatus
+            case 73:   //  Ioespt.UWP.DeviceControl.Models.DeviceStatus
                 userType = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Offline", global::Ioespt.UWP.DeviceControl.Models.DeviceStatus.Offline);
                 userType.AddEnumValue("Online", global::Ioespt.UWP.DeviceControl.Models.DeviceStatus.Online);
                 userType.AddEnumValue("UnProvisioned", global::Ioespt.UWP.DeviceControl.Models.DeviceStatus.UnProvisioned);
+                userType.AddEnumValue("Missing", global::Ioespt.UWP.DeviceControl.Models.DeviceStatus.Missing);
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 67:   //  GalaSoft.MvvmLight.Command.RelayCommand`1<Ioespt.UWP.DeviceControl.Models.RegisteredDevice>
+            case 74:   //  GalaSoft.MvvmLight.Command.RelayCommand`1<Ioespt.UWP.DeviceControl.Models.RegisteredDevice>
                 userType = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 68:   //  Ioespt.UWP.DeviceControl.Helpers.ItemClickCommand
+            case 75:   //  Ioespt.UWP.DeviceControl.Helpers.ItemClickCommand
                 userType = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.AddMemberName("Command");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 69:   //  System.Windows.Input.ICommand
+            case 76:   //  System.Windows.Input.ICommand
                 userType = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 70:   //  Ioespt.UWP.DeviceControl.Views.MainPage
+            case 77:   //  Ioespt.UWP.DeviceControl.Views.MainPage
                 userType = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_70_MainPage;
+                userType.Activator = Activate_77_MainPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 71:   //  Ioespt.UWP.DeviceControl.ViewModels.SettingsPageViewModel
+            case 78:   //  Ioespt.UWP.DeviceControl.ViewModels.SettingsPageViewModel
                 userType = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Template10.Mvvm.ViewModelBase"));
-                userType.Activator = Activate_71_SettingsPageViewModel;
+                userType.Activator = Activate_78_SettingsPageViewModel;
                 userType.AddMemberName("SettingsPartViewModel");
                 userType.AddMemberName("AboutPartViewModel");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 72:   //  Ioespt.UWP.DeviceControl.ViewModels.SettingsPartViewModel
+            case 79:   //  Ioespt.UWP.DeviceControl.ViewModels.SettingsPartViewModel
                 userType = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Template10.Mvvm.ViewModelBase"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 73:   //  Ioespt.UWP.DeviceControl.ViewModels.AboutPartViewModel
+            case 80:   //  Ioespt.UWP.DeviceControl.ViewModels.AboutPartViewModel
                 userType = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Template10.Mvvm.ViewModelBase"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 74:   //  Ioespt.UWP.DeviceControl.Views.SettingsPage
+            case 81:   //  Ioespt.UWP.DeviceControl.Views.SettingsPage
                 userType = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_74_SettingsPage;
+                userType.Activator = Activate_81_SettingsPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 75:   //  Ioespt.UWP.DeviceControl.Views.Shell
+            case 82:   //  Ioespt.UWP.DeviceControl.Views.Shell
                 userType = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_75_Shell;
+                userType.Activator = Activate_82_Shell;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 76:   //  Ioespt.UWP.DeviceControl.Views.Splash
+            case 83:   //  Ioespt.UWP.DeviceControl.Views.Splash
                 userType = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
                 userType.SetIsLocalType();
                 xamlType = userType;
@@ -1732,153 +1828,258 @@ namespace Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo
             var that = (global::Ioespt.UWP.DeviceControl.ViewModels.DetailPageViewModel)instance;
             that.selectedDevice = (global::Ioespt.UWP.DeviceControl.Models.RegisteredDevice)Value;
         }
-        private object get_74_Interaction_Behaviors(object instance)
+        private object get_74_DetailPageViewModel_showProvisioningDetails(object instance)
+        {
+            var that = (global::Ioespt.UWP.DeviceControl.ViewModels.DetailPageViewModel)instance;
+            return that.showProvisioningDetails;
+        }
+        private void set_74_DetailPageViewModel_showProvisioningDetails(object instance, object Value)
+        {
+            var that = (global::Ioespt.UWP.DeviceControl.ViewModels.DetailPageViewModel)instance;
+            that.showProvisioningDetails = (global::Windows.UI.Xaml.Visibility)Value;
+        }
+        private object get_75_DetailPageViewModel_showDeviceDetails(object instance)
+        {
+            var that = (global::Ioespt.UWP.DeviceControl.ViewModels.DetailPageViewModel)instance;
+            return that.showDeviceDetails;
+        }
+        private void set_75_DetailPageViewModel_showDeviceDetails(object instance, object Value)
+        {
+            var that = (global::Ioespt.UWP.DeviceControl.ViewModels.DetailPageViewModel)instance;
+            that.showDeviceDetails = (global::Windows.UI.Xaml.Visibility)Value;
+        }
+        private object get_76_DetailPageViewModel_networks(object instance)
+        {
+            var that = (global::Ioespt.UWP.DeviceControl.ViewModels.DetailPageViewModel)instance;
+            return that.networks;
+        }
+        private void set_76_DetailPageViewModel_networks(object instance, object Value)
+        {
+            var that = (global::Ioespt.UWP.DeviceControl.ViewModels.DetailPageViewModel)instance;
+            that.networks = (global::System.Collections.ObjectModel.ObservableCollection<global::Windows.Devices.WiFi.WiFiAvailableNetwork>)Value;
+        }
+        private object get_77_WiFiAvailableNetwork_BeaconInterval(object instance)
+        {
+            var that = (global::Windows.Devices.WiFi.WiFiAvailableNetwork)instance;
+            return that.BeaconInterval;
+        }
+        private object get_78_WiFiAvailableNetwork_Bssid(object instance)
+        {
+            var that = (global::Windows.Devices.WiFi.WiFiAvailableNetwork)instance;
+            return that.Bssid;
+        }
+        private object get_79_WiFiAvailableNetwork_ChannelCenterFrequencyInKilohertz(object instance)
+        {
+            var that = (global::Windows.Devices.WiFi.WiFiAvailableNetwork)instance;
+            return that.ChannelCenterFrequencyInKilohertz;
+        }
+        private object get_80_WiFiAvailableNetwork_IsWiFiDirect(object instance)
+        {
+            var that = (global::Windows.Devices.WiFi.WiFiAvailableNetwork)instance;
+            return that.IsWiFiDirect;
+        }
+        private object get_81_WiFiAvailableNetwork_NetworkKind(object instance)
+        {
+            var that = (global::Windows.Devices.WiFi.WiFiAvailableNetwork)instance;
+            return that.NetworkKind;
+        }
+        private object get_82_WiFiAvailableNetwork_NetworkRssiInDecibelMilliwatts(object instance)
+        {
+            var that = (global::Windows.Devices.WiFi.WiFiAvailableNetwork)instance;
+            return that.NetworkRssiInDecibelMilliwatts;
+        }
+        private object get_83_WiFiAvailableNetwork_PhyKind(object instance)
+        {
+            var that = (global::Windows.Devices.WiFi.WiFiAvailableNetwork)instance;
+            return that.PhyKind;
+        }
+        private object get_84_WiFiAvailableNetwork_SecuritySettings(object instance)
+        {
+            var that = (global::Windows.Devices.WiFi.WiFiAvailableNetwork)instance;
+            return that.SecuritySettings;
+        }
+        private object get_85_WiFiAvailableNetwork_SignalBars(object instance)
+        {
+            var that = (global::Windows.Devices.WiFi.WiFiAvailableNetwork)instance;
+            return that.SignalBars;
+        }
+        private object get_86_WiFiAvailableNetwork_Ssid(object instance)
+        {
+            var that = (global::Windows.Devices.WiFi.WiFiAvailableNetwork)instance;
+            return that.Ssid;
+        }
+        private object get_87_WiFiAvailableNetwork_Uptime(object instance)
+        {
+            var that = (global::Windows.Devices.WiFi.WiFiAvailableNetwork)instance;
+            return that.Uptime;
+        }
+        private object get_88_DetailPageViewModel_selectedNetwork(object instance)
+        {
+            var that = (global::Ioespt.UWP.DeviceControl.ViewModels.DetailPageViewModel)instance;
+            return that.selectedNetwork;
+        }
+        private void set_88_DetailPageViewModel_selectedNetwork(object instance, object Value)
+        {
+            var that = (global::Ioespt.UWP.DeviceControl.ViewModels.DetailPageViewModel)instance;
+            that.selectedNetwork = (global::System.Object)Value;
+        }
+        private object get_89_DetailPageViewModel_password(object instance)
+        {
+            var that = (global::Ioespt.UWP.DeviceControl.ViewModels.DetailPageViewModel)instance;
+            return that.password;
+        }
+        private void set_89_DetailPageViewModel_password(object instance, object Value)
+        {
+            var that = (global::Ioespt.UWP.DeviceControl.ViewModels.DetailPageViewModel)instance;
+            that.password = (global::System.String)Value;
+        }
+        private object get_90_Interaction_Behaviors(object instance)
         {
             return global::Microsoft.Xaml.Interactivity.Interaction.GetBehaviors((global::Windows.UI.Xaml.DependencyObject)instance);
         }
-        private void set_74_Interaction_Behaviors(object instance, object Value)
+        private void set_90_Interaction_Behaviors(object instance, object Value)
         {
             global::Microsoft.Xaml.Interactivity.Interaction.SetBehaviors((global::Windows.UI.Xaml.DependencyObject)instance, (global::Microsoft.Xaml.Interactivity.BehaviorCollection)Value);
         }
-        private object get_75_EllipsisBehavior_Visibility(object instance)
+        private object get_91_EllipsisBehavior_Visibility(object instance)
         {
             var that = (global::Template10.Behaviors.EllipsisBehavior)instance;
             return that.Visibility;
         }
-        private void set_75_EllipsisBehavior_Visibility(object instance, object Value)
+        private void set_91_EllipsisBehavior_Visibility(object instance, object Value)
         {
             var that = (global::Template10.Behaviors.EllipsisBehavior)instance;
             that.Visibility = (global::Template10.Behaviors.EllipsisBehavior.Visibilities)Value;
         }
-        private object get_76_EllipsisBehavior_AssociatedObject(object instance)
+        private object get_92_EllipsisBehavior_AssociatedObject(object instance)
         {
             var that = (global::Template10.Behaviors.EllipsisBehavior)instance;
             return that.AssociatedObject;
         }
-        private object get_77_MainPageViewModel_devices(object instance)
+        private object get_93_MainPageViewModel_devices(object instance)
         {
             var that = (global::Ioespt.UWP.DeviceControl.ViewModels.MainPageViewModel)instance;
             return that.devices;
         }
-        private void set_77_MainPageViewModel_devices(object instance, object Value)
+        private void set_93_MainPageViewModel_devices(object instance, object Value)
         {
             var that = (global::Ioespt.UWP.DeviceControl.ViewModels.MainPageViewModel)instance;
             that.devices = (global::System.Collections.ObjectModel.ObservableCollection<global::Ioespt.UWP.DeviceControl.Models.RegisteredDevice>)Value;
         }
-        private object get_78_RegisteredDevice_Status(object instance)
+        private object get_94_RegisteredDevice_Status(object instance)
         {
             var that = (global::Ioespt.UWP.DeviceControl.Models.RegisteredDevice)instance;
             return that.Status;
         }
-        private void set_78_RegisteredDevice_Status(object instance, object Value)
+        private void set_94_RegisteredDevice_Status(object instance, object Value)
         {
             var that = (global::Ioespt.UWP.DeviceControl.Models.RegisteredDevice)instance;
             that.Status = (global::Ioespt.UWP.DeviceControl.Models.DeviceStatus)Value;
         }
-        private object get_79_RegisteredDevice_GivenName(object instance)
+        private object get_95_RegisteredDevice_GivenName(object instance)
         {
             var that = (global::Ioespt.UWP.DeviceControl.Models.RegisteredDevice)instance;
             return that.GivenName;
         }
-        private void set_79_RegisteredDevice_GivenName(object instance, object Value)
+        private void set_95_RegisteredDevice_GivenName(object instance, object Value)
         {
             var that = (global::Ioespt.UWP.DeviceControl.Models.RegisteredDevice)instance;
             that.GivenName = (global::System.String)Value;
         }
-        private object get_80_RegisteredDevice_ModuleType(object instance)
+        private object get_96_RegisteredDevice_ModuleType(object instance)
         {
             var that = (global::Ioespt.UWP.DeviceControl.Models.RegisteredDevice)instance;
             return that.ModuleType;
         }
-        private void set_80_RegisteredDevice_ModuleType(object instance, object Value)
+        private void set_96_RegisteredDevice_ModuleType(object instance, object Value)
         {
             var that = (global::Ioespt.UWP.DeviceControl.Models.RegisteredDevice)instance;
             that.ModuleType = (global::System.String)Value;
         }
-        private object get_81_RegisteredDevice_FirmwareName(object instance)
+        private object get_97_RegisteredDevice_FirmwareName(object instance)
         {
             var that = (global::Ioespt.UWP.DeviceControl.Models.RegisteredDevice)instance;
             return that.FirmwareName;
         }
-        private void set_81_RegisteredDevice_FirmwareName(object instance, object Value)
+        private void set_97_RegisteredDevice_FirmwareName(object instance, object Value)
         {
             var that = (global::Ioespt.UWP.DeviceControl.Models.RegisteredDevice)instance;
             that.FirmwareName = (global::System.String)Value;
         }
-        private object get_82_RegisteredDevice_FirmwareVersion(object instance)
+        private object get_98_RegisteredDevice_FirmwareVersion(object instance)
         {
             var that = (global::Ioespt.UWP.DeviceControl.Models.RegisteredDevice)instance;
             return that.FirmwareVersion;
         }
-        private void set_82_RegisteredDevice_FirmwareVersion(object instance, object Value)
+        private void set_98_RegisteredDevice_FirmwareVersion(object instance, object Value)
         {
             var that = (global::Ioespt.UWP.DeviceControl.Models.RegisteredDevice)instance;
             that.FirmwareVersion = (global::System.String)Value;
         }
-        private object get_83_RegisteredDevice_ChipId(object instance)
+        private object get_99_RegisteredDevice_ChipId(object instance)
         {
             var that = (global::Ioespt.UWP.DeviceControl.Models.RegisteredDevice)instance;
             return that.ChipId;
         }
-        private void set_83_RegisteredDevice_ChipId(object instance, object Value)
+        private void set_99_RegisteredDevice_ChipId(object instance, object Value)
         {
             var that = (global::Ioespt.UWP.DeviceControl.Models.RegisteredDevice)instance;
             that.ChipId = (global::System.String)Value;
         }
-        private object get_84_RegisteredDevice_Ip(object instance)
+        private object get_100_RegisteredDevice_Ip(object instance)
         {
             var that = (global::Ioespt.UWP.DeviceControl.Models.RegisteredDevice)instance;
             return that.Ip;
         }
-        private void set_84_RegisteredDevice_Ip(object instance, object Value)
+        private void set_100_RegisteredDevice_Ip(object instance, object Value)
         {
             var that = (global::Ioespt.UWP.DeviceControl.Models.RegisteredDevice)instance;
             that.Ip = (global::System.String)Value;
         }
-        private object get_85_RegisteredDevice_ConnectedTo(object instance)
+        private object get_101_RegisteredDevice_ConnectedTo(object instance)
         {
             var that = (global::Ioespt.UWP.DeviceControl.Models.RegisteredDevice)instance;
             return that.ConnectedTo;
         }
-        private void set_85_RegisteredDevice_ConnectedTo(object instance, object Value)
+        private void set_101_RegisteredDevice_ConnectedTo(object instance, object Value)
         {
             var that = (global::Ioespt.UWP.DeviceControl.Models.RegisteredDevice)instance;
             that.ConnectedTo = (global::System.String)Value;
         }
-        private object get_86_RegisteredDevice_StatusText(object instance)
+        private object get_102_RegisteredDevice_StatusText(object instance)
         {
             var that = (global::Ioespt.UWP.DeviceControl.Models.RegisteredDevice)instance;
             return that.StatusText;
         }
-        private object get_87_RegisteredDevice_StatusColor(object instance)
+        private object get_103_RegisteredDevice_StatusColor(object instance)
         {
             var that = (global::Ioespt.UWP.DeviceControl.Models.RegisteredDevice)instance;
             return that.StatusColor;
         }
-        private object get_88_RegisteredDevice_DeviceIcon(object instance)
+        private object get_104_RegisteredDevice_DeviceIcon(object instance)
         {
             var that = (global::Ioespt.UWP.DeviceControl.Models.RegisteredDevice)instance;
             return that.DeviceIcon;
         }
-        private object get_89_MainPageViewModel_GotoDetailsPage(object instance)
+        private object get_105_MainPageViewModel_GotoDetailsPage(object instance)
         {
             var that = (global::Ioespt.UWP.DeviceControl.ViewModels.MainPageViewModel)instance;
             return that.GotoDetailsPage;
         }
-        private object get_90_ItemClickCommand_Command(object instance)
+        private object get_106_ItemClickCommand_Command(object instance)
         {
             return global::Ioespt.UWP.DeviceControl.Helpers.ItemClickCommand.GetCommand((global::Windows.UI.Xaml.DependencyObject)instance);
         }
-        private void set_90_ItemClickCommand_Command(object instance, object Value)
+        private void set_106_ItemClickCommand_Command(object instance, object Value)
         {
             global::Ioespt.UWP.DeviceControl.Helpers.ItemClickCommand.SetCommand((global::Windows.UI.Xaml.DependencyObject)instance, (global::System.Windows.Input.ICommand)Value);
         }
-        private object get_91_SettingsPageViewModel_SettingsPartViewModel(object instance)
+        private object get_107_SettingsPageViewModel_SettingsPartViewModel(object instance)
         {
             var that = (global::Ioespt.UWP.DeviceControl.ViewModels.SettingsPageViewModel)instance;
             return that.SettingsPartViewModel;
         }
-        private object get_92_SettingsPageViewModel_AboutPartViewModel(object instance)
+        private object get_108_SettingsPageViewModel_AboutPartViewModel(object instance)
         {
             var that = (global::Ioespt.UWP.DeviceControl.ViewModels.SettingsPageViewModel)instance;
             return that.AboutPartViewModel;
@@ -2376,103 +2577,199 @@ namespace Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo
                 xamlMember.Getter = get_73_DetailPageViewModel_selectedDevice;
                 xamlMember.Setter = set_73_DetailPageViewModel_selectedDevice;
                 break;
+            case "Ioespt.UWP.DeviceControl.ViewModels.DetailPageViewModel.showProvisioningDetails":
+                userType = (global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Ioespt.UWP.DeviceControl.ViewModels.DetailPageViewModel");
+                xamlMember = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlMember(this, "showProvisioningDetails", "Windows.UI.Xaml.Visibility");
+                xamlMember.Getter = get_74_DetailPageViewModel_showProvisioningDetails;
+                xamlMember.Setter = set_74_DetailPageViewModel_showProvisioningDetails;
+                break;
+            case "Ioespt.UWP.DeviceControl.ViewModels.DetailPageViewModel.showDeviceDetails":
+                userType = (global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Ioespt.UWP.DeviceControl.ViewModels.DetailPageViewModel");
+                xamlMember = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlMember(this, "showDeviceDetails", "Windows.UI.Xaml.Visibility");
+                xamlMember.Getter = get_75_DetailPageViewModel_showDeviceDetails;
+                xamlMember.Setter = set_75_DetailPageViewModel_showDeviceDetails;
+                break;
+            case "Ioespt.UWP.DeviceControl.ViewModels.DetailPageViewModel.networks":
+                userType = (global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Ioespt.UWP.DeviceControl.ViewModels.DetailPageViewModel");
+                xamlMember = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlMember(this, "networks", "System.Collections.ObjectModel.ObservableCollection`1<Windows.Devices.WiFi.WiFiAvailableNetwork>");
+                xamlMember.Getter = get_76_DetailPageViewModel_networks;
+                xamlMember.Setter = set_76_DetailPageViewModel_networks;
+                break;
+            case "Windows.Devices.WiFi.WiFiAvailableNetwork.BeaconInterval":
+                userType = (global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Windows.Devices.WiFi.WiFiAvailableNetwork");
+                xamlMember = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlMember(this, "BeaconInterval", "TimeSpan");
+                xamlMember.Getter = get_77_WiFiAvailableNetwork_BeaconInterval;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Windows.Devices.WiFi.WiFiAvailableNetwork.Bssid":
+                userType = (global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Windows.Devices.WiFi.WiFiAvailableNetwork");
+                xamlMember = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlMember(this, "Bssid", "String");
+                xamlMember.Getter = get_78_WiFiAvailableNetwork_Bssid;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Windows.Devices.WiFi.WiFiAvailableNetwork.ChannelCenterFrequencyInKilohertz":
+                userType = (global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Windows.Devices.WiFi.WiFiAvailableNetwork");
+                xamlMember = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlMember(this, "ChannelCenterFrequencyInKilohertz", "Int32");
+                xamlMember.Getter = get_79_WiFiAvailableNetwork_ChannelCenterFrequencyInKilohertz;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Windows.Devices.WiFi.WiFiAvailableNetwork.IsWiFiDirect":
+                userType = (global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Windows.Devices.WiFi.WiFiAvailableNetwork");
+                xamlMember = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlMember(this, "IsWiFiDirect", "Boolean");
+                xamlMember.Getter = get_80_WiFiAvailableNetwork_IsWiFiDirect;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Windows.Devices.WiFi.WiFiAvailableNetwork.NetworkKind":
+                userType = (global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Windows.Devices.WiFi.WiFiAvailableNetwork");
+                xamlMember = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlMember(this, "NetworkKind", "Windows.Devices.WiFi.WiFiNetworkKind");
+                xamlMember.Getter = get_81_WiFiAvailableNetwork_NetworkKind;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Windows.Devices.WiFi.WiFiAvailableNetwork.NetworkRssiInDecibelMilliwatts":
+                userType = (global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Windows.Devices.WiFi.WiFiAvailableNetwork");
+                xamlMember = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlMember(this, "NetworkRssiInDecibelMilliwatts", "Double");
+                xamlMember.Getter = get_82_WiFiAvailableNetwork_NetworkRssiInDecibelMilliwatts;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Windows.Devices.WiFi.WiFiAvailableNetwork.PhyKind":
+                userType = (global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Windows.Devices.WiFi.WiFiAvailableNetwork");
+                xamlMember = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlMember(this, "PhyKind", "Windows.Devices.WiFi.WiFiPhyKind");
+                xamlMember.Getter = get_83_WiFiAvailableNetwork_PhyKind;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Windows.Devices.WiFi.WiFiAvailableNetwork.SecuritySettings":
+                userType = (global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Windows.Devices.WiFi.WiFiAvailableNetwork");
+                xamlMember = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlMember(this, "SecuritySettings", "Windows.Networking.Connectivity.NetworkSecuritySettings");
+                xamlMember.Getter = get_84_WiFiAvailableNetwork_SecuritySettings;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Windows.Devices.WiFi.WiFiAvailableNetwork.SignalBars":
+                userType = (global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Windows.Devices.WiFi.WiFiAvailableNetwork");
+                xamlMember = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlMember(this, "SignalBars", "Byte");
+                xamlMember.Getter = get_85_WiFiAvailableNetwork_SignalBars;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Windows.Devices.WiFi.WiFiAvailableNetwork.Ssid":
+                userType = (global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Windows.Devices.WiFi.WiFiAvailableNetwork");
+                xamlMember = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlMember(this, "Ssid", "String");
+                xamlMember.Getter = get_86_WiFiAvailableNetwork_Ssid;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Windows.Devices.WiFi.WiFiAvailableNetwork.Uptime":
+                userType = (global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Windows.Devices.WiFi.WiFiAvailableNetwork");
+                xamlMember = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlMember(this, "Uptime", "TimeSpan");
+                xamlMember.Getter = get_87_WiFiAvailableNetwork_Uptime;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Ioespt.UWP.DeviceControl.ViewModels.DetailPageViewModel.selectedNetwork":
+                userType = (global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Ioespt.UWP.DeviceControl.ViewModels.DetailPageViewModel");
+                xamlMember = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlMember(this, "selectedNetwork", "Object");
+                xamlMember.Getter = get_88_DetailPageViewModel_selectedNetwork;
+                xamlMember.Setter = set_88_DetailPageViewModel_selectedNetwork;
+                break;
+            case "Ioespt.UWP.DeviceControl.ViewModels.DetailPageViewModel.password":
+                userType = (global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Ioespt.UWP.DeviceControl.ViewModels.DetailPageViewModel");
+                xamlMember = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlMember(this, "password", "String");
+                xamlMember.Getter = get_89_DetailPageViewModel_password;
+                xamlMember.Setter = set_89_DetailPageViewModel_password;
+                break;
             case "Microsoft.Xaml.Interactivity.Interaction.Behaviors":
                 userType = (global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactivity.Interaction");
                 xamlMember = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlMember(this, "Behaviors", "Microsoft.Xaml.Interactivity.BehaviorCollection");
                 xamlMember.SetTargetTypeName("Windows.UI.Xaml.DependencyObject");
                 xamlMember.SetIsAttachable();
-                xamlMember.Getter = get_74_Interaction_Behaviors;
-                xamlMember.Setter = set_74_Interaction_Behaviors;
+                xamlMember.Getter = get_90_Interaction_Behaviors;
+                xamlMember.Setter = set_90_Interaction_Behaviors;
                 break;
             case "Template10.Behaviors.EllipsisBehavior.Visibility":
                 userType = (global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Behaviors.EllipsisBehavior");
                 xamlMember = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlMember(this, "Visibility", "Template10.Behaviors.EllipsisBehavior.Visibilities");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_75_EllipsisBehavior_Visibility;
-                xamlMember.Setter = set_75_EllipsisBehavior_Visibility;
+                xamlMember.Getter = get_91_EllipsisBehavior_Visibility;
+                xamlMember.Setter = set_91_EllipsisBehavior_Visibility;
                 break;
             case "Template10.Behaviors.EllipsisBehavior.AssociatedObject":
                 userType = (global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Template10.Behaviors.EllipsisBehavior");
                 xamlMember = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlMember(this, "AssociatedObject", "Windows.UI.Xaml.DependencyObject");
-                xamlMember.Getter = get_76_EllipsisBehavior_AssociatedObject;
+                xamlMember.Getter = get_92_EllipsisBehavior_AssociatedObject;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Ioespt.UWP.DeviceControl.ViewModels.MainPageViewModel.devices":
                 userType = (global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Ioespt.UWP.DeviceControl.ViewModels.MainPageViewModel");
                 xamlMember = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlMember(this, "devices", "System.Collections.ObjectModel.ObservableCollection`1<Ioespt.UWP.DeviceControl.Models.RegisteredDevice>");
-                xamlMember.Getter = get_77_MainPageViewModel_devices;
-                xamlMember.Setter = set_77_MainPageViewModel_devices;
+                xamlMember.Getter = get_93_MainPageViewModel_devices;
+                xamlMember.Setter = set_93_MainPageViewModel_devices;
                 break;
             case "Ioespt.UWP.DeviceControl.Models.RegisteredDevice.Status":
                 userType = (global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Ioespt.UWP.DeviceControl.Models.RegisteredDevice");
                 xamlMember = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlMember(this, "Status", "Ioespt.UWP.DeviceControl.Models.DeviceStatus");
-                xamlMember.Getter = get_78_RegisteredDevice_Status;
-                xamlMember.Setter = set_78_RegisteredDevice_Status;
+                xamlMember.Getter = get_94_RegisteredDevice_Status;
+                xamlMember.Setter = set_94_RegisteredDevice_Status;
                 break;
             case "Ioespt.UWP.DeviceControl.Models.RegisteredDevice.GivenName":
                 userType = (global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Ioespt.UWP.DeviceControl.Models.RegisteredDevice");
                 xamlMember = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlMember(this, "GivenName", "String");
-                xamlMember.Getter = get_79_RegisteredDevice_GivenName;
-                xamlMember.Setter = set_79_RegisteredDevice_GivenName;
+                xamlMember.Getter = get_95_RegisteredDevice_GivenName;
+                xamlMember.Setter = set_95_RegisteredDevice_GivenName;
                 break;
             case "Ioespt.UWP.DeviceControl.Models.RegisteredDevice.ModuleType":
                 userType = (global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Ioespt.UWP.DeviceControl.Models.RegisteredDevice");
                 xamlMember = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlMember(this, "ModuleType", "String");
-                xamlMember.Getter = get_80_RegisteredDevice_ModuleType;
-                xamlMember.Setter = set_80_RegisteredDevice_ModuleType;
+                xamlMember.Getter = get_96_RegisteredDevice_ModuleType;
+                xamlMember.Setter = set_96_RegisteredDevice_ModuleType;
                 break;
             case "Ioespt.UWP.DeviceControl.Models.RegisteredDevice.FirmwareName":
                 userType = (global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Ioespt.UWP.DeviceControl.Models.RegisteredDevice");
                 xamlMember = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlMember(this, "FirmwareName", "String");
-                xamlMember.Getter = get_81_RegisteredDevice_FirmwareName;
-                xamlMember.Setter = set_81_RegisteredDevice_FirmwareName;
+                xamlMember.Getter = get_97_RegisteredDevice_FirmwareName;
+                xamlMember.Setter = set_97_RegisteredDevice_FirmwareName;
                 break;
             case "Ioespt.UWP.DeviceControl.Models.RegisteredDevice.FirmwareVersion":
                 userType = (global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Ioespt.UWP.DeviceControl.Models.RegisteredDevice");
                 xamlMember = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlMember(this, "FirmwareVersion", "String");
-                xamlMember.Getter = get_82_RegisteredDevice_FirmwareVersion;
-                xamlMember.Setter = set_82_RegisteredDevice_FirmwareVersion;
+                xamlMember.Getter = get_98_RegisteredDevice_FirmwareVersion;
+                xamlMember.Setter = set_98_RegisteredDevice_FirmwareVersion;
                 break;
             case "Ioespt.UWP.DeviceControl.Models.RegisteredDevice.ChipId":
                 userType = (global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Ioespt.UWP.DeviceControl.Models.RegisteredDevice");
                 xamlMember = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlMember(this, "ChipId", "String");
-                xamlMember.Getter = get_83_RegisteredDevice_ChipId;
-                xamlMember.Setter = set_83_RegisteredDevice_ChipId;
+                xamlMember.Getter = get_99_RegisteredDevice_ChipId;
+                xamlMember.Setter = set_99_RegisteredDevice_ChipId;
                 break;
             case "Ioespt.UWP.DeviceControl.Models.RegisteredDevice.Ip":
                 userType = (global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Ioespt.UWP.DeviceControl.Models.RegisteredDevice");
                 xamlMember = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlMember(this, "Ip", "String");
-                xamlMember.Getter = get_84_RegisteredDevice_Ip;
-                xamlMember.Setter = set_84_RegisteredDevice_Ip;
+                xamlMember.Getter = get_100_RegisteredDevice_Ip;
+                xamlMember.Setter = set_100_RegisteredDevice_Ip;
                 break;
             case "Ioespt.UWP.DeviceControl.Models.RegisteredDevice.ConnectedTo":
                 userType = (global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Ioespt.UWP.DeviceControl.Models.RegisteredDevice");
                 xamlMember = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlMember(this, "ConnectedTo", "String");
-                xamlMember.Getter = get_85_RegisteredDevice_ConnectedTo;
-                xamlMember.Setter = set_85_RegisteredDevice_ConnectedTo;
+                xamlMember.Getter = get_101_RegisteredDevice_ConnectedTo;
+                xamlMember.Setter = set_101_RegisteredDevice_ConnectedTo;
                 break;
             case "Ioespt.UWP.DeviceControl.Models.RegisteredDevice.StatusText":
                 userType = (global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Ioespt.UWP.DeviceControl.Models.RegisteredDevice");
                 xamlMember = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlMember(this, "StatusText", "String");
-                xamlMember.Getter = get_86_RegisteredDevice_StatusText;
+                xamlMember.Getter = get_102_RegisteredDevice_StatusText;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Ioespt.UWP.DeviceControl.Models.RegisteredDevice.StatusColor":
                 userType = (global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Ioespt.UWP.DeviceControl.Models.RegisteredDevice");
                 xamlMember = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlMember(this, "StatusColor", "Windows.UI.Xaml.Media.SolidColorBrush");
-                xamlMember.Getter = get_87_RegisteredDevice_StatusColor;
+                xamlMember.Getter = get_103_RegisteredDevice_StatusColor;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Ioespt.UWP.DeviceControl.Models.RegisteredDevice.DeviceIcon":
                 userType = (global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Ioespt.UWP.DeviceControl.Models.RegisteredDevice");
                 xamlMember = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlMember(this, "DeviceIcon", "String");
-                xamlMember.Getter = get_88_RegisteredDevice_DeviceIcon;
+                xamlMember.Getter = get_104_RegisteredDevice_DeviceIcon;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Ioespt.UWP.DeviceControl.ViewModels.MainPageViewModel.GotoDetailsPage":
                 userType = (global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Ioespt.UWP.DeviceControl.ViewModels.MainPageViewModel");
                 xamlMember = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlMember(this, "GotoDetailsPage", "GalaSoft.MvvmLight.Command.RelayCommand`1<Ioespt.UWP.DeviceControl.Models.RegisteredDevice>");
-                xamlMember.Getter = get_89_MainPageViewModel_GotoDetailsPage;
+                xamlMember.Getter = get_105_MainPageViewModel_GotoDetailsPage;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Ioespt.UWP.DeviceControl.Helpers.ItemClickCommand.Command":
@@ -2480,19 +2777,19 @@ namespace Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo
                 xamlMember = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlMember(this, "Command", "System.Windows.Input.ICommand");
                 xamlMember.SetTargetTypeName("Windows.UI.Xaml.DependencyObject");
                 xamlMember.SetIsAttachable();
-                xamlMember.Getter = get_90_ItemClickCommand_Command;
-                xamlMember.Setter = set_90_ItemClickCommand_Command;
+                xamlMember.Getter = get_106_ItemClickCommand_Command;
+                xamlMember.Setter = set_106_ItemClickCommand_Command;
                 break;
             case "Ioespt.UWP.DeviceControl.ViewModels.SettingsPageViewModel.SettingsPartViewModel":
                 userType = (global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Ioespt.UWP.DeviceControl.ViewModels.SettingsPageViewModel");
                 xamlMember = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlMember(this, "SettingsPartViewModel", "Ioespt.UWP.DeviceControl.ViewModels.SettingsPartViewModel");
-                xamlMember.Getter = get_91_SettingsPageViewModel_SettingsPartViewModel;
+                xamlMember.Getter = get_107_SettingsPageViewModel_SettingsPartViewModel;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Ioespt.UWP.DeviceControl.ViewModels.SettingsPageViewModel.AboutPartViewModel":
                 userType = (global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Ioespt.UWP.DeviceControl.ViewModels.SettingsPageViewModel");
                 xamlMember = new global::Ioespt.UWP.DeviceControl.Ioespt_UWP_DeviceControl_XamlTypeInfo.XamlMember(this, "AboutPartViewModel", "Ioespt.UWP.DeviceControl.ViewModels.AboutPartViewModel");
-                xamlMember.Getter = get_92_SettingsPageViewModel_AboutPartViewModel;
+                xamlMember.Getter = get_108_SettingsPageViewModel_AboutPartViewModel;
                 xamlMember.SetIsReadOnly();
                 break;
             }

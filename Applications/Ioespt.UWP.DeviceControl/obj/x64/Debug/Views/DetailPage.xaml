@@ -58,19 +58,47 @@
         </controls:PageHeader>
 
         <!--  content  -->
-        <Grid Grid.Row="1">
+        <Grid Grid.Row="1" Visibility="{Binding showProvisioningDetails}">
+
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0" Width="150" Height="150">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="30"/>
+                </Grid.RowDefinitions>
+                <Rectangle Width="100" Height="70" Fill="AliceBlue"/>
+                <Image Width="70" Height="70" Source="{Binding selectedDevice.DeviceIcon}" />
+                <Rectangle Grid.Row="1" Width="100" Height="30" Fill="{Binding selectedDevice.StatusColor}"/>
+                <TextBlock Width="70" Grid.Row="1" Text="{Binding selectedDevice.StatusText}" Margin="5" Foreground="Black" />
+            </Grid>
+
+            <StackPanel Grid.Row="1" Margin="40,10" Width="200">
+                <TextBlock Text="Network SSID" Style="{StaticResource BodyTextBlockStyle}" Width="200" />
+                <ComboBox x:ConnectionId='8'                                                                                                               DisplayMemberPath="Ssid"  Width="200"/>
+                <TextBlock Text="Password" Style="{StaticResource BodyTextBlockStyle}" />
+                <PasswordBox x:ConnectionId='9'                                                     />
+                <Button x:ConnectionId='10' Content="Connect Device" HorizontalAlignment="Center"                                      Margin="10"/>
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Row="1" Visibility="{Binding showDeviceDetails}">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
 
-                <Grid Grid.Row="0">
+                <Grid Grid.Row="0" Margin="10">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition />
                     </Grid.ColumnDefinitions>
 
-                    <Grid Grid.Column="0" Margin="10">
+                    <Grid Grid.Column="0" >
                         <Grid.RowDefinitions>
                             <RowDefinition/>
                             <RowDefinition/>
@@ -80,7 +108,16 @@
                         <Rectangle Grid.Row="1" Width="100" Height="30" Fill="{Binding selectedDevice.StatusColor}"/>
                         <TextBlock Grid.Row="1" Text="{Binding selectedDevice.StatusText}" Margin="5" Foreground="Black" />
                     </Grid>
-
+                    <StackPanel Grid.Column="1" Margin="12,0,0,0" VerticalAlignment="Top">
+                        <TextBlock Text="{Binding selectedDevice.GivenName}" Style="{StaticResource TitleTextBlockStyle}"  />
+                        <TextBlock Text="{Binding selectedDevice.ModuleType}" Style="{StaticResource SubtitleTextBlockStyle}" />
+                        <TextBlock Text="Firmware: " Style="{StaticResource BodyTextBlockStyle}" >
+                                    <Run Text="{Binding selectedDevice.FirmwareName}" /><Run Text=" : " /><Run Text="{Binding selectedDevice.FirmwareVersion}" />
+                        </TextBlock>
+                        <TextBlock Text="Connected To: " Style="{StaticResource BodyTextBlockStyle}" >
+                                    <Run Text="{Binding selectedDevice.ConnectedTo}" />
+                        </TextBlock>
+                    </StackPanel>
                 </Grid>
                 
             
@@ -88,7 +125,8 @@
                     <PivotItem Header="General">
                         <!--Pivot content goes here-->
                         <StackPanel>
-                        
+
+
                         </StackPanel>
                     </PivotItem>
                     <PivotItem Header="Azure Settings">

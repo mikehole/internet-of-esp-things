@@ -45,7 +45,8 @@ namespace Ioespt.UWP.DeviceControl.Services.DeviceDiscovery
                 }
 
                 Device device = await GetXml(response);
-                Debug.WriteLine("Device found");
+                Debug.WriteLine($"Device found : {device.DeviceType.friendlyName}");
+
                 if (DeviceFound != null)
                     DeviceFound(this, new DeviceFoundEventArgs(device));
             };
