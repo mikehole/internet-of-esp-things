@@ -49,15 +49,18 @@
         </VisualStateManager.VisualStateGroups>
 
         <controls:PageHeader x:ConnectionId='7' x:Name="pageHeader" Text="Main Page">
+            <!--  Main commands  -->
+            <AppBarButton x:ConnectionId='9'                                   Icon="Add" Label="Device Search" />
+            <AppBarButton x:ConnectionId='10'                                    Icon="Refresh" Label="Refresh List" />
             <!--  place stretched, across top  -->
             <RelativePanel.AlignTopWithPanel>True</RelativePanel.AlignTopWithPanel>
             <RelativePanel.AlignRightWithPanel>True</RelativePanel.AlignRightWithPanel>
             <RelativePanel.AlignLeftWithPanel>True</RelativePanel.AlignLeftWithPanel>
             <!--  secondary commands  -->
             <controls:PageHeader.SecondaryCommands>
-                <AppBarButton x:ConnectionId='9'                                         Label="Settings" />
-                <AppBarButton x:ConnectionId='10'                                        Label="Privacy" />
-                <AppBarButton x:ConnectionId='11'                                      Label="About" />
+                <AppBarButton x:ConnectionId='11'                                         Label="Settings" />
+                <AppBarButton x:ConnectionId='12'                                        Label="Privacy" />
+                <AppBarButton x:ConnectionId='13'                                      Label="About" />
             </controls:PageHeader.SecondaryCommands>
         </controls:PageHeader>
 

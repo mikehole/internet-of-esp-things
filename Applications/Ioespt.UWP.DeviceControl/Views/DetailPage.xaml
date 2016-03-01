@@ -59,11 +59,43 @@
 
         <!--  content  -->
         <Grid Grid.Row="1">
-            <ScrollViewer Padding="12,8,0,0" VerticalScrollBarVisibility="Auto">
-                <StackPanel>
-                    <TextBlock Style="{StaticResource TitleTextBlockStyle}" Text="You passed:" />
-                </StackPanel>
-            </ScrollViewer>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid Grid.Column="0" Margin="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Rectangle Width="100" Height="70" Fill="AliceBlue"/>
+                        <Image Width="70" Height="70" Source="{Binding selectedDevice.DeviceIcon}" />
+                        <Rectangle Grid.Row="1" Width="100" Height="30" Fill="{Binding selectedDevice.StatusColor}"/>
+                        <TextBlock Grid.Row="1" Text="{Binding selectedDevice.StatusText}" Margin="5" Foreground="Black" />
+                    </Grid>
+
+                </Grid>
+                
+            
+                <Pivot Grid.Row="1">
+                    <PivotItem Header="General">
+                        <!--Pivot content goes here-->
+                        <StackPanel>
+                        
+                        </StackPanel>
+                    </PivotItem>
+                    <PivotItem Header="Azure Settings">
+                        <!--Pivot content goes here-->
+                    </PivotItem>
+                </Pivot>
+            </Grid>
         </Grid>
 
     </Grid>

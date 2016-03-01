@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.UI;
 using Windows.UI.Xaml.Media;
+using PropertyChanged;
 
 namespace Ioespt.UWP.DeviceControl.Models
 {
@@ -19,9 +20,11 @@ namespace Ioespt.UWP.DeviceControl.Models
 
 
     [JsonObject(MemberSerialization.OptIn)]
+    [ImplementPropertyChanged]
     public class RegisteredDevice
     {
         [JsonProperty]
+        [AlsoNotifyFor("StatusText", "StatusColor")]
         public DeviceStatus Status { get; set; }
 
         [JsonProperty]

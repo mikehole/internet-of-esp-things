@@ -7,14 +7,15 @@
     <RootPropertyPathName Name="DeviceName" />
     <RootPropertyPathName Name="SearchStatus" />
     <RootPropertyPathName Name="startPanelVisible" />
+    <RootPropertyPathName Name="selectedDevice" />
+    <RootPropertyPathName Name="StatusText" />
+    <RootPropertyPathName Name="StatusColor" />
+    <RootPropertyPathName Name="DeviceIcon" />
     <RootPropertyPathName Name="ConnectedTo" />
     <RootPropertyPathName Name="FirmwareVersion" />
     <RootPropertyPathName Name="FirmwareName" />
     <RootPropertyPathName Name="ModuleType" />
     <RootPropertyPathName Name="GivenName" />
-    <RootPropertyPathName Name="StatusText" />
-    <RootPropertyPathName Name="StatusColor" />
-    <RootPropertyPathName Name="DeviceIcon" />
     <RootPropertyPathName Name="AboutPartViewModel" />
     <RootPropertyPathName Name="Version" />
     <RootPropertyPathName Name="Publisher" />
@@ -46,6 +47,7 @@
       <RootProperty Name="Text" />
       <RootProperty Name="SecondaryCommands" />
       <RootProperty Name="Frame" />
+      <RootProperty Name="PrimaryCommands" />
       <RootProperty Name="Content" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Control">
@@ -165,6 +167,7 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.AppBarButton">
       <RootProperty Name="Label" />
+      <RootProperty Name="Icon" />
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Ioespt.UWP.DeviceControl.Views.AddDevicePage" />
@@ -197,12 +200,26 @@
       <RootMethod Name="GetBehaviors" />
       <RootMethod Name="SetBehaviors" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
-      <RootProperty Name="Padding" />
-      <RootProperty Name="VerticalScrollBarVisibility" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Pivot">
+      <RootProperty Name="Items" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.PivotItem">
+      <RootProperty Name="Header" />
       <RootProperty Name="Content" />
+      <RootProperty Name="DataContext" />
+      <RootProperty Name="Padding" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Shapes.Rectangle">
+      <RootProperty Name="Width" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Fill" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Image">
+      <RootProperty Name="Width" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Source" />
       <RootProperty Name="Margin" />
-      <RootProperty Name="HorizontalContentAlignment" />
+      <RootProperty Name="Stretch" />
     </RootType>
     <RootType FullName="Template10.Behaviors.EllipsisBehavior">
       <RootProperty Name="Visibility" />
@@ -222,32 +239,11 @@
     <RootType FullName="Windows.UI.Xaml.DataTemplate">
       <RootProperty Name="Template" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Shapes.Rectangle">
-      <RootProperty Name="Fill" />
-      <RootProperty Name="Width" />
-      <RootProperty Name="Height" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Documents.Run">
       <RootProperty Name="Text" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.Image">
-      <RootProperty Name="Width" />
-      <RootProperty Name="Height" />
-      <RootProperty Name="Source" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="Stretch" />
-    </RootType>
     <RootType FullName="Ioespt.UWP.DeviceControl.Views.MainPage" />
     <RootType FullName="Ioespt.UWP.DeviceControl.ViewModels.SettingsPageViewModel" />
-    <RootType FullName="Windows.UI.Xaml.Controls.Pivot">
-      <RootProperty Name="Items" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.PivotItem">
-      <RootProperty Name="DataContext" />
-      <RootProperty Name="Header" />
-      <RootProperty Name="Content" />
-      <RootProperty Name="Padding" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Border">
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
@@ -256,6 +252,12 @@
       <RootProperty Name="IsHitTestVisible" />
       <RootProperty Name="Background" />
       <RootProperty Name="Child" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
+      <RootProperty Name="Margin" />
+      <RootProperty Name="VerticalScrollBarVisibility" />
+      <RootProperty Name="Content" />
+      <RootProperty Name="HorizontalContentAlignment" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Documents.LineBreak" />
     <RootType FullName="Windows.UI.Xaml.Documents.Bold">
