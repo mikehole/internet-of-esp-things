@@ -20,18 +20,15 @@ namespace Ioespt.UWP.DeviceControl.ViewModels
 {
     public class MainPageViewModel : ViewModelBase
     {
-        public ObservableCollection<RegisteredDevice> devices { get; set; }
-
-        SSDPClient ssdpClient = null;
-
-        DispatcherTimer dispatcherTimer = new DispatcherTimer();
-
-        private WiFiAdapter firstAdapter = null;
+        public ObservableCollection<RegisteredDevice> devices 
+        {
+            get {
+                return App.devices;
+            }
+        }
 
         public MainPageViewModel()
         {
-            devices = new ObservableCollection<RegisteredDevice>();
-
             if (Windows.ApplicationModel.DesignMode.DesignModeEnabled)
             {
                 #region Design Time Info
@@ -70,47 +67,6 @@ namespace Ioespt.UWP.DeviceControl.ViewModels
             }
             else
             {
-                DataService db = new DataService();
-
-                db.createDB();
-
-                foreach (var device in db.DevicesTable)
-                {
-                    devices.Add(device);
-                }
-
-                ssdpClient = new SSDPClient();
-
-                ssdpClient.DeviceFound += SsdpClinet_DeviceFound;
-
-                ssdpClient.SearchForDevices();
-                SearchWifi();
-
-                dispatcherTimer.Tick += DispatcherTimer_Tick;
-
-                dispatcherTimer.Interval = new TimeSpan(0, 2, 0);
-
-            }
-        }
-
-        private void DispatcherTimer_Tick(object sender, object e)
-        {
-            ssdpClient.SearchForDevices();
-            SearchWifi();
-        }
-
-        private void SsdpClinet_DeviceFound(object sender, DeviceFoundEventArgs e)
-        {
-            if(e.Device.DeviceType.manufacturer == "IOESPT")
-            {
-                var foundDevice = devices.FirstOrDefault(D => D.ChipId == e.Device.DeviceType.serialNumber);
-
-                if(foundDevice != null)
-                {
-                    Dispatcher.Dispatch(() => {
-                        foundDevice.Status = DeviceStatus.Online;
-                    });
-                }
             }
         }
 
@@ -146,10 +102,10 @@ namespace Ioespt.UWP.DeviceControl.ViewModels
             {
                 if (_GotoDetailsPage == null)
                 {
-                    _GotoDetailsPage = new RelayCommand<RegisteredDevice>(
-                        (selectedDevice) =>
+                    _GotoDetailsPage = new RelayCommand<RegisteredDevice>((selectedDevice) =>
                     {
-                        NavigationService.Navigate(typeof(Views.DetailPage), selectedDevice);
+                        string deviceName = selectedDevice.GivenName;
+                        NavigationService.Navigate(typeof(Views.DetailPage), deviceName);
                     });
                 }
 
@@ -166,76 +122,10 @@ namespace Ioespt.UWP.DeviceControl.ViewModels
         public void GotoAbout() =>
             NavigationService.Navigate(typeof(Views.SettingsPage), 2);
 
-        public async void SearchWifi()
-        {
-            var result = await Windows.Devices.Enumeration.DeviceInformation.FindAllAsync(WiFiAdapter.GetDeviceSelector());
-
-            if (result.Count >= 1)
-            {
-
-                firstAdapter = await WiFiAdapter.FromIdAsync(result[0].Id);
-
-                await firstAdapter.ScanAsync();
-
-                //firstAdapter.AvailableNetworksChanged += FirstAdapter_AvailableNetworksChanged;
-
-                var qualifyingWifi = firstAdapter.NetworkReport.AvailableNetworks.Where(N => N.Ssid.ToLower().StartsWith("ioespt-thing"));
-
-
-                foreach (WiFiAvailableNetwork deviceWifi in qualifyingWifi)
-                {
-                    RegisteredDevice newRegisteredDevice = new RegisteredDevice()
-                    {
-                        Status = DeviceStatus.UnProvisioned,
-                        ConnectedTo = "None",
-                        GivenName = deviceWifi.Ssid,
-                        ChipId = "Unknown",
-                        FirmwareName = "Unknown",
-                        FirmwareVersion = "Unknown",
-                        ModuleType = "Unknown"
-                    };
-
-                    devices.Add(newRegisteredDevice);
-                }
-            }
-            else
-            {
-
-            }
-        }
-
-        //private void FirstAdapter_AvailableNetworksChanged(WiFiAdapter sender, object args)
-        //{
-        //    var qualifyingWifi = firstAdapter.NetworkReport.AvailableNetworks.Where(N => N.Ssid.ToLower().StartsWith("ioespt-thing"));
-
-        //    foreach (WiFiAvailableNetwork deviceWifi in qualifyingWifi)
-        //    {
-        //        if (!devices.Any(D => D.GivenName.ToLower() == deviceWifi.Ssid.ToLower()))
-        //        {
-        //            RegisteredDevice newRegisteredDevice = new RegisteredDevice()
-        //            {
-        //                Status = DeviceStatus.UnProvisioned,
-        //                ConnectedTo = "None",
-        //                GivenName = deviceWifi.Ssid,
-        //                ChipId = "Unknown",
-        //                FirmwareName = "Unknown",
-        //                FirmwareVersion = "Unknown",
-        //                ModuleType = "Unknown"
-        //            };
-
-
-        //            Dispatcher.Dispatch(()=>{
-        //                devices.Add(newRegisteredDevice);
-        //            });
-                    
-        //        }
-        //    }
-        // }
 
         public void Refresh()
         {
-            ssdpClient.SearchForDevices();
-            SearchWifi();
+            //TODO
         }
     }
     }

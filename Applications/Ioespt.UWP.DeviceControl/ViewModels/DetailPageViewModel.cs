@@ -31,6 +31,8 @@ namespace Ioespt.UWP.DeviceControl.ViewModels
 
         public string password { get; set; }
 
+        private string deviceName;
+
         private WiFiAvailableNetwork deviceNetwork;
 
         private WiFiAdapter firstAdapter = null;
@@ -46,7 +48,9 @@ namespace Ioespt.UWP.DeviceControl.ViewModels
 
         public override Task OnNavigatedToAsync(object parameter, NavigationMode mode, IDictionary<string, object> suspensionState)
         {
-            selectedDevice = (suspensionState.ContainsKey(nameof(selectedDevice))) ? suspensionState[nameof(selectedDevice)] as RegisteredDevice : parameter as RegisteredDevice;
+            deviceName = (suspensionState.ContainsKey(nameof(deviceName))) ? suspensionState[nameof(deviceName)]?.ToString() : parameter?.ToString();
+
+            selectedDevice = App.devices.First( D => D.GivenName == deviceName );
 
             //Set the state in accordance with the state of the device.
             if (selectedDevice.FirmwareName == "Unknown")
@@ -69,7 +73,7 @@ namespace Ioespt.UWP.DeviceControl.ViewModels
         {
             if (suspending)
             {
-                suspensionState[nameof(selectedDevice)] = selectedDevice;
+                suspensionState[nameof(deviceName)] = deviceName;
             }
             return Task.CompletedTask;
         }

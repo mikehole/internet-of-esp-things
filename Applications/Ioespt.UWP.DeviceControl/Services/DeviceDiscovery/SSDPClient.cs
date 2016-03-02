@@ -18,7 +18,7 @@ namespace Ioespt.UWP.DeviceControl.Services.DeviceDiscovery
 
         bool isSearching = false;
 
-        public async void SearchForDevices()
+        public async void Search()
         {
             if (isSearching)
                 return;
@@ -66,7 +66,6 @@ namespace Ioespt.UWP.DeviceControl.Services.DeviceDiscovery
 
             isSearching = false;
         }
-
 
         private async Task<Device> GetXml(Dictionary<string, string> headers)
         {
