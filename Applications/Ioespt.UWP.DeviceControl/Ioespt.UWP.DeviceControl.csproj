@@ -98,6 +98,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Helpers\ItemClickCommand.cs" />
+    <Compile Include="Models\DeviceTypes\ThermometerDevice.cs" />
     <Compile Include="Models\RegisteredDevice.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\DataServices\DataService.cs" />
@@ -133,9 +134,12 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\BigESP.png" />
+    <Content Include="Assets\DeviceTypes\ButtonDevice.png" />
+    <Content Include="Assets\DeviceTypes\DisplayDevice.png" />
+    <Content Include="Assets\DeviceTypes\LightDevice.png" />
     <Content Include="Assets\DeviceTypes\MasterDevice.png" />
     <Content Include="Assets\DeviceTypes\SlaveDevice.png" />
+    <Content Include="Assets\DeviceTypes\ThermometerDevice.png" />
     <Content Include="Assets\DeviceTypes\UnknownDevice.png" />
     <Content Include="Assets\NewStoreLogo.scale-100.png" />
     <Content Include="Assets\NewStoreLogo.scale-125.png" />

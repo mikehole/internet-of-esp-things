@@ -100,7 +100,5 @@ extern "C" void __cxa_pure_virtual() {;}
 #define portOutputRegister(P)
 #define portInputRegister(P)
 #define portModeRegister(P)
-#include <..\IoesptSlaveFirmware\IoesptSlaveFirmware.ino>
-#include <..\IoesptSlaveFirmware\Debug.cpp>
-#include <..\IoesptSlaveFirmware\Debug.h>
+#include <..\IoesptThermometerFirmware\IoesptThermometerFirmware.ino>
 #endif
