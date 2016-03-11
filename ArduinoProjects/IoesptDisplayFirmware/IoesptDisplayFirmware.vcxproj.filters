@@ -17,4 +17,17 @@
   <ItemGroup>
     <None Include="IoesptDisplayFirmware.ino" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="__vm\.IoesptDisplayFirmware.vsarduino.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IoesptLCD.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="IoesptLCD.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
 </Project>

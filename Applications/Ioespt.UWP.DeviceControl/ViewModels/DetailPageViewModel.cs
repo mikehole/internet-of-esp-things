@@ -1,4 +1,5 @@
 using Ioespt.UWP.DeviceControl.Models;
+using Ioespt.UWP.DeviceControl.Models.DeviceTypes;
 using Ioespt.UWP.Devices;
 using Newtonsoft.Json;
 using System;
@@ -19,7 +20,7 @@ namespace Ioespt.UWP.DeviceControl.ViewModels
 {
     public class DetailPageViewModel : ViewModelBase
     {
-        public RegisteredDevice selectedDevice { get; set; }
+        public IDevice selectedDevice { get; set; }
 
         public Visibility showProvisioningDetails { get; set; }
 
@@ -53,7 +54,7 @@ namespace Ioespt.UWP.DeviceControl.ViewModels
             selectedDevice = App.devices.First( D => D.GivenName == deviceName );
 
             //Set the state in accordance with the state of the device.
-            if (selectedDevice.FirmwareName == "Unknown")
+            if (selectedDevice.DeviceDetails.FirmwareName == "Unknown")
             {
                 showProvisioningDetails = Visibility.Visible;
                 showDeviceDetails = Visibility.Collapsed;
@@ -124,14 +125,14 @@ namespace Ioespt.UWP.DeviceControl.ViewModels
                     var details = JsonConvert.DeserializeObject<DeviceDetails>(stringRes);
 
 
-                    selectedDevice.Status = DeviceStatus.Missing;
-                    selectedDevice.ConnectedTo = "None";
+                    selectedDevice.DeviceDetails.Status = DeviceStatus.Missing;
+                    selectedDevice.DeviceDetails.ConnectedTo = "None";
 
-                    selectedDevice.ChipId = details.ChipId;
-                    selectedDevice.FirmwareName = details.FirmwareName;
-                    selectedDevice.FirmwareVersion = details.FirmwareVersion;
+                    selectedDevice.DeviceDetails.ChipId = details.ChipId;
+                    selectedDevice.DeviceDetails.FirmwareName = details.FirmwareName;
+                    selectedDevice.DeviceDetails.FirmwareVersion = details.FirmwareVersion;
 
-                    selectedDevice.ModuleType = details.ModuleType;
+                    selectedDevice.DeviceDetails.ModuleType = details.ModuleType;
 
                     WifiConfig wifi = new WifiConfig()
                     {

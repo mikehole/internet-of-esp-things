@@ -245,6 +245,7 @@ C:\Source\github\internet-of-esp-things\Applications\Ioespt.UWP.DeviceControl\bi
 C:\Source\github\internet-of-esp-things\Applications\Ioespt.UWP.DeviceControl\obj\x64\Debug\Microsoft.Practices.ServiceLocation\en-US\Microsoft.Practices.ServiceLocation.Properties.Resources.resw
 C:\Source\github\internet-of-esp-things\Applications\Ioespt.UWP.DeviceControl\obj\x64\Debug\GalaSoft.MvvmLight.Platform.pri.xml
 D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.DeviceControl\bin\x64\Debug\App.xbf
+D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.DeviceControl\bin\x64\Debug\Controls\DeviceControls\DisplayDevice.xbf
 D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.DeviceControl\bin\x64\Debug\Styles\Custom.xbf
 D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.DeviceControl\bin\x64\Debug\Views\Busy.xbf
 D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.DeviceControl\bin\x64\Debug\Views\DetailPage.xbf
@@ -381,6 +382,8 @@ D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.DeviceContro
 D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.DeviceControl\obj\x64\Debug\Ioespt.UWP.DeviceControl.csprojResolveAssemblyReference.cache
 D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.DeviceControl\obj\x64\Debug\App.g.i.cs
 D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.DeviceControl\obj\x64\Debug\App.g.cs
+D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.DeviceControl\obj\x64\Debug\Controls\DeviceControls\DisplayDevice.g.i.cs
+D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.DeviceControl\obj\x64\Debug\Controls\DeviceControls\DisplayDevice.g.cs
 D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.DeviceControl\obj\x64\Debug\Views\Busy.g.i.cs
 D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.DeviceControl\obj\x64\Debug\Views\Busy.g.cs
 D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.DeviceControl\obj\x64\Debug\Views\DetailPage.g.i.cs
@@ -395,6 +398,7 @@ D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.DeviceContro
 D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.DeviceControl\obj\x64\Debug\Views\Splash.g.cs
 D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.DeviceControl\obj\x64\Debug\XamlTypeInfo.g.cs
 D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.DeviceControl\obj\x64\Debug\App.xaml
+D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.DeviceControl\obj\x64\Debug\Controls\DeviceControls\DisplayDevice.xaml
 D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.DeviceControl\obj\x64\Debug\Styles\Custom.xaml
 D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.DeviceControl\obj\x64\Debug\Views\Busy.xaml
 D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.DeviceControl\obj\x64\Debug\Views\DetailPage.xaml
@@ -403,6 +407,7 @@ D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.DeviceContro
 D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.DeviceControl\obj\x64\Debug\Views\Shell.xaml
 D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.DeviceControl\obj\x64\Debug\Views\Splash.xaml
 D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.DeviceControl\obj\x64\Debug\App.xbf
+D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.DeviceControl\obj\x64\Debug\Controls\DeviceControls\DisplayDevice.xbf
 D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.DeviceControl\obj\x64\Debug\Styles\Custom.xbf
 D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.DeviceControl\obj\x64\Debug\Views\Busy.xbf
 D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.DeviceControl\obj\x64\Debug\Views\DetailPage.xbf
@@ -485,3 +490,8 @@ D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.DeviceContro
 D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.DeviceControl\obj\x64\Debug\GalaSoft.MvvmLight.Platform.pri.xml
 D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.DeviceControl\obj\x64\Debug\Template10Library.pri.xml
 D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.DeviceControl\obj\x64\Debug\ProjectArchitectures.txt
+D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.DeviceControl\bin\x64\Debug\Controls\DeviceControls\ThermometerDevice.xbf
+D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.DeviceControl\obj\x64\Debug\Controls\DeviceControls\ThermometerDevice.g.i.cs
+D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.DeviceControl\obj\x64\Debug\Controls\DeviceControls\ThermometerDevice.g.cs
+D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.DeviceControl\obj\x64\Debug\Controls\DeviceControls\ThermometerDevice.xaml
+D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.DeviceControl\obj\x64\Debug\Controls\DeviceControls\ThermometerDevice.xbf

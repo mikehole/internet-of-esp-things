@@ -15,12 +15,15 @@ using System;
 using Ioespt.UWP.Devices;
 using Ioespt.UWP.DeviceControl.Services.DeviceDiscovery;
 using Windows.UI.Xaml;
+using Windows.Devices.SerialCommunication;
+using Windows.Devices.Enumeration;
+using Ioespt.UWP.DeviceControl.Models.DeviceTypes;
 
 namespace Ioespt.UWP.DeviceControl.ViewModels
 {
     public class MainPageViewModel : ViewModelBase
     {
-        public ObservableCollection<RegisteredDevice> devices 
+        public ObservableCollection<IDevice> devices 
         {
             get {
                 return App.devices;
@@ -68,6 +71,32 @@ namespace Ioespt.UWP.DeviceControl.ViewModels
             else
             {
             }
+
+            TestSerial();
+
+        }
+
+        private async void TestSerial()
+        {
+            var aqsFilter = SerialDevice.GetDeviceSelector();
+            var devices = await DeviceInformation.FindAllAsync(aqsFilter);
+            if (devices.Any())
+            {
+                //var deviceId = devices.First().Id;
+                //this.device = await SerialDevice.FromIdAsync(deviceId);
+
+                //if (this.device != null)
+                //{
+                //    this.device.BaudRate = 57600;
+                //    this.device.StopBits = SerialStopBitCount.One;
+                //    this.device.DataBits = 8;
+                //    this.device.Parity = SerialParity.None;
+                //    this.device.Handshake = SerialHandshake.None;
+
+                //    this.reader = new DataReader(this.device.InputStream);
+                //}
+            }
+
         }
 
         public override Task OnNavigatedToAsync(object parameter, NavigationMode mode, IDictionary<string, object> suspensionState)
@@ -95,14 +124,14 @@ namespace Ioespt.UWP.DeviceControl.ViewModels
         }
 
 
-        private RelayCommand<RegisteredDevice> _GotoDetailsPage;
-        public RelayCommand<RegisteredDevice> GotoDetailsPage
+        private RelayCommand<IDevice> _GotoDetailsPage;
+        public RelayCommand<IDevice> GotoDetailsPage
         {
             get
             {
                 if (_GotoDetailsPage == null)
                 {
-                    _GotoDetailsPage = new RelayCommand<RegisteredDevice>((selectedDevice) =>
+                    _GotoDetailsPage = new RelayCommand<IDevice>((selectedDevice) =>
                     {
                         string deviceName = selectedDevice.GivenName;
                         NavigationService.Navigate(typeof(Views.DetailPage), deviceName);

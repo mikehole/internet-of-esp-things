@@ -19,7 +19,7 @@ IoesptProvisioning provisioning;
 
 IoesptAzure azure;
 
-ESP8266WebServer HTTP(8080);
+ESP8266WebServer HTTP(80);
 
 bool SetupSSDP()
 {

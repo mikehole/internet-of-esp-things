@@ -6,33 +6,53 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Xaml;
 
 namespace Ioespt.UWP.DeviceControl.Models.DeviceTypes
 {
-    public class TempretureReading
+    public class TemperatureReading
     {
-        public int Tempreture { get; set; }
+        public double Temperature { get; set; }
     }
 
-
-
     [ImplementPropertyChanged]
-    class ThermometerDevice : RegisteredDevice
+    public class ThermometerDevice : IDevice
     {
-        [AlsoNotifyFor("TempretureText")]
-        public int CurrentTempreture { get; set; }
+        public RegisteredDevice DeviceDetails { get; set; }
 
-        public string TempretureText => $"{CurrentTempreture}c";
+        public string GivenName => DeviceDetails.GivenName;
+
+
+        [AlsoNotifyFor("TemperatureText")]
+        public double CurrentTemperature { get; set; }
+
+        public string TemperatureText => $"{CurrentTemperature}c";
+
+        Controls.DeviceControls.ThermometerDevice _myControl = null;
+
+        public FrameworkElement GeneralControl
+        {
+            get
+            {
+                if(_myControl == null)
+                {
+                    _myControl = new Controls.DeviceControls.ThermometerDevice();
+                    _myControl.DataContext = this;
+                }
+
+                return _myControl;
+            }
+        }
 
         public async Task<bool> UpdateValue()
         {
             try
             {
                 HttpClient httpClient = new HttpClient();
-                var stringRes = await httpClient.GetStringAsync($"http://{Ip}/gettempreture");
-                var reading = JsonConvert.DeserializeObject<TempretureReading>(stringRes);
+                var stringRes = await httpClient.GetStringAsync($"http://{DeviceDetails.Ip}/gettemperature");
+                var reading = JsonConvert.DeserializeObject<TemperatureReading>(stringRes);
 
-                CurrentTempreture = reading.Tempreture;
+                CurrentTemperature = reading.Temperature;
 
                 return true;
             }
@@ -41,5 +61,13 @@ namespace Ioespt.UWP.DeviceControl.Models.DeviceTypes
                 return false;
             }
         }
+
+        public async void Refresh()
+        {
+            await UpdateValue();
+        }
+
+
+
     }
 }

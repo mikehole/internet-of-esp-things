@@ -17,7 +17,6 @@ C:\Source\github\internet-of-esp-things\Applications\Ioespt.UWP.Devices\obj\x64\
 D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.Devices\bin\x64\Debug\Ioespt.UWP.Devices.dll
 D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.Devices\bin\x64\Debug\Ioespt.UWP.Devices.pdb
 D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.Devices\bin\x64\Debug\Ioespt.UWP.Devices.pri
-D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.Devices\obj\x64\Debug\Ioespt.UWP.Devices.csprojResolveAssemblyReference.cache
 D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.Devices\obj\x64\Debug\Ioespt.UWP.Devices.dll
 D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.Devices\obj\x64\Debug\Ioespt.UWP.Devices.pdb
 D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.Devices\obj\x64\Debug\priconfig.xml

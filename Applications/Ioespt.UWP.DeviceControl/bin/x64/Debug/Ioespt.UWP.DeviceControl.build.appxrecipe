@@ -372,14 +372,23 @@
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UAP\v0.8.0.0\ExtensionSDKs\SQLite.UAP.2015\3.10.2\Redist\Debug\x64\sqlite3.dll">
       <PackagePath>sqlite3.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.DeviceControl\Assets\BigESP.png">
-      <PackagePath>Assets\BigESP.png</PackagePath>
+    <AppxPackagedFile Include="D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.DeviceControl\Assets\DeviceTypes\ButtonDevice.png">
+      <PackagePath>Assets\DeviceTypes\ButtonDevice.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.DeviceControl\Assets\DeviceTypes\DisplayDevice.png">
+      <PackagePath>Assets\DeviceTypes\DisplayDevice.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.DeviceControl\Assets\DeviceTypes\LightDevice.png">
+      <PackagePath>Assets\DeviceTypes\LightDevice.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.DeviceControl\Assets\DeviceTypes\MasterDevice.png">
       <PackagePath>Assets\DeviceTypes\MasterDevice.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.DeviceControl\Assets\DeviceTypes\SlaveDevice.png">
       <PackagePath>Assets\DeviceTypes\SlaveDevice.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.DeviceControl\Assets\DeviceTypes\ThermometerDevice.png">
+      <PackagePath>Assets\DeviceTypes\ThermometerDevice.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Source\github.com\internet-of-esp-things\Applications\Ioespt.UWP.DeviceControl\Assets\DeviceTypes\UnknownDevice.png">
       <PackagePath>Assets\DeviceTypes\UnknownDevice.png</PackagePath>

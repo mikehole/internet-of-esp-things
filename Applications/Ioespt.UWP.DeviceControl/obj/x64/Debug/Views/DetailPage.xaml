@@ -71,9 +71,9 @@
                     <RowDefinition Height="30"/>
                 </Grid.RowDefinitions>
                 <Rectangle Width="100" Height="70" Fill="AliceBlue"/>
-                <Image Width="70" Height="70" Source="{Binding selectedDevice.DeviceIcon}" />
-                <Rectangle Grid.Row="1" Width="100" Height="30" Fill="{Binding selectedDevice.StatusColor}"/>
-                <TextBlock Width="70" Grid.Row="1" Text="{Binding selectedDevice.StatusText}" Margin="5" Foreground="Black" />
+                <Image Width="70" Height="70" Source="{Binding selectedDevice.DeviceDetails.DeviceIcon}" />
+                <Rectangle Grid.Row="1" Width="100" Height="30" Fill="{Binding selectedDevice.DeviceDetails.StatusColor}"/>
+                <TextBlock Width="70" Grid.Row="1" Text="{Binding selectedDevice.DeviceDetails.StatusText}" Margin="5" Foreground="Black" />
             </Grid>
 
             <StackPanel Grid.Row="1" Margin="40,10" Width="200">
@@ -104,18 +104,18 @@
                             <RowDefinition/>
                         </Grid.RowDefinitions>
                         <Rectangle Width="100" Height="70" Fill="AliceBlue"/>
-                        <Image Width="70" Height="70" Source="{Binding selectedDevice.DeviceIcon}" />
-                        <Rectangle Grid.Row="1" Width="100" Height="30" Fill="{Binding selectedDevice.StatusColor}"/>
-                        <TextBlock Grid.Row="1" Text="{Binding selectedDevice.StatusText}" Margin="5" Foreground="Black" />
+                        <Image Width="70" Height="70" Source="{Binding selectedDevice.DeviceDetails.DeviceIcon}" />
+                        <Rectangle Grid.Row="1" Width="100" Height="30" Fill="{Binding selectedDevice.DeviceDetails.StatusColor}"/>
+                        <TextBlock Grid.Row="1" Text="{Binding selectedDevice.DeviceDetails.StatusText}" Margin="5" Foreground="Black" />
                     </Grid>
                     <StackPanel Grid.Column="1" Margin="12,0,0,0" VerticalAlignment="Top">
-                        <TextBlock Text="{Binding selectedDevice.GivenName}" Style="{StaticResource TitleTextBlockStyle}"  />
-                        <TextBlock Text="{Binding selectedDevice.ModuleType}" Style="{StaticResource SubtitleTextBlockStyle}" />
+                        <TextBlock Text="{Binding selectedDevice.DeviceDetails.GivenName}" Style="{StaticResource TitleTextBlockStyle}"  />
+                        <TextBlock Text="{Binding selectedDevice.DeviceDetails.ModuleType}" Style="{StaticResource SubtitleTextBlockStyle}" />
                         <TextBlock Text="Firmware: " Style="{StaticResource BodyTextBlockStyle}" >
-                                    <Run Text="{Binding selectedDevice.FirmwareName}" /><Run Text=" : " /><Run Text="{Binding selectedDevice.FirmwareVersion}" />
+                                    <Run Text="{Binding selectedDevice.DeviceDetails.FirmwareName}" /><Run Text=" : " /><Run Text="{Binding selectedDevice.DeviceDetails.FirmwareVersion}" />
                         </TextBlock>
                         <TextBlock Text="Connected To: " Style="{StaticResource BodyTextBlockStyle}" >
-                                    <Run Text="{Binding selectedDevice.ConnectedTo}" />
+                                    <Run Text="{Binding selectedDevice.DeviceDetails.ConnectedTo}" />
                         </TextBlock>
                     </StackPanel>
                 </Grid>
@@ -124,10 +124,7 @@
                 <Pivot Grid.Row="1">
                     <PivotItem Header="General">
                         <!--Pivot content goes here-->
-                        <StackPanel>
-
-
-                        </StackPanel>
+                        <ContentControl Content="{Binding selectedDevice.GeneralControl}" />
                     </PivotItem>
                     <PivotItem Header="Azure Settings">
                         <!--Pivot content goes here-->

@@ -101,4 +101,6 @@ extern "C" void __cxa_pure_virtual() {;}
 #define portInputRegister(P)
 #define portModeRegister(P)
 #include <..\IoesptDisplayFirmware\IoesptDisplayFirmware.ino>
+#include <..\IoesptDisplayFirmware\IoesptLCD.cpp>
+#include <..\IoesptDisplayFirmware\IoesptLCD.h>
 #endif

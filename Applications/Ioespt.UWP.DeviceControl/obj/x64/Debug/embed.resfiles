@@ -1,4 +1,6 @@
 App.xbf
+Controls\DeviceControls\DisplayDevice.xbf
+Controls\DeviceControls\ThermometerDevice.xbf
 Styles\Custom.xbf
 Views\Busy.xbf
 Views\DetailPage.xbf

@@ -1,7 +1,10 @@
 WinMetadata\Windows.winmd
-Assets\BigESP.png
+Assets\DeviceTypes\ButtonDevice.png
+Assets\DeviceTypes\DisplayDevice.png
+Assets\DeviceTypes\LightDevice.png
 Assets\DeviceTypes\MasterDevice.png
 Assets\DeviceTypes\SlaveDevice.png
+Assets\DeviceTypes\ThermometerDevice.png
 Assets\DeviceTypes\UnknownDevice.png
 Assets\NewStoreLogo.scale-100.png
 Assets\NewStoreLogo.scale-125.png

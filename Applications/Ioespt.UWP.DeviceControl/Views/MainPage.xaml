@@ -93,19 +93,19 @@
                                         <RowDefinition/>
                                     </Grid.RowDefinitions>
                                     <Rectangle Width="100" Height="70" Fill="AliceBlue"/>
-                                    <Image Width="70" Height="70" Source="{Binding DeviceIcon}" />
-                                    <Rectangle Grid.Row="1" Width="100" Height="30" Fill="{Binding StatusColor}"/>
-                                    <TextBlock Grid.Row="1" Text="{Binding StatusText}" Margin="5" Foreground="Black" />
+                                    <Image Width="70" Height="70" Source="{Binding DeviceDetails.DeviceIcon}" />
+                                    <Rectangle Grid.Row="1" Width="100" Height="30" Fill="{Binding DeviceDetails.StatusColor}"/>
+                                    <TextBlock Grid.Row="1" Text="{Binding DeviceDetails.StatusText}" Margin="5" Foreground="Black" />
                                 </Grid>
 
                                 <StackPanel Grid.Column="1" Margin="12,0,0,0" VerticalAlignment="Top">
-                                    <TextBlock Text="{Binding GivenName}" Style="{StaticResource TitleTextBlockStyle}"  />
-                                    <TextBlock Text="{Binding ModuleType}" Style="{StaticResource SubtitleTextBlockStyle}" />
+                                    <TextBlock Text="{Binding DeviceDetails.GivenName}" Style="{StaticResource TitleTextBlockStyle}"  />
+                                    <TextBlock Text="{Binding DeviceDetails.ModuleType}" Style="{StaticResource SubtitleTextBlockStyle}" />
                                     <TextBlock Text="Firmware: " Style="{StaticResource BodyTextBlockStyle}" >
-                                    <Run Text="{Binding FirmwareName}" /><Run Text=" : " /><Run Text="{Binding FirmwareVersion}" />
+                                    <Run Text="{Binding DeviceDetails.FirmwareName}" /><Run Text=" : " /><Run Text="{Binding DeviceDetails.FirmwareVersion}" />
                                     </TextBlock>
                                     <TextBlock Text="Connected To: " Style="{StaticResource BodyTextBlockStyle}" >
-                                    <Run Text="{Binding ConnectedTo}" />
+                                    <Run Text="{Binding DeviceDetails.ConnectedTo}" />
                                     </TextBlock>
                                 </StackPanel>
 

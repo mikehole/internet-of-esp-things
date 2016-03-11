@@ -11,6 +11,7 @@ using Ioespt.UWP.DeviceControl.Services.DataServices;
 using System.Linq;
 using Ioespt.UWP.DeviceControl.Services.DeviceDiscovery;
 using Windows.ApplicationModel.Core;
+using Ioespt.UWP.DeviceControl.Models.DeviceTypes;
 
 namespace Ioespt.UWP.DeviceControl
 {
@@ -20,7 +21,7 @@ namespace Ioespt.UWP.DeviceControl
     sealed partial class App : Template10.Common.BootStrapper
     {
 
-        private static ObservableCollection<RegisteredDevice> _devices = null;
+        private static ObservableCollection<IDevice> _devices = null;
 
         SSDPClient ssdpClient = null;
         WiFiClient wifiClient = null;
@@ -30,11 +31,11 @@ namespace Ioespt.UWP.DeviceControl
         DataService db = new DataService();
 
 
-        public static ObservableCollection<RegisteredDevice> devices {
+        public static ObservableCollection<IDevice> devices {
             get
             {
                 if(_devices == null)
-                    _devices = new ObservableCollection<RegisteredDevice>();
+                    _devices = new ObservableCollection<IDevice>();
 
                 return _devices;
             }
@@ -88,8 +89,11 @@ namespace Ioespt.UWP.DeviceControl
 
             foreach (var device in db.DevicesTable)
             {
-                device.Status = DeviceStatus.Missing;
-                devices.Add(device);
+                IDevice dev = DeviceTypeFactory.MakeDevice(device.FirmwareName, device);
+
+                dev.DeviceDetails.Status = DeviceStatus.Missing;
+
+                devices.Add(dev);
             }
 
             NavigationService.Navigate(typeof(Views.MainPage));
@@ -124,12 +128,12 @@ namespace Ioespt.UWP.DeviceControl
 
                 if (device == null)
                 {
-                    devices.Add(e.Device);
+                    devices.Add(DeviceTypeFactory.MakeDevice(e.Device.FirmwareName, e.Device));
                     db.InsertNewDevice(e.Device);
                 }
                 else
                 {
-                    device.Status = DeviceStatus.UnProvisioned;
+                    device.DeviceDetails.Status = DeviceStatus.UnProvisioned;
                 }
             });
         }
@@ -138,13 +142,40 @@ namespace Ioespt.UWP.DeviceControl
         {
             if (e.Device.DeviceType.manufacturer == "IOESPT")
             {
-                var foundDevice = devices.FirstOrDefault(D => D.ChipId == e.Device.DeviceType.serialNumber);
+                var foundDevice = devices.FirstOrDefault(D => D.DeviceDetails.ChipId == e.Device.DeviceType.serialNumber);
+
+                Uri uri = new Uri(e.Device.URLBase);
+
 
                 if (foundDevice != null)
                 {
                     await CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.High, () => {
-                        foundDevice.Status = DeviceStatus.Online;
+                        foundDevice.DeviceDetails.Status = DeviceStatus.Online;
+
+                        foundDevice.DeviceDetails.Ip = uri.Host;
                     });
+                }
+                else
+                {
+                    //We have a new device online
+                    var newDevice = new RegisteredDevice();
+
+                    newDevice.ChipId = e.Device.DeviceType.serialNumber;
+                    newDevice.FirmwareName = e.Device.DeviceType.modelName;
+                    newDevice.ModuleType = e.Device.DeviceType.modelName;
+                    newDevice.FirmwareVersion = e.Device.DeviceType.modelNumber;
+                    newDevice.GivenName = e.Device.DeviceType.friendlyName;
+                    newDevice.Status = DeviceStatus.Online;
+                    newDevice.ConnectedTo = "None";
+                    newDevice.Ip = uri.Host;
+
+                    db.InsertNewDevice(newDevice);
+
+                    await CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.High, () => {
+                        devices.Add(DeviceTypeFactory.MakeDevice(newDevice.FirmwareName, newDevice));
+                    });
+
+
                 }
             }
         }

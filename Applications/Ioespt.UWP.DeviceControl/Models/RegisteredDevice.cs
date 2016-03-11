@@ -19,7 +19,6 @@ namespace Ioespt.UWP.DeviceControl.Models
         Missing
     }
 
-
     [JsonObject(MemberSerialization.OptIn)]
     [ImplementPropertyChanged]
     public class RegisteredDevice
@@ -93,12 +92,12 @@ namespace Ioespt.UWP.DeviceControl.Models
                         return "ms-appx:///Assets/DeviceTypes/SlaveDevice.png";
                     case "IOESPT-Master":
                         return "ms-appx:///Assets/DeviceTypes/MasterDevice.png";
+                    case "IOESPT-Display":
+                        return "ms-appx:///Assets/DeviceTypes/DisplayDevice.png";
                     default:
                         return "ms-appx:///Assets/DeviceTypes/UnknownDevice.png";
                 }
             }
-                
-
         }
 
     }

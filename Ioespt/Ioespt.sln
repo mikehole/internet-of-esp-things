@@ -17,9 +17,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ioespt.UWP.Devices", "..\Ap
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IoesptThermometerFirmware", "..\ArduinoProjects\IoesptThermometerFirmware\IoesptThermometerFirmware.vcxproj", "{B8B5BEF2-AD22-4C70-9514-8BA07B6BFA2B}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IoesptDisplayFirmware", "..\..\..\..\Users\MikeHole\Documents\Arduino\IoesptDisplayFirmware\IoesptDisplayFirmware.vcxproj", "{261927AA-F477-4FC2-9D14-8C107E4EC548}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IoesptDisplayFirmware", "..\ArduinoProjects\IoesptDisplayFirmware\IoesptDisplayFirmware.vcxproj", "{5B49CD79-E56A-4418-9DA5-4EA17190DEB6}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IoesptLightFirmware", "..\ArduinoProjects\IoesptLightFirmware\IoesptLightFirmware.vcxproj", "{B8569FAB-EAC9-4A28-851F-9DE5106DCCBF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -105,18 +105,6 @@ Global
 		{B8B5BEF2-AD22-4C70-9514-8BA07B6BFA2B}.Release|x64.Build.0 = Release|x64
 		{B8B5BEF2-AD22-4C70-9514-8BA07B6BFA2B}.Release|x86.ActiveCfg = Release|Win32
 		{B8B5BEF2-AD22-4C70-9514-8BA07B6BFA2B}.Release|x86.Build.0 = Release|Win32
-		{261927AA-F477-4FC2-9D14-8C107E4EC548}.Debug|Any CPU.ActiveCfg = Debug|Win32
-		{261927AA-F477-4FC2-9D14-8C107E4EC548}.Debug|ARM.ActiveCfg = Debug|Win32
-		{261927AA-F477-4FC2-9D14-8C107E4EC548}.Debug|x64.ActiveCfg = Debug|x64
-		{261927AA-F477-4FC2-9D14-8C107E4EC548}.Debug|x64.Build.0 = Debug|x64
-		{261927AA-F477-4FC2-9D14-8C107E4EC548}.Debug|x86.ActiveCfg = Debug|Win32
-		{261927AA-F477-4FC2-9D14-8C107E4EC548}.Debug|x86.Build.0 = Debug|Win32
-		{261927AA-F477-4FC2-9D14-8C107E4EC548}.Release|Any CPU.ActiveCfg = Release|Win32
-		{261927AA-F477-4FC2-9D14-8C107E4EC548}.Release|ARM.ActiveCfg = Release|Win32
-		{261927AA-F477-4FC2-9D14-8C107E4EC548}.Release|x64.ActiveCfg = Release|x64
-		{261927AA-F477-4FC2-9D14-8C107E4EC548}.Release|x64.Build.0 = Release|x64
-		{261927AA-F477-4FC2-9D14-8C107E4EC548}.Release|x86.ActiveCfg = Release|Win32
-		{261927AA-F477-4FC2-9D14-8C107E4EC548}.Release|x86.Build.0 = Release|Win32
 		{5B49CD79-E56A-4418-9DA5-4EA17190DEB6}.Debug|Any CPU.ActiveCfg = Debug|Win32
 		{5B49CD79-E56A-4418-9DA5-4EA17190DEB6}.Debug|ARM.ActiveCfg = Debug|Win32
 		{5B49CD79-E56A-4418-9DA5-4EA17190DEB6}.Debug|x64.ActiveCfg = Debug|x64
@@ -129,6 +117,18 @@ Global
 		{5B49CD79-E56A-4418-9DA5-4EA17190DEB6}.Release|x64.Build.0 = Release|x64
 		{5B49CD79-E56A-4418-9DA5-4EA17190DEB6}.Release|x86.ActiveCfg = Release|Win32
 		{5B49CD79-E56A-4418-9DA5-4EA17190DEB6}.Release|x86.Build.0 = Release|Win32
+		{B8569FAB-EAC9-4A28-851F-9DE5106DCCBF}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{B8569FAB-EAC9-4A28-851F-9DE5106DCCBF}.Debug|ARM.ActiveCfg = Debug|Win32
+		{B8569FAB-EAC9-4A28-851F-9DE5106DCCBF}.Debug|x64.ActiveCfg = Debug|x64
+		{B8569FAB-EAC9-4A28-851F-9DE5106DCCBF}.Debug|x64.Build.0 = Debug|x64
+		{B8569FAB-EAC9-4A28-851F-9DE5106DCCBF}.Debug|x86.ActiveCfg = Debug|Win32
+		{B8569FAB-EAC9-4A28-851F-9DE5106DCCBF}.Debug|x86.Build.0 = Debug|Win32
+		{B8569FAB-EAC9-4A28-851F-9DE5106DCCBF}.Release|Any CPU.ActiveCfg = Release|Win32
+		{B8569FAB-EAC9-4A28-851F-9DE5106DCCBF}.Release|ARM.ActiveCfg = Release|Win32
+		{B8569FAB-EAC9-4A28-851F-9DE5106DCCBF}.Release|x64.ActiveCfg = Release|x64
+		{B8569FAB-EAC9-4A28-851F-9DE5106DCCBF}.Release|x64.Build.0 = Release|x64
+		{B8569FAB-EAC9-4A28-851F-9DE5106DCCBF}.Release|x86.ActiveCfg = Release|Win32
+		{B8569FAB-EAC9-4A28-851F-9DE5106DCCBF}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -140,5 +140,6 @@ Global
 		{211987B2-25EF-43C6-AA35-AA3D6014FBF9} = {3CA739E2-FA4F-42A6-A3EF-52DC102A2E77}
 		{B8B5BEF2-AD22-4C70-9514-8BA07B6BFA2B} = {FBE07675-49D9-46D2-A838-5A11C03DFFDF}
 		{5B49CD79-E56A-4418-9DA5-4EA17190DEB6} = {FBE07675-49D9-46D2-A838-5A11C03DFFDF}
+		{B8569FAB-EAC9-4A28-851F-9DE5106DCCBF} = {FBE07675-49D9-46D2-A838-5A11C03DFFDF}
 	EndGlobalSection
 EndGlobal
