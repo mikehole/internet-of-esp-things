@@ -1,120 +1,85 @@
 #include <ESP8266WiFi.h>
 #include <PubSubClient.h>
 
-const char *ssid = "virginmedia5388578";
-const char *password = "wtjjldlr";
+const char *ssid = "edge";
+const char *password = "P3n4rth#";
 
 const char* mqtt_server = "MikeHoleHome.azure-devices.net";
 
 WiFiClientSecure espClient;
 
-PubSubClient client(espClient);
+PubSubClient client(espClient, mqtt_server, 8883);
+
+void callback(const MQTT::Publish& pub);
 
 long lastMsg = 0;
 char msg[50];
 int value = 0;
 
+#define BUFFER_SIZE 100
+
 void setup() {
 	Serial.begin(115200);
-	setup_wifi();
-
-	client.setServer(mqtt_server, 8883);
-	client.setCallback(callback);
 }
 
-void setup_wifi() {
+void callback(const MQTT::Publish& pub) {
+	Serial.println(pub.topic());
 
-	delay(10);
-	// We start by connecting to a WiFi network
-	Serial.println();
-	Serial.print("Connecting to ");
-	Serial.println(ssid);
+	Serial.print("payload_len : ");
+	Serial.println(pub.payload_len());
+	
+	if (pub.has_stream()) {
+		Serial.println(" (stream) => ");
 
-	WiFi.begin(ssid, password);
-
-	while (WiFi.status() != WL_CONNECTED) {
-		delay(500);
-		Serial.print(".");
-	}
-
-	Serial.println("");
-	Serial.println("WiFi connected");
-	Serial.println("IP address: ");
-	Serial.println(WiFi.localIP());
-}
-
-void callback(char* topic, byte* payload, unsigned int length) {
-	Serial.print("Message arrived [");
-	Serial.print(topic);
-	Serial.print("] ");
-	for (int i = 0; i < length; i++) {
-		Serial.print((char)payload[i]);
-	}
-	Serial.println();
-
-	// Switch on the LED if an 1 was received as first character
-	if ((char)payload[0] == '1') {
-
-	}
-	else {
-
-	}
-
-}
-
-void reconnect() {
-	// Loop until we're reconnected
-	while (!client.connected()) {
-		Serial.print("Attempting MQTT connection...");
-		// Attempt to connect
-
-		if (client.connect("TestDevice", "MikeHoleHome.azure-devices.net/TestDevice", "SharedAccessSignature sr=MikeHoleHome.azure-devices.net%2fdevices%2fTestDevice&sig=yh6X5iYURyAtmaY33jhs375Q7nQZ%2by%2b5Qq05%2bbJwHF4%3d&se=1458934959" )) {
-			Serial.print("connected : State: ");
-			Serial.println(client.state());
-			
-			// Once connected, publish an announcement...
-			client.publish("devices/TestDevice/messages/events/", "hello world");
-
-			Serial.print("post publish an announcement : State: ");
-			Serial.println(client.state());
-
-			// ... and resubscribe
-			client.subscribe("devices/TestDevice/messages/devicebound/");
-
-			Serial.print("post resubscribe : State: ");
-			Serial.println(client.state());
+		uint8_t buf[BUFFER_SIZE];
+		int read;
+		while (read = pub.payload_stream()->read(buf, BUFFER_SIZE)) {
+			Serial.write(buf, read);
 		}
-		else {
-			Serial.print("failed, rc=");
-			Serial.print(client.state());
-			Serial.println(" try again in 5 seconds");
-			// Wait 5 seconds before retrying
-			delay(5000);
-		}
+		pub.payload_stream()->stop();
+		Serial.println("");
+	}
+	else
+	{
+		Serial.println(" (string) => ");
+		Serial.println(pub.payload_string());
 	}
 }
 
 void loop() {
+	if (WiFi.status() != WL_CONNECTED) {
+		Serial.print("Connecting to ");
+		Serial.print(ssid);
+		Serial.println("...");
+		WiFi.begin(ssid, password);
 
-	if (!client.connected()) {
-		reconnect();
+		if (WiFi.waitForConnectResult() != WL_CONNECTED)
+			return;
+		Serial.println("WiFi connected");
 	}
 
-	client.loop();
+	if (WiFi.status() == WL_CONNECTED) {
+		if (!client.connected()) {
+			Serial.println("Connecting to MQTT server");
+			if (client.connect(MQTT::Connect("TestDevice")
+				.set_auth("MikeHoleHome.azure-devices.net/TestDevice", "SharedAccessSignature sr=MikeHoleHome.azure-devices.net%2fdevices%2fTestDevice&sig=yh6X5iYURyAtmaY33jhs375Q7nQZ%2by%2b5Qq05%2bbJwHF4%3d&se=1458934959"))) {
+				
+				Serial.println("Connected to MQTT server");
+				
+				client.set_callback(callback);
+				//client.publish("devices/TestDevice/messages/events/", "hello world");
+				
+				client.subscribe("devices/TestDevice/messages/devicebound/#");
+			}
+			else {
+				Serial.println("Could not connect to MQTT server");
+			}
+		}
 
-	long now = millis();
-	if (now - lastMsg > 2000) {
-		
-		lastMsg = now;
-		
-		++value;
-		
-		snprintf(msg, 75, "hello world #%ld", value);
-		
-		Serial.print("Publish message: ");
-		
-		Serial.println(msg);
-		
-		client.publish("outTopic", msg);
+		if (client.connected())
+		{
+
+			client.loop();
+		}
 	}
 }
