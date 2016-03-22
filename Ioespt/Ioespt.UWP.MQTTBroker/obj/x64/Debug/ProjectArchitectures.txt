@@ -1,0 +1,1 @@
+D:\Source\github.com\internet-of-esp-things\Ioespt\Ioespt.UWP.MQTTBroker\Ioespt.UWP.MQTTBroker.csproj;x64
