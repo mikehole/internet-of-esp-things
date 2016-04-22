@@ -2,6 +2,8 @@
 
 **_NOTE:_ I am looking for contributors are you interested in helping grow this project?**
 
+**_NOTE:_ This project is currently a work in progress**
+
 The main aim of this repository is to simplify the process of connecting Espressif ESP chips/modules to the main cloud based IoT infrastructures. 
 
 This will be achieved by taking advantage of a set of the best ideas and implementations available for the Espressif ESP modules. Currently the only publicly available chip is the ESP8266. More information found here:  
