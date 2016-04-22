@@ -182,7 +182,7 @@
         </ResourceDictionary>
     </UserControl.Resources>
 
-    <Grid x:ConnectionId='5' x:Name="RootGrid">
+    <Grid x:ConnectionId='5' x:Name="RootGrid"                                                                              >
 
         <VisualStateManager.VisualStateGroups>
 
@@ -216,7 +216,7 @@
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
                         <Setter Target="ShellSplitView.DisplayMode" Value="CompactInline" />
-                        <Setter Target="HamburgerButton.Visibility" Value="Collapsed" />
+                        <Setter Target="HamburgerButton.Visibility" Value="Visible" />
                         <Setter Target="ShellSplitView.IsPaneOpen" Value="True" />
                     </VisualState.Setters>
                 </VisualState>
@@ -362,7 +362,8 @@
 
         </SplitView>
 
-        <Grid x:ConnectionId='15' Grid.Row="0"                                                             >
+        <Grid x:ConnectionId='15' Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Top"
+                                                                          >
             <Button x:ConnectionId='16' x:Name="HamburgerButton"
                                                                                                  
                                                        

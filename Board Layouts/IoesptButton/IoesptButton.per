@@ -1,0 +1,129 @@
+[Version]
+Product,2
+File,18
+{
+"Config" : {
+  "NetImportFormat" : "Protel"
+},
+"Board" : {
+  "Width" : 57,
+  "Height" : 19,
+  "Pattern" : "Strip"
+},
+"CelledOutlines" : [
+  { "Name" : "ESP", "Locked" : true,
+    "Rows" : [
+    [{"Pin" : "TX"},"Body",{"Pin" : "GND"},"Body","Body","Body","Body","Body","Body","Body"],
+    [{"Pin" : "CH_PD"},"Body",{"Pin" : "2"},"Body","Body","Body","Body","Body","Body","Body"],
+    [{"Pin" : "RST"},"Body",{"Pin" : "0"},"Body","Body","Body","Body","Body","Body","Body"],
+    [{"Pin" : "3.3"},"Body",{"Pin" : "RX"},"Body","Body","Body","Body","Body","Body","Body"]
+    ]
+  }
+],
+"LeadedOutlines" : [
+  { "Name" : "Diode", "Locked" : true,
+    "BodyLength" : 3, "BodyWidth" : 1,
+    "Pin0Name" : "1", "Pin1Name" : "2", "ShowReference" : true
+  },
+  { "Name" : "Resistor", "Locked" : true,
+    "BodyLength" : 3, "BodyWidth" : 1,
+    "Pin0Name" : "1", "Pin1Name" : "2", "ShowReference" : false
+  },
+  { "Name" : "short resistor", "Locked" : true,
+    "BodyLength" : 1, "BodyWidth" : 1,
+    "Pin0Name" : "1", "Pin1Name" : "2", "ShowReference" : false
+  }
+],
+"RadialOutlines" : [
+  { "Name" : "LED", "Locked" : true,
+    "LeadSpacing" : 4, "Diameter" : 3,
+    "Pin0Name" : "1", "Pin1Name" : "2"
+  }
+],
+"CustomOutlines" : [
+  { "Name" : "Button", "Locked" : true,
+    "Pins" : [
+    { "Name" : "1", "X5" : 2, "Y5" : 2 },
+    { "Name" : "1", "X5" : 27, "Y5" : 2 },
+    { "Name" : "1", "X5" : 2, "Y5" : 12 },
+    { "Name" : "1", "X5" : 27, "Y5" : 12 }
+    ],
+    "Lines" : [
+    { "X5" : 0, "Y5" : 0, "DX5" : 0, "DY5" : 15},
+    { "X5" : 30, "Y5" : 0, "DX5" : 0, "DY5" : 15},
+    { "X5" : 0, "Y5" : 15, "DX5" : 30, "DY5" : 0},
+    { "X5" : 0, "Y5" : 0, "DX5" : 31, "DY5" : 0},
+    { "X5" : 9, "Y5" : 3, "DX5" : 0, "DY5" : 8},
+    { "X5" : 9, "Y5" : 10, "DX5" : 8, "DY5" : 0},
+    { "X5" : 17, "Y5" : 9, "DX5" : 0, "DY5" : -5},
+    { "X5" : 9, "Y5" : 3, "DX5" : 8, "DY5" : 0}
+    ]
+  }
+],
+"SmdOutlines" : [
+],
+"Components" : [
+  { "Designator" : "BUTTON", "Value" : "??", "Outline" : "Button",
+  "X1000" : 32000, "Y1000" : 11000, "EndDeltaX" : 0, "EndDeltaY" : 1,
+  "Text" : { "X" : 0, "Y" : 0, "Angle" : 0, "Visible" : true },
+  "Group" : 0
+  },
+  { "Designator" : "DIOD", "Value" : "??", "Outline" : "Diode",
+  "X1000" : 26000, "Y1000" : 13000, "EndDeltaX" : 5, "EndDeltaY" : 0,
+  "Text" : { "X" : 0, "Y" : 0, "Angle" : 0, "Visible" : true },
+  "Group" : 0
+  },
+  { "Designator" : "ESP8266", "Value" : "??", "Outline" : "ESP",
+  "X1000" : 12000, "Y1000" : 6000, "EndDeltaX" : 0, "EndDeltaY" : 1,
+  "Text" : { "X" : 0, "Y" : 0, "Angle" : 0, "Visible" : true },
+  "Group" : 0
+  },
+  { "Designator" : "LED", "Value" : "??", "Outline" : "LED",
+  "X1000" : 27000, "Y1000" : 4000, "EndDeltaX" : 0, "EndDeltaY" : 4,
+  "Text" : { "X" : 0, "Y" : 0, "Angle" : 0, "Visible" : true },
+  "Group" : 0
+  },
+  { "Designator" : "R2", "Value" : "??", "Outline" : "short resistor",
+  "X1000" : 29000, "Y1000" : 1000, "EndDeltaX" : 0, "EndDeltaY" : 3,
+  "Text" : { "X" : 0, "Y" : 0, "Angle" : 0, "Visible" : true },
+  "Group" : 0
+  },
+  { "Designator" : "RESISTOR", "Value" : "??", "Outline" : "Resistor",
+  "X1000" : 18000, "Y1000" : 7000, "EndDeltaX" : 0, "EndDeltaY" : 5,
+  "Text" : { "X" : 0, "Y" : 1, "Angle" : 0, "Visible" : true },
+  "Group" : 0
+  }
+],
+"Links" : [
+  { "X" : 22, "Y" : 13, "EndDeltaX" : 0, "EndDeltaY" : 2, "Group" : 0 },
+  { "X" : 9, "Y" : 7, "EndDeltaX" : 0, "EndDeltaY" : 8, "Group" : 0 },
+  { "X" : 18, "Y" : 11, "EndDeltaX" : 0, "EndDeltaY" : 2, "Group" : 0 },
+  { "X" : 40, "Y" : 11, "EndDeltaX" : 0, "EndDeltaY" : 6, "Group" : 0 },
+  { "X" : 16, "Y" : 1, "EndDeltaX" : 0, "EndDeltaY" : 5, "Group" : 0 },
+  { "X" : 4, "Y" : 9, "EndDeltaX" : 0, "EndDeltaY" : 8, "Group" : 0 }
+],
+"Breaks" : [
+  { "X" : 13, "Y" : 6, "Shift" : "none", "Group" : 0 },
+  { "X" : 13, "Y" : 7, "Shift" : "none", "Group" : 0 },
+  { "X" : 13, "Y" : 8, "Shift" : "none", "Group" : 0 },
+  { "X" : 29, "Y" : 13, "Shift" : "none", "Group" : 0 },
+  { "X" : 14, "Y" : 13, "Shift" : "none", "Group" : 0 },
+  { "X" : 35, "Y" : 13, "Shift" : "none", "Group" : 0 },
+  { "X" : 13, "Y" : 9, "Shift" : "none", "Group" : 0 },
+  { "X" : 35, "Y" : 11, "Shift" : "none", "Group" : 0 }
+],
+"Wires" : [
+    { "Value" : "VCC", "X" : 1, "Y" : 17, "Group" : 0 },
+    { "Value" : "GND", "X" : 1, "Y" : 1, "Group" : 0 }
+],
+"Nets" : [
+],
+"NetColors" : [
+    { "Node" : "" },
+    { "Node" : "" },
+    { "Node" : "" },
+    { "Node" : "" },
+    { "Node" : "" },
+    { "Node" : "" }
+]
+}

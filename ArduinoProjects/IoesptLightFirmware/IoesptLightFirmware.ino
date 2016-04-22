@@ -4,13 +4,17 @@
 const char *ssid = "edge";
 const char *password = "P3n4rth#";
 
-const char* mqtt_server = "MikeHoleHome.azure-devices.net";
+#define hubAddress "MikeHoleHome.azure-devices.net" 
+#define hubName "TestDevice"
+#define hubUser "MikeHoleHome.azure-devices.net/TestDevice"
+#define hubPass "SharedAccessSignature sr=MikeHoleHome.azure-devices.net%2fdevices%2fTestDevice&sig=INAxoJtCXBSSUL6lYEBdFowsMKeRpz0BPBJoC8KbwkE%3d&se=1461310304"
+
+
+#define hubTopic "devices/TestDevice/messages/devicebound/#"
+
 
 WiFiClientSecure espClient;
-
-PubSubClient client(espClient, mqtt_server, 8883);
-
-void callback(const MQTT::Publish& pub);
+PubSubClient client(espClient);
 
 long lastMsg = 0;
 char msg[50];
@@ -20,66 +24,67 @@ int value = 0;
 
 void setup() {
 	Serial.begin(115200);
+
+	Serial.println("Setting server for MQTT");
+	//this will set the address of the hub and port on which it communicates
+	client.setServer(hubAddress, 8883);
+
+	Serial.println("Setting callback for MQTT");
+	client.setCallback(callback);
 }
 
-void callback(const MQTT::Publish& pub) {
-	Serial.println(pub.topic());
-
-	Serial.print("payload_len : ");
-	Serial.println(pub.payload_len());
+void callback(char* topic, byte* payload, unsigned int length) {
+	// handle message arrived
+	String msg = "";
+	for (int i = 0; i < length; i++) {
+		msg += (char)payload[i];
+	}
 	
-	if (pub.has_stream()) {
-		Serial.println(" (stream) => ");
-
-		uint8_t buf[BUFFER_SIZE];
-		int read;
-		while (read = pub.payload_stream()->read(buf, BUFFER_SIZE)) {
-			Serial.write(buf, read);
-		}
-		pub.payload_stream()->stop();
-		Serial.println("");
-	}
-	else
-	{
-		Serial.println(" (string) => ");
-		Serial.println(pub.payload_string());
-	}
+	Serial.print("We have a messge: ");
+	Serial.println(msg);
 }
 
 void loop() {
+
 	if (WiFi.status() != WL_CONNECTED) {
 		Serial.print("Connecting to ");
 		Serial.print(ssid);
-		Serial.println("...");
+		Serial.println(":");
 		WiFi.begin(ssid, password);
 
-		if (WiFi.waitForConnectResult() != WL_CONNECTED)
-			return;
+		while (WiFi.status() != WL_CONNECTED) {
+			delay(500);
+			Serial.print(".");
+		}
+		Serial.println();
+
 		Serial.println("WiFi connected");
 	}
 
 	if (WiFi.status() == WL_CONNECTED) {
 		if (!client.connected()) {
-			Serial.println("Connecting to MQTT server");
-			if (client.connect(MQTT::Connect("TestDevice")
-				.set_auth("MikeHoleHome.azure-devices.net/TestDevice", "SharedAccessSignature sr=MikeHoleHome.azure-devices.net%2fdevices%2fTestDevice&sig=yh6X5iYURyAtmaY33jhs375Q7nQZ%2by%2b5Qq05%2bbJwHF4%3d&se=1458934959"))) {
-				
-				Serial.println("Connected to MQTT server");
-				
-				client.set_callback(callback);
-				//client.publish("devices/TestDevice/messages/events/", "hello world");
-				
-				client.subscribe("devices/TestDevice/messages/devicebound/#");
+			Serial.println(F("Connecting to MQTT server"));
+
+			if (client.connect(hubName, hubUser, hubPass)) {
+
+				Serial.println(F("Connected to MQTT server"));
+
+				client.publish("devices/TestDevice/messages/events/", "Device Connected");
+
+				client.subscribe(hubTopic);
+
 			}
 			else {
-				Serial.println("Could not connect to MQTT server");
+				Serial.println(F("Could not connect to MQTT server"));
 			}
 		}
 
 		if (client.connected())
 		{
-
-			client.loop();
+			if (!client.loop()) {
+				Serial.println(F("MQTT failed to loop"));
+			}
 		}
 	}
+
 }
