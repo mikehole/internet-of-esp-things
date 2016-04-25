@@ -7,7 +7,7 @@ const char *password = "P3n4rth#";
 #define hubAddress "MikeHoleHome.azure-devices.net" 
 #define hubName "TestDevice"
 #define hubUser "MikeHoleHome.azure-devices.net/TestDevice"
-#define hubPass "SharedAccessSignature sr=MikeHoleHome.azure-devices.net%2fdevices%2fTestDevice&sig=INAxoJtCXBSSUL6lYEBdFowsMKeRpz0BPBJoC8KbwkE%3d&se=1461310304"
+#define hubPass "SharedAccessSignature sr=MikeHoleHome.azure-devices.net%2fdevices%2fTestDevice&sig=RFznxs4l6eOznnRgOVG48ytB4yHrNmna1pkTFAr2ikc%3d&se=1483719938"
 
 
 #define hubTopic "devices/TestDevice/messages/devicebound/#"
